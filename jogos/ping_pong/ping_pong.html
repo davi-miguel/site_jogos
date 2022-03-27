@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>jogo de ping pong</title>
+        <meta charset="utf-8">
+        <style>
+            body{
+                margin:0px;
+                background-color: rgb(0, 0, 0);
+            }
+            #dvPainel{
+                display: flex;
+                height: 50px;
+                align-items: center;
+            }
+            .itemPainel{
+                margin: 5px;
+            }
+            #dvJogo{
+                width: 960px;
+                height: 500px;
+                border: 9px solid rgba(5, 3, 102, 0.301);
+                background-color: rgb(0, 0, 0);
+				
+            }
+            #dvBola{
+                position: absolute;
+                top: 240px;
+                left: 475px;
+                width: 22px;
+                height: 22px;
+                background-color: rgb(255, 230, 0);
+            }
+			.barra1{
+                position: absolute;
+                width: 20px;
+                height: 140px;
+                background-color: #f00;
+                top: 180px;
+            }
+            .barra2{
+                position: absolute;
+                width: 20px;
+                height: 140px;
+                background-color: #00f;
+                top: 180px;
+            }
+            
+            .esquerda{
+                left: 10px;
+            }
+            .direita{
+                left: 930px;
+            }
+            button{
+                color: blue;
+                background-color: #000;
+                border: 4px outset red;
+				display: flex;
+            }
+			button:hover{
+				color: #0ef;
+				background: blue;
+				border: #091 solid 3px;
+			}
+			input{
+				color: rgb(51, 255, 0);
+				background-color: rgb(1, 2, 116);
+				border: rgb(255, 0, 0) 6px outset;
+			}
+			label{
+				color: blue;
+			}
+			audio{
+				color: rgb(6, 1, 65);
+				border: solid 4px rgb(0, 0, 0);
+			}
+			a{
+				color: rgb(251, 255, 0);
+				display: block;
+			}
+			h4{
+				color: #f00;
+			}
+
+        </style>
+    </head>
+	<body>
+		
+		<div id="dvJogo">
+			<div id="dvBola"></div>
+			<div id="dvJogador" class="barra esquerda barra1"></div>
+			<div id="dvCpu" class="barra direita barra2"></div>
+		</div>
+
+		<div class="itemPainel">
+			<button id="btIniciar" onclick="iniciaJogo">iniciar</button>
+		</div>
+			<div class="itemPainel"></div>
+			<label>Pontos</label>
+			 <input type="text" id="txtPontos" value="0" size="10">
+		</div>
+		<h4>VOCÊ É A BARRA VERMELHA MOVIMENTE COM AS SETAS PARA CIMA E PARA BAIXO</h4>
+
+    </body>
+	<script>
+		//SOM
+		const som_HIT = new Audio();
+		som_HIT.src = './hit.wav';
+
+		//Elementos
+		var vBtIniciar;
+		var vBola;
+		var vCpu;
+		var vJogador;
+		var vPainelTxtPontos;
+		
+		//Controle de animação
+		var game,frames;
+
+		//Posições
+		var posBolaX;
+		var posBolaY;
+		var posJogadorX;
+		var posJogadorY;
+		var posCpuX;
+		var posCpuY;
+
+		//Direção de acordo com a tecla 
+		var dirJy;
+
+		//Posicões iniciais
+		var posJogIniY=180,posCpuIniY=180,posBolainiX=475,posBolaIniY=240;
+
+		//tamanhos
+		var campoX=0,campoY=0,campoW=960,campoH=500;
+
+		var barraW=20,barraH=140,bolaW=20,bolaH=20;
+
+		//Direção
+		var bolaX,bolaY;
+		var cpuY=0;
+
+		//Velocidade
+		var velBola,velCpu,velJogador;
+
+		//Controle
+		var pontos=0;
+		var tecla;  
+		var jogo = false;
+
+		function controlaJog(){
+			if(jogo){
+				posJogadorY += velJogador * dirJy;
+				if(((posJogadorY + barraH) >= campoH) || ((posJogadorY) <= 0)){
+					posJogadorY += (velJogador * dirJy) * (-1);
+				}
+				vJogador.style.top = posJogadorY + 'px';
+
+			}
+		}
+		function controlacpu(){
+			if(jogo){
+				if((posBolaX) > (campoW/2)&&(bolaX > 0)){
+					//Movimentar CPU
+					if(((posBolaY+(bolaH/2))>((posCpuY+(barraH/2)))+velCpu)){
+						//Mover para baixo
+						if((posCpuY+barraH) <= campoH){
+							posCpuY+=velCpu;
+						}
+					}else if((posBolaY+(bolaH/2)) < (posCpuY+(barraH/2))-velCpu){
+						//Mover para cima
+						if(posCpuY >= 0){
+							posCpuY-=velCpu;
+						}
+					}
+				}else{
+					//Posicionar CPU no centro
+					if((posCpuY+(barraH/2)) < (campoH/2)){
+							posCpuY+=velCpu;
+						}else if((posCpuY+(barraH/2)) > (campoH/2)){
+							posCpuY-=velCpu;
+					}	
+				}
+				vCpu.style.top=posCpuY+"px";
+			}
+		}
+		function controlaBola(){
+			posBolaX += velBola * bolaX;
+			posBolaY += velBola * bolaY;
+
+			//colisao jogador
+			if((posBolaX <= posJogadorX + barraW) && ((posBolaY + bolaH >= posJogadorY)	&& (posBolaY <= posJogadorY + barraH))){
+				bolaY = (((posBolaY + (bolaH / 2)) - (posJogadorY + (barraH / 2)))/16)
+				bolaX *= -1;
+			}
+			//colisao cpu
+			if((posBolaX >= posCpuX - barraW) && ((posBolaY + bolaH >= posCpuY)	&& (posBolaY <= posCpuY + barraH))){
+				console.log('colisao cpu')
+				bolaY = (((posBolaY + (bolaH / 2)) - (posCpuY + (barraH / 2)))/16)
+				bolaX *= -1;
+				som_HIT.play()
+
+			}
+			//Colisão com limite de superior e inferior
+			if((posBolaY >= 480)||(posBolaY <= 0)){
+
+				bolaY*=-1;
+			}
+			//foi gol pela esquerda ou pela direita
+			if(posBolaX >= (campoW-bolaW)){
+				velBola=0;
+				posBolaX=posBolainiX;
+				posBolaY=posBolaIniY;
+				posJogadorY=posJogIniY;
+				posCpuY=posCpuIniY;
+				pontos++;
+				vPainelTxtPontos.value=pontos;
+				jogo=false;
+				vJogador.style.top=posJogadorY+"px";
+
+				
+			}else if(posBolaX <= 0){
+				velBola=0;
+				posBolaX=posBolainiX;
+				posBolaY=posBolaIniY;
+				posJogadorY=posJogIniY;
+				posCpuY=posCpuIniY;
+				pontos--;
+				vPainelTxtPontos.value=pontos;
+				jogo=false;
+				vCpu.style.top=posCpuY+"px";
+
+			}
+			vBola.style.top = posBolaY + 'px';
+			vBola.style.left = posBolaX + 'px';
+		}
+		
+		function teclaDw(){
+			tecla = event.keyCode;
+			console.log(tecla, 'down')
+			switch(tecla){
+				case 38:
+					console.log('38 down')
+					dirJy =-1;
+					break;
+				case 40:
+					console.log('40 down')
+					dirJy =+1; 
+					break;
+			}
+		}
+
+		function teclaUp(){	
+			tecla = event.keyCode;
+			switch(tecla){
+				case 38:
+					console.log('38 up')
+					dirJy = 0;
+					break;
+				case 40:
+					console.log('40 up')
+					dirJy = 0;
+					break; 
+			}
+		}	
+		function game(){
+			if(jogo){
+				controlaJog()
+				controlaBola()
+				controlacpu()
+			}
+			frames = requestAnimationFrame(game);
+		}
+
+		function inicializa(){
+			velBola = 8
+			velCpu = 8
+			velJogador = 8
+			bolaY = 0
+			// bolaX = (Math.random() * 10) < 5 ? -1 : 1;
+			bolaX = 1;
+
+			vBtIniciar = document.getElementById('btIniciar');
+			vBtIniciar.addEventListener('click', iniciaJogo);
+			vJogador = document.getElementById('dvJogador');
+			vCpu = document.getElementById('dvCpu');
+			vBola = document.getElementById('dvBola');
+			vPainelTxtPontos = document.getElementById('txtPontos');
+			document.addEventListener('keydown', teclaDw);
+			document.addEventListener('keyup', teclaUp);
+			
+		}
+
+		function iniciaJogo(){
+			if(!jogo){
+				velBola=8
+				velCpu=8
+				velJogador = 8;
+				cancelAnimationFrame(frames)
+				jogo=true;
+				dirJy = 0
+				posBolaX = posBolainiX;
+				posBolaY = posBolaIniY;
+				posJogadorY = posJogIniY;
+				posJogadorX = 0;
+				posCpuY = posCpuIniY;
+				posCpuX = 940;
+				bolaY=0
+				if((Math.random()*10)<5){
+					bolax =- 1;
+				}else{
+					bolaX = 1;
+				}
+				game();
+			}
+			
+		}
+
+		window.addEventListener("load", inicializa);
+</script>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>senha</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                background-color: #5F7C8A;
+            }
+            form{
+                background-color: #fff;
+                max-width: 500px;
+                width: 70%;
+                padding: 20px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+            }
+            form h3{
+                text-align: center;
+                color: #5F7C8A;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            form input[type=password]{
+                width: 100%;
+                height: 45px;
+                border: 1px solid #ccc;
+                padding-left: 10px;
+                margin: 10px 0;
+            }
+            form input[type=submit]{
+                width: 100%;
+                height: 40px;
+                cursor: pointer;
+                background-color: #5F7C8A;
+                color: white;
+                border: 0;
+                border-radius: 20px;
+                transition: 1s;
+            }
+            form input[type=submit]:hover{
+                background-color: #4A5F6A;
+            }
+            form input[type=password]:focus{
+                outline: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="">
+
+            <h3>Senha</h3>
+            <input type="password" placeholder="Senha" id="senha">
+            <input type="submit" onclick="logar(); return false"> 
+
+        </form>
+    </body>
+    <script>
+        function logar(){
+            var senha = document.getElementById('senha').value;
+
+            if(senha == "diversao"){
+                alert("Login correto");
+                location.href = "jogo de ping pong.html"
+            }else{
+                alert('senha incorreta')
+            }
+
+        }
+        
+    </script>
+</html>
