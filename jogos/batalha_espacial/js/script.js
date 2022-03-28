@@ -18,7 +18,7 @@
 	var shots = 0;
 	var hits = 0;
 	var acuracy = 0;
-	var scoreToWin = 2;
+	var scoreToWin = 100;
 	var FIRE = 0;
 	var EXPLOSION = 1;
 	
@@ -263,16 +263,16 @@
 		var alienPosition = (Math.floor(Math.random() * 8)) * 50;
 		
 		var alien = new Alien(30,0,50,50,alienPosition,-50);
-		alien.vy = 1;
+		alien.vy = 2;
 		
 		//otimização do alien
 		if(Math.floor(Math.random() * 11) > 7){
 			alien.state = alien.CRAZY;
-			alien.vx = 2;
+			alien.vx = 3;
 		}
 		
 		if(Math.floor(Math.random() * 11) > 5){
-			alien.vy = 2;
+			alien.vy = 3;
 		}
 		
 		sprites.push(alien);
