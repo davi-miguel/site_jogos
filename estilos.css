@@ -12,6 +12,12 @@ a{
 button{
     background-color: #000;
     color: #f00;
+    margin: 30px;
+}
+#JOGOS{
+    color: #00f5d4;
+    font-family: 100pt;
+    padding: 20px;
 }
 body{
     left: 50%;
