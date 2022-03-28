@@ -55,18 +55,21 @@
         <form action="">
 
             <h3>Senha</h3>
-            <input type="password" placeholder="Senha" id="senha">
+            <input type="password" placeholder="para descobrir a senha zere a batalha espacial" id="senha">
             <input type="submit" onclick="logar(); return false"> 
 
         </form>
     </body>
     <script>
+        const som_hit = new Audio();
+        som_hit.src = "./hit.wav";
        function logar(){
             var senha = document.getElementById('senha').value;
 
-            if(senha == "diversao"){
+            if(senha == "amigo-estou-aqui"){
                 location.href = "./jogo da velha teste.html"
             }else{
+                som_hit.play();
                 alert('senha incorreta');
             }
 

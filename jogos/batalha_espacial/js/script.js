@@ -330,6 +330,7 @@
 		}else{
 			gameOverMessage.text = "MISSION SUCCESS!!!";
 			gameOverMessage.color = "#00f";
+			alert("senha do jogo da velha: AMIGO-ESTOU-AQUI");
 		}
 		gameOverMessage.visible = true;
 		setTimeout(function(){
