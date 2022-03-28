@@ -322,7 +322,7 @@ class Snake {
     this.index = i;
     this.delay = 5;
     this.size = W / cells;
-    this.color = "black";
+    this.color = "red";
     this.history = [];
     this.total = 1;
   }
@@ -330,14 +330,14 @@ class Snake {
     let { x, y } = this.pos;
     CTX.fillStyle = this.color;
     CTX.shadowBlur = 20;
-    CTX.shadowColor = "blue";
+    CTX.shadowColor = "#fff";
     CTX.fillRect(x, y, this.size, this.size);
     CTX.shadowBlur = 0;
     if (this.total >= 2) {
       for (let i = 0; i < this.history.length - 1; i++) {
         let { x, y } = this.history[i];
         CTX.lineWidth = 1;
-        CTX.fillStyle = "rgb(20, 20, 20)";
+        CTX.fillStyle = "black";
         CTX.fillRect(x, y, this.size, this.size);
       }
     }
