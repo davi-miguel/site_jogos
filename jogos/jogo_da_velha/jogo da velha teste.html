@@ -318,7 +318,7 @@
                     verifica=verificaVitoria();
                     atualizaTabuleiro();
                     if(verifica!==""){
-                        alert(verifica +" THE MACHINE WINS");
+                        alert(verifica +" VENCEU");
                         jogando=false;
                     }
                     atualizaTabuleiro();
@@ -423,7 +423,7 @@
                     verifica=verificaVitoria();
                     atualizaTabuleiro();
                     if(verifica!=""){
-                        alert(verifica+" THE PLAYER WINS");
+                        alert(verifica+" VENCEU");
                         jogando = false;
                      }
                      atualizaTabuleiro();
@@ -466,12 +466,12 @@
                 if(quemComeça==1){
                     quemComeça = 0;
                     quemJoga = quemComeça;
-                    document.getElementById("dvQuemComeça").innerHTML="WHO PLAY: PLAYER";
+                    document.getElementById("dvQuemComeça").innerHTML="QUEM COMEÇA: JOGADOR";
 
                 }else{
                     quemComeça = 1;
                     quemJoga = quemComeça;
-                    document.getElementById("dvQuemComeça").innerHTML="WHO PLAY: MACHINE";
+                    document.getElementById("dvQuemComeça").innerHTML="QUEM COMEÇA: JOGADOR";
                     cpuJoga();
                 }
             }
