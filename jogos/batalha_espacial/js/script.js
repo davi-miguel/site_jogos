@@ -268,7 +268,7 @@
 		//otimização do alien
 		if(Math.floor(Math.random() * 11) > 7){
 			alien.state = alien.CRAZY;
-			alien.vx = 3;
+			alien.vx = 4;
 		}
 		
 		if(Math.floor(Math.random() * 11) > 5){

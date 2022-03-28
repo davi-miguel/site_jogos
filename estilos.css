@@ -17,7 +17,7 @@ button{
 #JOGOS{
     color: #00f5d4;
     font-family: 100pt;
-    padding: 20px;
+    padding: 5px;
 }
 body{
     left: 50%;
@@ -115,3 +115,12 @@ summary::-webkit-details-marker{
    #DA{
        color: #000
     }
+    article{
+        padding: 15px;
+        border: 1px solid #000;
+        background-color: rgb(1, 0, 87);
+        margin-bottom: 10px;
+    }
+    article h1{
+        color: #f00;
+}
