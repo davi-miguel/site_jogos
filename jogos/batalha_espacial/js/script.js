@@ -18,7 +18,7 @@
 	var shots = 0;
 	var hits = 0;
 	var acuracy = 0;
-	var scoreToWin = 100;
+	var scoreToWin = 2;
 	var FIRE = 0;
 	var EXPLOSION = 1;
 	
@@ -330,7 +330,6 @@
 		}else{
 			gameOverMessage.text = "MISSION SUCCESS!!!";
 			gameOverMessage.color = "#00f";
-			alert("senha do jogo da velha: AMIGO-ESTOU-AQUI");
 		}
 		gameOverMessage.visible = true;
 		setTimeout(function(){
