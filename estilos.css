@@ -1,21 +1,11 @@
-a{
-    color: #f00;
-
-    cursor:pointer;
-
-    text-decoration: none;
-    
-    background-color: rgb(39, 39, 39);
-    left: 650px
-
-}
 button{
     background-color: #000;
     color: #f00;
     margin: 30px;
+    cursor: pointer;
 }
 #JOGOS{
-    color: #00f5d4;
+    color: #fbd000;
     font-family: 100pt;
     padding: 5px;
 }
@@ -42,7 +32,7 @@ body{
     border-radius: 20px 20px;
 }
 #p1{
-    color:#61F000;
+    color: #000000;
     font-family: sans-serif;
     left: 50%;
     top: 60%;
@@ -118,7 +108,7 @@ summary::-webkit-details-marker{
     article{
         padding: 15px;
         border: 1px solid #000;
-        background-color: rgb(1, 0, 87);
+        background-color: #43b047;
         margin-bottom: 10px;
     }
     article h1{
