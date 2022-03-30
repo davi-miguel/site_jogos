@@ -1,7 +1,7 @@
 button{
     background-color: #000;
     color: #f00;
-    margin: 30px;
+    margin: 3px;
     cursor: pointer;
 }
 #JOGOS{
@@ -109,7 +109,7 @@ summary::-webkit-details-marker{
         padding: 15px;
         border: 1px solid #000;
         background-color: #43b047;
-        margin-bottom: 10px;
+        margin-bottom: 1px;
     }
     article h1{
         color: #f00;
