@@ -107,7 +107,7 @@ summary::-webkit-details-marker{
     }
     article{
         padding: 15px;
-        border: 1px solid #000;
+        border: 0.24px solid #ff0400;
         background-color: #43b047;
         margin-bottom: 1px;
     }
