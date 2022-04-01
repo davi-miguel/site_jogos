@@ -7,7 +7,31 @@ button{
 #JOGOS{
     color: #fbd000;
     font-family: 100pt;
-    padding: 5px;
+    padding: 15px;
+    position: absolute;
+    left: 535px;
+    top: 209px;
+    background-color: rgb(10, 10, 10);
+}
+.image1{
+    position: absolute;
+    left: 475px;
+    top: 330px;
+}
+.image2{
+    position: absolute;
+    left: 540px;
+    top: 640px;
+}
+.image3{
+    position: absolute;
+    left: 540px;
+    top: 950px;
+}
+.image4{
+    position: absolute;
+    left: 470px;
+    top: 1300px;
 }
 body{
     left: 50%;
@@ -32,10 +56,12 @@ body{
     border-radius: 20px 20px;
 }
 #p1{
-    color: #000000;
-    font-family: sans-serif;
-    left: 50%;
-    top: 60%;
+    color: #00c7ce;
+    font-family: Tahoma;
+    font-size: 40px;
+    left: 30%;
+    top: 130px;
+    position: relative;
 }
 .p2{
     color: #43B057;
@@ -44,12 +70,7 @@ body{
 .h3{
     color: #E52521;
 }
-.p10{
-    color: #E52521;
-}
-.p12{
-    color: #fff;
-}
+
 .h2{
     width: 288px;
 
@@ -105,12 +126,34 @@ summary::-webkit-details-marker{
    #DA{
        color: #000
     }
-    article{
-        padding: 15px;
+    .article{
         border: 0.24px solid #ff0400;
         background-color: #43b047;
         margin-bottom: 1px;
+        width: 370px;
+        padding: 14px;
+        position: absolute;
+        left: 956px;
+        top: 300px;
     }
-    article h1{
-        color: #f00;
+    .articled{
+        padding: 5px;
+        background-color: rgb(0, 0, 0);
+        margin-bottom: 30px;
+    }
+    .articledd{
+        border: 0.24px solid #ff0400;
+        background-color: #43b047;
+        margin-bottom: 1px;
+        width: 370px;
+        padding: 14px;
+        position: absolute;
+        left: 0px;
+        top: 300px;
+    }
+.touro{
+    display: flex;
+    position: absolute;
+    left: 40%;
+    top: 10px;
 }
