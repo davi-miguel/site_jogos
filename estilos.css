@@ -6,11 +6,12 @@ button{
 }
 #JOGOS{
     color: #fbd000;
-    font-family: 100pt;
+    font-size: 30pt;
     padding: 15px;
     position: absolute;
     left: 535px;
     top: 209px;
+    width: 150px;
     background-color: rgb(10, 10, 10);
 }
 .image1{
@@ -20,8 +21,8 @@ button{
 }
 .image2{
     position: absolute;
-    left: 540px;
-    top: 640px;
+    left: 570px;
+    top: 720px;
 }
 .image3{
     position: absolute;
@@ -33,34 +34,13 @@ button{
     left: 470px;
     top: 1300px;
 }
-body{
-    left: 50%;
-}
-.o{
-    font-family: sans-serif;
 
-    color: #1000E0;
-
-    padding-left: 20px; 
-
-    background-color: #FF004F;
-
-    width: 490px;
-
-    height: 40px;
-
-    align-items: center;
-
-    border: #049CD8 solid 2px;
-
-    border-radius: 20px 20px;
-}
 #p1{
     color: #00c7ce;
     font-family: Tahoma;
     font-size: 40px;
-    left: 30%;
-    top: 130px;
+    left: 440px;
+    top: 106px;
     position: relative;
 }
 .p2{
@@ -70,58 +50,8 @@ body{
 .h3{
     color: #E52521;
 }
-
-.h2{
-    width: 288px;
-
-    display: inline;
-
-    height: 288px;
-}
-h6{
-    font-size: 5px;
-}
-
-summary::-webkit-details-marker{
-    color:#f00; 
-   }
-   details[open] summary ::-webkit-details-marker{
-    color:#00f; 
-   }
-   summary{
-       color: #049CD8;
-       cursor: pointer;
-   }
-   summary:hover{
-       color: rgb(0, 255, 136);
-       cursor: pointer;
-   }
-   details{
-       color: #049CD8;
-   }
-   .h4{
-       display: block;
-       display: inline;
-       width: 315px;
-       height: 290px;
-   }
-   .h3{
-       display: inline;
-   }
-
-   #d{
-    display: inline;
-   }
-   #a{
-    display: inline;
-   }
    #p{
     border-right: #f00 solid 100px;
-   }
-   span{
-       background-color: #00f;
-       border: #E52521 solid 2px;
-       height: 200px;
    }
    #DA{
        color: #000
@@ -130,11 +60,14 @@ summary::-webkit-details-marker{
         border: 0.24px solid #ff0400;
         background-color: #43b047;
         margin-bottom: 1px;
-        width: 370px;
+        width: 356px;
         padding: 14px;
         position: absolute;
         left: 956px;
         top: 300px;
+    }
+    h1{
+        width: 500px;
     }
     .articled{
         padding: 5px;
@@ -145,7 +78,7 @@ summary::-webkit-details-marker{
         border: 0.24px solid #ff0400;
         background-color: #43b047;
         margin-bottom: 1px;
-        width: 370px;
+        width: 367px;
         padding: 14px;
         position: absolute;
         left: 0px;
@@ -154,6 +87,6 @@ summary::-webkit-details-marker{
 .touro{
     display: flex;
     position: absolute;
-    left: 40%;
+    left: 570px;
     top: 10px;
 }

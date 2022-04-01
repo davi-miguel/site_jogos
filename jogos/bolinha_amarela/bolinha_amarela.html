@@ -17,7 +17,9 @@
 	</head>
 	<body>
 	<script>
-		//variáveis do jogo
+				//variáveis do jogo
+		const som_HIT = new Audio();
+		som_HIT.src = './hit.wav';
         var canvas, ctx, ALTURA, LARGURA, VELOCIDADE = 6, maxPulos = 3,
         estadoAtual, record, img,
 
@@ -170,6 +172,7 @@
                         obj.y <= bloco.y + bloco.altura) {
 
 						bloco.colidindo = true
+						
 
 						setTimeout(function() {
 							bloco.colidindo = false;
@@ -177,9 +180,11 @@
 
 						if (bloco.vidas >= 1)
 							bloco.vidas--;
+							
 
 						else {
 							estadoAtual = estados.perdeu
+							
 						}
 					}
 
@@ -257,7 +262,7 @@
 			canvas = document.createElement("canvas");
 			canvas.width = LARGURA;
 			canvas.height = ALTURA;
-			canvas.style.border = "1px solid #000";
+			canvas.style.border = "2px solid red";
 
 			ctx = canvas.getContext("2d");
 			document.body.appendChild(canvas);
@@ -295,7 +300,7 @@
 		function desenha() {
 			bg.desenha(0, 0);
 
-			ctx.fillStyle = "#fff";
+			ctx.fillStyle = "purple";
 			ctx.font = "50px Arial";
 			ctx.fillText(bloco.score, 30, 68);
 			ctx.fillText(bloco.vidas, 540, 68);
