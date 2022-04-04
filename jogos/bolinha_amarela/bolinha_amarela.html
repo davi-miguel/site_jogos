@@ -18,8 +18,8 @@
 	<body>
 	<script>
 				//variáveis do jogo
-		const som_HIT = new Audio();
-		som_HIT.src = './hit.wav';
+		const som_Pula = new Audio();
+		som_Pula.src = './pulo.wav';
         var canvas, ctx, ALTURA, LARGURA, VELOCIDADE = 6, maxPulos = 3,
         estadoAtual, record, img,
 
@@ -82,14 +82,14 @@
 			y: 0,
 			altura: spriteBoneco.altura,
 			largura: spriteBoneco.largura,
-			gravidade: 1.6,
+			gravidade: 2.0,
 			velocidade: 0,
 			forcaDoPulo: 23.6,
 			qntPulos: 0,
 			score: 0,
 			rotacao: 0,
 
-			vidas: 3,
+			vidas: 6,
 			colidindo: false,
 
 			atualiza: function() {
@@ -106,6 +106,7 @@
 
 			pula: function() {
 				if (this.qntPulos < maxPulos) {
+					som_Pula.play();
 					this.velocidade = -this.forcaDoPulo;
 					this.qntPulos++;
 				}
@@ -119,12 +120,12 @@
 					localStorage.setItem("record", this.score);
 				}
 
-				this.vidas = 3;
+				this.vidas = 6;
 				this.score = 0;
 
 				VELOCIDADE = 6;
 				faseAtual = 0;
-				this.gravidade = 1.6;
+				this.gravidade = 2.0;
 
 			},
 
