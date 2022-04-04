@@ -263,16 +263,16 @@
 		var alienPosition = (Math.floor(Math.random() * 8)) * 50;
 		
 		var alien = new Alien(30,0,50,50,alienPosition,-50);
-		alien.vy = 2;
+		alien.vy = 1;
 		
 		//otimização do alien
 		if(Math.floor(Math.random() * 11) > 7){
 			alien.state = alien.CRAZY;
-			alien.vx = 4;
+			alien.vx = 3;
 		}
 		
 		if(Math.floor(Math.random() * 11) > 5){
-			alien.vy = 3;
+			alien.vy = 2;
 		}
 		
 		sprites.push(alien);
