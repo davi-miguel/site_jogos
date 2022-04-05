@@ -22,7 +22,7 @@
 		const som_HIT = new Audio();
 		som_HIT.src = './hit.wav';
 		som_Pula.src = './pulo.wav';
-        var canvas, ctx, ALTURA, LARGURA, VELOCIDADE = 8, maxPulos = 3,
+        var canvas, ctx, ALTURA, LARGURA, VELOCIDADE = 8, maxPulos = 4,
         estadoAtual, record, img,
 
 		pontosParaNovaFase = [5, 10, 15, 20],
@@ -84,7 +84,7 @@
 			y: 0,
 			altura: spriteBoneco.altura,
 			largura: spriteBoneco.largura,
-			gravidade: 1.3,
+			gravidade: 0.5,
 			velocidade: 0,
 			forcaDoPulo: 23.6,
 			qntPulos: 0,
@@ -127,7 +127,7 @@
 
 				VELOCIDADE = 8;
 				faseAtual = 0;
-				this.gravidade = 1.3;
+				this.gravidade = 0.5;
 
 			},
 
