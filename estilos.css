@@ -60,11 +60,12 @@ button{
         border: 0.24px solid #ff0400;
         background-color: #43b047;
         margin-bottom: 1px;
-        width: 356px;
+        width: 340px;
         padding: 14px;
         position: absolute;
         left: 956px;
         top: 300px;
+        height: 1210px;
     }
     h1{
         width: 500px;
@@ -83,6 +84,7 @@ button{
         position: absolute;
         left: 0px;
         top: 300px;
+        height: 1210px;
     }
 .touro{
     display: flex;
