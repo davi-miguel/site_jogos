@@ -65,12 +65,16 @@
 	//ações
 	var mvLeft = mvRight = shoot = spaceIsDown = false;
 
-	const atira = document.getElementById("btnAtira");
-	
+	const atira = document.getElementById("btnAtira")
+
 	btnAtira = addEventListener("click", atiraCanhao)
 
-    const 
+    const moveEsquerda = document.getElementById("btnEsquerda");
+
+	btnEsquerda = addEventListener("click", esquerda)
 	
+	const moveDireita = document.getElementById("btnDireita")
+	btnDireita = addEventListener("click", direita)
 	//estados do jogo
 	var LOADING = 0, PLAYING = 1,  PAUSED = 2, OVER = 3;
 	var gameState = LOADING;
@@ -157,6 +161,7 @@
 		}
 		render();
 	}
+
 	function atiraCanhao(){
 		if(!btnAtira){
 			fireMissile();
@@ -165,13 +170,15 @@
 	}
 
 	function direita(){
-		
+		//move para a direita
+		if(mvRight && !mvLeft){
+			defender.vx = 5;
+		}
 	}
 
 	function esquerda(){
 		if(mvLeft && !mvRight){
 			defender.vx = -5;
-			
 		}
 	}
 	
@@ -182,8 +189,6 @@
 			defender.vx = -5;
 			
 		}
-
-		
 
 		//move para a direita
 		if(mvRight && !mvLeft){
@@ -201,9 +206,6 @@
 			shoot = false;
 			
 		}
-		esquerda();
-		direita();
-
 		//atualiza a posição
 		defender.x = Math.max(0,Math.min(cnv.width - defender.width, defender.x + defender.vx));
 		

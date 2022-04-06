@@ -8,14 +8,14 @@ h3{
 #f{
 	color: red;
 }
-#esquerda{
+#btnEsquerda{
 	position: absolute;
 	left: 300px;
 	top: 500px;
 	color: #000000;
 	background-color: #e52521;
 }
-#direita{
+#btnDireita{
 	position: absolute;
 	left: 905px;
 	top: 500px;
