@@ -64,6 +64,12 @@
 	
 	//ações
 	var mvLeft = mvRight = shoot = spaceIsDown = false;
+
+	const atira = document.getElementById("btnAtira");
+	
+	btnAtira = addEventListener("click", atiraCanhao)
+
+    const 
 	
 	//estados do jogo
 	var LOADING = 0, PLAYING = 1,  PAUSED = 2, OVER = 3;
@@ -85,6 +91,7 @@
 					spaceIsDown = true;
 				}
 				break;
+			
 		}
 	},false);
 
@@ -114,7 +121,10 @@
 				break;
 			case SPACE:
 				spaceIsDown = false;
+				break;
 		}
+
+		
 	},false);
 	
 	
@@ -147,41 +157,37 @@
 		}
 		render();
 	}
+	function atiraCanhao(){
+		if(!btnAtira){
+			fireMissile();
+			shoot = false;
+		}
+	}
+
+	function direita(){
+		
+	}
+
+	function esquerda(){
+		if(mvLeft && !mvRight){
+			defender.vx = -5;
+			
+		}
+	}
 	
 	function update(){
 		
 		//move para a esquerda
 		if(mvLeft && !mvRight){
 			defender.vx = -5;
-			moveEda();
+			
 		}
 
-		function Ata(){
-			//dispara o canhão
-			if(shoot){
-				fireMissile();
-				shoot = false;
-			}
-	}
-	
-		function moveDta(){
-			//move para a direita
-			if(mvRight && !mvLeft){
-				defender.vx = 5;
-			}
-		}
-	
-		function moveEda(){
-			//move para a esquerda
-			if(mvLeft && !mvRight){
-				defender.vx = -5;
-			}
-		}
+		
 
 		//move para a direita
 		if(mvRight && !mvLeft){
 			defender.vx = 5;
-			moveDta();
 		}
 		
 		//para a nave
@@ -193,8 +199,10 @@
 		if(shoot){
 			fireMissile();
 			shoot = false;
-			Ata();
+			
 		}
+		esquerda();
+		direita();
 
 		//atualiza a posição
 		defender.x = Math.max(0,Math.min(cnv.width - defender.width, defender.x + defender.vx));

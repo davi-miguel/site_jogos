@@ -8,21 +8,21 @@ h3{
 #f{
 	color: red;
 }
-#Esquerda{
+#esquerda{
 	position: absolute;
 	left: 300px;
 	top: 500px;
 	color: #000000;
 	background-color: #e52521;
 }
-#Direita{
+#direita{
 	position: absolute;
 	left: 905px;
 	top: 500px;
 	color: #000000;
 	background-color: #e52521;
 }
-#Ata{
+#btnAtira{
 	position: absolute;
 	left: 640px;
 	top: 550px;
