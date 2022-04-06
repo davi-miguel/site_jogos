@@ -8,3 +8,24 @@ h3{
 #f{
 	color: red;
 }
+#Esquerda{
+	position: absolute;
+	left: 300px;
+	top: 500px;
+	color: #000000;
+	background-color: #e52521;
+}
+#Direita{
+	position: absolute;
+	left: 905px;
+	top: 500px;
+	color: #000000;
+	background-color: #e52521;
+}
+#Ata{
+	position: absolute;
+	left: 640px;
+	top: 550px;
+	color: #000000;
+	background-color: #e52521;
+}

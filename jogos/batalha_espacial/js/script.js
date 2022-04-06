@@ -66,7 +66,7 @@
 	var mvLeft = mvRight = shoot = spaceIsDown = false;
 	
 	//estados do jogo
-	var LOADING = 0, PLAYING = 1, PAUSED = 2, OVER = 3;
+	var LOADING = 0, PLAYING = 1,  PAUSED = 2, OVER = 3;
 	var gameState = LOADING;
 	
 	//listeners
@@ -87,6 +87,8 @@
 				break;
 		}
 	},false);
+
+	
 	
 	window.addEventListener('keyup',function(e){
 		var key = e.keyCode;
@@ -126,6 +128,8 @@
 			gameState = PAUSED;
 		}
 	}
+
+	
 	
 	function loop(){
 		requestAnimationFrame(loop, cnv);
@@ -145,14 +149,39 @@
 	}
 	
 	function update(){
+		
 		//move para a esquerda
 		if(mvLeft && !mvRight){
 			defender.vx = -5;
+			moveEda();
 		}
-		
+
+		function Ata(){
+			//dispara o canhão
+			if(shoot){
+				fireMissile();
+				shoot = false;
+			}
+	}
+	
+		function moveDta(){
+			//move para a direita
+			if(mvRight && !mvLeft){
+				defender.vx = 5;
+			}
+		}
+	
+		function moveEda(){
+			//move para a esquerda
+			if(mvLeft && !mvRight){
+				defender.vx = -5;
+			}
+		}
+
 		//move para a direita
 		if(mvRight && !mvLeft){
 			defender.vx = 5;
+			moveDta();
 		}
 		
 		//para a nave
@@ -164,8 +193,9 @@
 		if(shoot){
 			fireMissile();
 			shoot = false;
+			Ata();
 		}
-		
+
 		//atualiza a posição
 		defender.x = Math.max(0,Math.min(cnv.width - defender.width, defender.x + defender.vx));
 		

@@ -22,7 +22,7 @@
 		const som_HIT = new Audio();
 		som_HIT.src = './hit.wav';
 		som_Pula.src = './pulo.wav';
-        var canvas, ctx, ALTURA, LARGURA, VELOCIDADE = 8, maxPulos = 4,
+        var canvas, ctx, ALTURA, LARGURA, VELOCIDADE = 10, maxPulos = 4,
         estadoAtual, record, img,
 
 		pontosParaNovaFase = [5, 10, 15, 20],
@@ -125,7 +125,7 @@
 				this.vidas = 6;
 				this.score = 0;
 
-				VELOCIDADE = 8;
+				VELOCIDADE = 10;
 				faseAtual = 0;
 				this.gravidade = 1.0;
 
@@ -237,7 +237,6 @@
 
 			else if (estadoAtual == estados.jogando)
 				bloco.pula();
-				
 		}
 
 		function passarDeFase() {
