@@ -16,23 +16,23 @@ button{
 }
 .image1{
     position: absolute;
-    left: 475px;
+    left: 0px;
     top: 330px;
 }
 .image2{
     position: absolute;
-    left: 570px;
+    left: 10px;
     top: 720px;
 }
 .image3{
     position: absolute;
-    left: 540px;
-    top: 950px;
+    left: 1130px;
+    top: 720px;
 }
 .image4{
     position: absolute;
-    left: 470px;
-    top: 1300px;
+    left: 1020px;
+    top: 330px;
 }
 
 #p1{
@@ -56,17 +56,7 @@ button{
    #DA{
        color: #000
     }
-    .article{
-        border: 0.24px solid #ff0400;
-        background-color: #43b047;
-        margin-bottom: 1px;
-        width: 340px;
-        padding: 14px;
-        position: absolute;
-        left: 956px;
-        top: 300px;
-        height: 1210px;
-    }
+    
     h1{
         width: 500px;
     }
@@ -79,16 +69,45 @@ button{
         border: 0.24px solid #ff0400;
         background-color: #43b047;
         margin-bottom: 1px;
-        width: 367px;
+        width: 1317px;
         padding: 14px;
         position: absolute;
         left: 0px;
-        top: 300px;
-        height: 1210px;
+        top: 350px;
+        height: 2450px;
     }
 .touro{
     display: flex;
     position: absolute;
     left: 527px;
     top: 10px;
+}
+#cobrinha{
+    position: absolute;
+    left: 461px;
+}
+#velha{
+    position: absolute;
+    left: 461px;
+    top: 400px;
+}
+#ping{
+    position: absolute;
+    left: 461px;
+    top: 800px;
+}
+#nave{
+    position: absolute;
+    left: 461px;
+    top: 1250px;
+}
+#flappy{
+    position: absolute;
+    left: 461px;
+    top: 1650px;
+}
+#bola{
+    position: absolute;
+    left: 461px;
+    top: 2120px;
 }

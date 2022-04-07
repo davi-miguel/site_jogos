@@ -179,7 +179,8 @@
 	function esquerda(){
 		if(mvLeft && !mvRight){
 			defender.vx = -5;
-		}
+		
+	}
 	}
 	
 	function update(){
@@ -204,7 +205,6 @@
 		if(shoot){
 			fireMissile();
 			shoot = false;
-			
 		}
 		//atualiza a posição
 		defender.x = Math.max(0,Math.min(cnv.width - defender.width, defender.x + defender.vx));
