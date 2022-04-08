@@ -1,0 +1,12 @@
+
+#gallery-container {
+    grid-template-columns: 1fr;
+}
+
+.gallery-image {
+    width: 100%;
+}
+
+#art1{
+    color: #00A2F0;
+}
