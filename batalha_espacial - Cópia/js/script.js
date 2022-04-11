@@ -98,6 +98,18 @@
 		}
 	},false);
 
+	document.getElementById('init_jogo').addEventListener('click', () => {
+		if(gameState !== OVER){
+			if(gameState !== PLAYING){
+				gameState = PLAYING;
+				startMessage.visible = false;
+				pausedMessage.visible = false;
+			} else {
+				gameState = PAUSED;
+				pausedMessage.visible = true;
+			}
+		}
+	})
 	
 	
 	window.addEventListener('keyup',function(e){
@@ -112,15 +124,15 @@
 			case ENTER:
 				if(gameState !== OVER){
 				
-				if(gameState !== PLAYING){
-					gameState = PLAYING;
-					startMessage.visible = false;
-					pausedMessage.visible = false;
-				} else {
-					gameState = PAUSED;
-					pausedMessage.visible = true;
+					if(gameState !== PLAYING){
+						gameState = PLAYING;
+						startMessage.visible = false;
+						pausedMessage.visible = false;
+					} else {
+						gameState = PAUSED;
+						pausedMessage.visible = true;
+					}
 				}
-			}
 				break;
 			case SPACE:
 				spaceIsDown = false;
