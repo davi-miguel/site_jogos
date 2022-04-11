@@ -25,25 +25,25 @@ window.addEventListener("scroll", function () {
 
 
 function logar1(){
-    location.href="jogos/cobrinha/cobrinha.html";
+    location.href="cobrinha.html";
  }
 
  function logar2(){
-        location.href="jogos/jogo_da_velha/jogo_da_velha.html";
+        location.href="jogo_da_velha.html";
 
      }
      function logar3(){
-        location.href="jogos/ping_pong/ping_pong.html";
+        location.href="ping_pong.html";
      }
      function logar4(){
-        location.href="jogos/batalha_espacial/batalha_espacial.html";
+        location.href="batalha_espacial.html";
 
      }
      function logar5(){
-        location.href="jogos/flappy_bird/flappy_bird.html";
+        location.href="flappy_bird.html";
 
      }
 
      function logar6(){
-        location.href="jogos/bolinha_amarela/bolinha_amarela.html";
+        location.href="bolinha_amarela.html";
      }
