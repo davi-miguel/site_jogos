@@ -64,12 +64,29 @@
 	
 	//ações
 	var mvLeft = mvRight = shoot = spaceIsDown = false;
+
+	document
+	.getElementById("btnAtira")
+	.addEventListener("click", atiraCanhao)
+
+    const btn_esquerda = document.getElementById("btnEsquerda")
+	
+	btn_esquerda.addEventListener("touchstart", () => {
+		mvLeft = true;
+	})
+	btn_esquerda.addEventListener('touchend', () => {
+		mvLeft = false;
+	})
+	
+	document
+	.getElementById("btnDireita")
+	.addEventListener("click", direita)
 	//estados do jogo
 	var LOADING = 0, PLAYING = 1,  PAUSED = 2, OVER = 3;
 	var gameState = LOADING;
 	
 	//listeners
-	window.addEventListener('keydown',function(e){
+	window.addEventListener('keydown', (e) => {
 		var key = e.keyCode;
 		switch(key){
 			case LEFT:
@@ -115,9 +132,7 @@
 			case SPACE:
 				spaceIsDown = false;
 				break;
-		}
-
-		
+		}	
 	},false);
 	
 	
@@ -168,20 +183,8 @@
 		if(mvLeft && !mvRight){
 			defender.vx = -5;
 		
+		}
 	}
-}
-
-const Atira = document.getElementById("Atira")
-
-Atira.addEventListener("click", atiraCanhao)
-
-const moveEsquerda = document.getElementById("moveEsquerda");
-
-moveEsquerda.addEventListener("click", esquerda)
-
-const moveDireita = document.getElementById("moveDireita");
-
-moveDireita.addEventListener("click", direita)
 	
 	function update(){
 		
