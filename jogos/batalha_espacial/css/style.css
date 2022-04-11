@@ -8,24 +8,6 @@ h3{
 #f{
 	color: red;
 }
-#btnEsquerda{
-	position: absolute;
-	left: 300px;
-	top: 500px;
-	color: #000000;
-	background-color: #e52521;
-}
-#btnDireita{
-	position: absolute;
-	left: 905px;
-	top: 500px;
-	color: #000000;
-	background-color: #e52521;
-}
-#btnAtira{
-	position: absolute;
-	left: 640px;
-	top: 550px;
-	color: #000000;
-	background-color: #e52521;
+#voltar1{
+	font-size: 50pt;
 }

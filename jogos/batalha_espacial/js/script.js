@@ -65,16 +65,6 @@
 	//ações
 	var mvLeft = mvRight = shoot = spaceIsDown = false;
 
-	const atira = document.getElementById("btnAtira")
-
-	btnAtira = addEventListener("click", atiraCanhao)
-
-    const moveEsquerda = document.getElementById("btnEsquerda");
-
-	btnEsquerda = addEventListener("click", esquerda)
-	
-	const moveDireita = document.getElementById("btnDireita")
-	btnDireita = addEventListener("click", direita)
 	//estados do jogo
 	var LOADING = 0, PLAYING = 1,  PAUSED = 2, OVER = 3;
 	var gameState = LOADING;
@@ -143,7 +133,9 @@
 		}
 	}
 
-	
+	function voltar(){
+			location.href = "./jogo da velha teste.html"
+	}
 	
 	function loop(){
 		requestAnimationFrame(loop, cnv);
@@ -160,27 +152,6 @@
 				break;
 		}
 		render();
-	}
-
-	function atiraCanhao(){
-		if(!btnAtira){
-			fireMissile();
-			shoot = false;
-		}
-	}
-
-	function direita(){
-		//move para a direita
-		if(mvRight && !mvLeft){
-			defender.vx = 5;
-		}
-	}
-
-	function esquerda(){
-		if(mvLeft && !mvRight){
-			defender.vx = -5;
-		
-	}
 	}
 	
 	function update(){
