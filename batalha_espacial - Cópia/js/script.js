@@ -64,17 +64,6 @@
 	
 	//ações
 	var mvLeft = mvRight = shoot = spaceIsDown = false;
-
-	const atira = document.getElementById("btnAtira")
-
-	btnAtira = addEventListener("click", atiraCanhao)
-
-    const moveEsquerda = document.getElementById("btnEsquerda");
-
-	btnEsquerda = addEventListener("click", esquerda)
-	
-	const moveDireita = document.getElementById("btnDireita")
-	btnDireita = addEventListener("click", direita)
 	//estados do jogo
 	var LOADING = 0, PLAYING = 1,  PAUSED = 2, OVER = 3;
 	var gameState = LOADING;
@@ -163,9 +152,8 @@
 	}
 
 	function atiraCanhao(){
-		if(!btnAtira){
-			fireMissile();
-			shoot = false;
+		if(!Atira){
+			alert("atira");
 		}
 	}
 
@@ -181,7 +169,19 @@
 			defender.vx = -5;
 		
 	}
-	}
+}
+
+const Atira = document.getElementById("Atira")
+
+Atira.addEventListener("click", atiraCanhao)
+
+const moveEsquerda = document.getElementById("moveEsquerda");
+
+moveEsquerda.addEventListener("click", esquerda)
+
+const moveDireita = document.getElementById("moveDireita");
+
+moveDireita.addEventListener("click", direita)
 	
 	function update(){
 		
