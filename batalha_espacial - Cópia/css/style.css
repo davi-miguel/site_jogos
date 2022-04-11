@@ -9,7 +9,7 @@ h3{
 	color: red;
 }
 #moveEsquerda{
-	position: absolute;
+	/* position: absolute; */
 	left: 300px;
 	top: 500px;
 	color: #000000;
