@@ -66,13 +66,33 @@
 	var mvLeft = mvRight = shoot = spaceIsDown = false;
 
     const btn_esquerda = document.getElementById("moveEsquerda")
-	
 	btn_esquerda.addEventListener("touchstart", () => {
 		mvLeft = true;
 	})
 	btn_esquerda.addEventListener('touchend', () => {
 		mvLeft = false;
 	})
+
+	const btn_direita = document.getElementById('moveDireita')
+	btn_direita.addEventListener("touchstart", () => {
+		mvRight = true;
+	})
+	btn_direita.addEventListener('touchend', () => {
+		mvRight = false;
+	})
+
+	const btn_atira = document.getElementById('Atira')
+	btn_atira.addEventListener("touchstart", () => {
+		if(!spaceIsDown){
+			shoot = true;
+			spaceIsDown = true;
+		}
+	})
+	btn_atira.addEventListener('touchend', () => {
+		spaceIsDown = false;
+	})
+
+
 	
 	//estados do jogo
 	var LOADING = 0, PLAYING = 1,  PAUSED = 2, OVER = 3;

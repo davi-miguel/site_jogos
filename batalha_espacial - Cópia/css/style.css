@@ -8,24 +8,30 @@ h3{
 #f{
 	color: red;
 }
-#moveEsquerda{
-	/* position: absolute; */
+
+.botoes {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+
+.botoes button{
+	margin: 20px;
 	left: 300px;
 	top: 500px;
 	color: #000000;
 	background-color: #e52521;
+	display: flex;
 }
-#moveDireita{
-	position: absolute;
-	left: 905px;
-	top: 500px;
-	color: #000000;
-	background-color: #e52521;
-}
-#Atira{
-	position: absolute;
-	left: 640px;
-	top: 550px;
-	color: #000000;
-	background-color: #e52521;
-}
+
+@media only screen and (min-device-width: 500px) {
+	#moveEsquerda{
+		position: absolute;
+		display: none;
+	}
+	.botoes button{
+		position: absolute;
+		display: none;
+	}
+  }
+
