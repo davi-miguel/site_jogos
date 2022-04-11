@@ -65,11 +65,7 @@
 	//ações
 	var mvLeft = mvRight = shoot = spaceIsDown = false;
 
-	document
-	.getElementById("btnAtira")
-	.addEventListener("click", atiraCanhao)
-
-    const btn_esquerda = document.getElementById("btnEsquerda")
+    const btn_esquerda = document.getElementById("moveEsquerda")
 	
 	btn_esquerda.addEventListener("touchstart", () => {
 		mvLeft = true;
@@ -78,9 +74,6 @@
 		mvLeft = false;
 	})
 	
-	document
-	.getElementById("btnDireita")
-	.addEventListener("click", direita)
 	//estados do jogo
 	var LOADING = 0, PLAYING = 1,  PAUSED = 2, OVER = 3;
 	var gameState = LOADING;
