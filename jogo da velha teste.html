@@ -28,23 +28,32 @@
                 background: rgb(0, 17, 255);
             }
             #dvjogo{
-                width: 160px;
-                height: 160px;
+                width: 190px;
+                height: 190px;
                 display: flex;
                 flex-wrap: wrap;
                 align-content: flex-start;
             }
+            #dvmenu{
+                left: 530px;
+                top: 50px;
+                position: relative;
+                width: 300px;
+            }
             .posJogo{
-                width: 50px;
-                height: 50px;
+                width: 53px;
+                height: 53px;
                 margin: 0px;
                 padding: 0px;
                 cursor: pointer;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 40px;
+                font-size: 90px;
                 color: rgb(9, 255, 0);
+                left: 535px;
+                top: 70px;
+                position: relative;
 
             }
             #p1{
@@ -108,11 +117,18 @@
             }
             #dvQuemComeça{
                 color: #0ef;
+                left: 500px;
+                top: 40px;
+                position: relative;
+                width: 300px;
             }
 
             .a{
     text-decoration: none;
     color: inherit;
+    left: 470px;
+    top: 90px;
+    position: relative;
 }
 
 .btn {
@@ -133,11 +149,11 @@
         </style>
     </head>
     <body>
+        <div id="dvQuemComeça">QUEM JOGA:</div>
         <div id="dvmenu">
-            <div id="dvQuemComeça">QUEM JOGA:</div>
-            <button onclick="inicia()">START GAME</button>
+            <button onclick="inicia()">JOGAR</button>
+        <button type="button" onclick="d()">CLIQUE AQUI</button>
         </div>
-        <button type="button" onclick="d()">CLICK HERE</button>
         <div id="dvjogo">
             <div id="p1" class="posJogo" onclick="jogar(1)"></div>
             <div id="p2" class="posJogo" onclick="jogar(2)"></div>
@@ -149,8 +165,8 @@
             <div id="p8" class="posJogo" onclick="jogar(8)"></div>
             <div id="p9" class="posJogo" onclick="jogar(9)"></div>
         </div>
-        
         <a href="./index.html" id="voltar" class="btn a">Voltar para site</a>
+        
 
     </body>
     

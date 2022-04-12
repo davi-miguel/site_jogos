@@ -29,7 +29,7 @@ function logar1(){
  }
 
  function logar2(){
-        location.href="jogo_da_velha.html";
+        location.href="jogo da velha teste.html";
 
      }
      function logar3(){
