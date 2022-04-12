@@ -36,7 +36,7 @@ function logar1(){
         location.href="ping_pong.html";
      }
      function logar4(){
-        location.href="./batalha_espacial - Cópia/batalha_espacial.html";
+        location.href="./batalha_espacial.html";
 
      }
      function logar5(){

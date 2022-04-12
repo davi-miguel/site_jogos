@@ -3,18 +3,30 @@
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <title>Batalha Espacial</title>
-<link rel="stylesheet" type="text/css" href="css btl/style.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body bgcolor="#000">
-
+	
 	<div style="width: 400px; height: 500px; position: relative; margin: 0 auto; border: solid 3px #00f; background-color: #fff; top: 20px;">
 		<canvas width="400" height="500"></canvas>
 	</div>
-	<audio id="music" src="sound/musica.mp4" loop autoplay></audio>
-	<script src="js btl/objects.js"></script>
-	<script src="js btl/collision.js"></script>
-	<script src="js btl/script.js"></script>
+	<div class="botoes">
+		<button id="moveEsquerda"><h1>esquerda</h1></button>
 
-	<a href="index.html" id="voltar" class="btn">Voltar para site</a>	
+		<button id="moveDireita"><h1>direita</h1></button>
+	
+		<button id="Atira"><h1>canhao de plasma</h1></button>
+
+		<button id="init_jogo"><h1>Iniciar jogo</h1></button>
+		
+	</div>
+	<audio id="music" src="sound/music.ogg" loop autoplay></audio>
+	<script src="js/objects.js"></script>
+	<script src="js/collision.js"></script>
+	<script src="js/script.js"></script>
+
+	<div id="final">
+        <a href="./index.html" class="btn">Voltar para site</a>
+	</div>
 </body>
 </html>
