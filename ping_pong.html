@@ -80,11 +80,13 @@
                 background-color: #000;
                 border: 4px outset red;
 				display: flex;
+				transition: 6s;
             }
 			button:hover{
 				color: #0ef;
 				background: blue;
-				border: #091 solid 3px;
+				border: #091 outset 4px;
+				transition: 1s;
 			}
 			input{
 				color: rgb(51, 255, 0);
@@ -117,7 +119,9 @@
 		</div>
 
 		<div class="itemPainel">
-			<button id="btIniciar" onclick="iniciaJogo">iniciar</button>
+			<button id="btIniciar" onclick="iniciaJogo">INICIAR</button>
+			<button id="moveCima" onclick="iniciaJogo">PARA CIMA</button>
+			<button id="moveBaixo" onclick="iniciaJogo">PARA BAIXO</button>
 		</div>
 			<div class="itemPainel"></div>
 			<label>Pontos</label>
@@ -170,8 +174,27 @@
 
 		//Controle
 		var pontos=0;
-		var tecla;  
+		var tecla; 
 		var jogo = false;
+
+
+		const btn_esquerda = document.getElementById("moveBaixo")
+		btn_esquerda.addEventListener("touchstart", () => {
+			
+		})
+		btn_esquerda.addEventListener('touchend', () => {
+			
+		})
+
+		const btn_direita = document.getElementById('moveCima')
+		btn_direita.addEventListener("touchstart", () => {
+
+		})
+		btn_direita.addEventListener('touchend', () => {
+			
+		})
+
+
 
 		function controlaJog(){
 			if(jogo){
@@ -217,13 +240,14 @@
 			if((posBolaX <= posJogadorX + barraW) && ((posBolaY + bolaH >= posJogadorY)	&& (posBolaY <= posJogadorY + barraH))){
 				bolaY = (((posBolaY + (bolaH / 2)) - (posJogadorY + (barraH / 2)))/16)
 				bolaX *= -1;
+				som_HIT.play();
 			}
 			//colisao cpu
 			if((posBolaX >= posCpuX - barraW) && ((posBolaY + bolaH >= posCpuY)	&& (posBolaY <= posCpuY + barraH))){
 				console.log('colisao cpu')
 				bolaY = (((posBolaY + (bolaH / 2)) - (posCpuY + (barraH / 2)))/16)
 				bolaX *= -1;
-				som_HIT.play()
+				som_HIT.play();
 
 			}
 			//Colisão com limite de superior e inferior
@@ -242,6 +266,7 @@
 				vPainelTxtPontos.value=pontos;
 				jogo=false;
 				vJogador.style.top=posJogadorY+"px";
+				som_HIT.play()
 
 				
 			}else if(posBolaX <= 0){
@@ -254,7 +279,7 @@
 				vPainelTxtPontos.value=pontos;
 				jogo=false;
 				vCpu.style.top=posCpuY+"px";
-
+				som_HIT.play()
 			}
 			vBola.style.top = posBolaY + 'px';
 			vBola.style.left = posBolaX + 'px';
