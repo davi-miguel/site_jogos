@@ -4,8 +4,7 @@
     <title>COBRINHA</title>
     <style>
      @font-face{
-	font-family: emulogic;
-	src: url("../fonts/emulogic.ttf");
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 * {
 padding: 0;
@@ -126,7 +125,7 @@ margin-left: 20px;
 flex-flow: column wrap;
 }
 }
-#author {
+#author{
 width: 100%;
 bottom: 40px;
 display: inline-flex;
@@ -153,6 +152,53 @@ justify-content: center;
 align-items: center;
 margin-bottom: 20px;
 }
+
+.botoes {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+
+#moveEsquerda{
+	margin: 20px;
+	left: 276px;
+	top: 500px;
+  position: absolute;
+	color: #000000;
+	background-color: #e52521;
+	display: flex;
+}
+
+#moveDireita{
+	margin: 20px;
+	left: 950px;
+	top: 500px;
+  position: absolute;
+	color: #000000;
+	background-color: #e52521;
+	display: flex;
+}
+
+#moveBaixo{
+	margin: 20px;
+	left: 410px;
+	top: 560px;
+  position: absolute;
+	color: #000000;
+	background-color: #e52521;
+	display: flex;
+}
+
+#moveCima{
+	margin: 20px;
+	left: 820px;
+	top: 560px;
+  position: absolute;
+	color: #000000;
+	background-color: #e52521;
+	display: flex;
+}
+
   </style>
 
   </head>
@@ -162,11 +208,15 @@ margin-bottom: 20px;
       <button id="replay">
         <i class="fas fa-play"></i>
         RESTART
-      
       </button>
-      
       <div id="canvas">
-
+        
+      </div>
+      <div class="botoes">
+        <button id="moveEsquerda"><h1>esquerda</h1></button>
+        <button id="moveDireita"><h1>direita</h1></button>
+        <button id="moveBaixo"><h1>pra baixo</h1></button>
+        <button id="moveCima"><h1>pra cima</h1></button>
       </div>
       <div id="ui">
         <h2>SCORE
@@ -175,7 +225,7 @@ margin-bottom: 20px;
       </div>
     </div>
     <div id="author">
-      <h1>SNAKE</h1> <span>BY DAVI</span>
+  <h1>SNAKE</h1><span>BY DAVI</span>
       <a href="./index.html" id="voltar" class="btn">Voltar para site</a>
     </div>
   </div>
@@ -204,6 +254,25 @@ let snake,
   splashingParticleCount = 20,
   cellsCount,
   requestID;
+
+  const btn_esquerda = document.getElementById("moveEsquerda")
+	btn_esquerda.addEventListener("touchstart", () => {
+    
+	})
+	btn_esquerda.addEventListener('touchend', () => {
+		mvLeft = false;
+	})
+
+	const btn_direita = document.getElementById('moveDireita')
+	btn_direita.addEventListener("touchstart", () => {
+		if (KEY.ArrowRight) {
+      this.dir = new helpers.Vec(dir, 0);
+    }
+	})
+	btn_direita.addEventListener('touchend', () => {
+		mvRight = false;
+	})
+
 
 let helpers = {
   Vec: class {
