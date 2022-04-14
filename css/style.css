@@ -226,6 +226,26 @@ a {
     background-color: #049cd8;
 }
 
+@media only screen and (max-device-width: 100px) {
+    /* Gallery */
+#gallery {
+    width: 100%;
+    margin: auto;
+    padding: 50px;
+    background-color: #049cd8;
+    }
+}
+
+@media only screen and (min-device-width: 1201px) {
+    /* Gallery */
+#gallery {
+    width: 100%;
+    margin: auto;
+    padding: 50px;
+    background-color: #049cd8;
+    }
+}
+
 #gallery-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -245,6 +265,10 @@ a {
     color: #eee;
     padding: 30px;
     text-align: center;
+    left: 0px;
+    top: 3700px;
+    width: 100%;
+    position: absolute;
 }
 
 .touro{
