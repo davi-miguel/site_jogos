@@ -153,52 +153,6 @@ align-items: center;
 margin-bottom: 20px;
 }
 
-.botoes {
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-}
-
-#moveEsquerda{
-	margin: 20px;
-	left: 276px;
-	top: 500px;
-  position: absolute;
-	color: #000000;
-	background-color: #e52521;
-	display: flex;
-}
-
-#moveDireita{
-	margin: 20px;
-	left: 950px;
-	top: 500px;
-  position: absolute;
-	color: #000000;
-	background-color: #e52521;
-	display: flex;
-}
-
-#moveBaixo{
-	margin: 20px;
-	left: 410px;
-	top: 560px;
-  position: absolute;
-	color: #000000;
-	background-color: #e52521;
-	display: flex;
-}
-
-#moveCima{
-	margin: 20px;
-	left: 820px;
-	top: 560px;
-  position: absolute;
-	color: #000000;
-	background-color: #e52521;
-	display: flex;
-}
-
   </style>
 
   </head>
@@ -212,12 +166,7 @@ margin-bottom: 20px;
       <div id="canvas">
         
       </div>
-      <div class="botoes">
-        <button id="moveEsquerda"><h1>esquerda</h1></button>
-        <button id="moveDireita"><h1>direita</h1></button>
-        <button id="moveBaixo"><h1>pra baixo</h1></button>
-        <button id="moveCima"><h1>pra cima</h1></button>
-      </div>
+      
       <div id="ui">
         <h2>SCORE
         </h2>
@@ -254,24 +203,6 @@ let snake,
   splashingParticleCount = 20,
   cellsCount,
   requestID;
-
-  const btn_esquerda = document.getElementById("moveEsquerda")
-	btn_esquerda.addEventListener("touchstart", () => {
-    
-	})
-	btn_esquerda.addEventListener('touchend', () => {
-		mvLeft = false;
-	})
-
-	const btn_direita = document.getElementById('moveDireita')
-	btn_direita.addEventListener("touchstart", () => {
-		if (KEY.ArrowRight) {
-      this.dir = new helpers.Vec(dir, 0);
-    }
-	})
-	btn_direita.addEventListener('touchend', () => {
-		mvRight = false;
-	})
 
 
 let helpers = {
@@ -419,7 +350,7 @@ class Snake {
     this.dir = new helpers.Vec(0, 0);
     this.type = type;
     this.index = i;
-    this.delay = 5;
+    this.delay = 30;
     this.size = W / cells;
     this.color = "regt";
     this.history = [];
@@ -572,7 +503,7 @@ class Particle {
 
 function incrementScore() {
   score++;
-  dom_score.innerText = score.toString().padStart(2, "0");
+  dom_score.innerText = score.toString().padStart(3, "0");
 }
 
 function particleSplash() {
@@ -629,8 +560,8 @@ function gameOver() {
 }
 
 function reset() { 
-  dom_score.innerText = "00";
-  score = "00";
+  dom_score.innerText = "000";
+  score = "000";
   snake = new Snake();
   food.spawn();
   KEY.resetState();
