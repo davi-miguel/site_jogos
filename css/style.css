@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #049cd8;
+    background-color: #ED210C;
 }
 
 a {
@@ -113,6 +113,14 @@ a {
     background-color: #0f0;
 }
 
+/* Clients */
+#clients {
+    width: 100%;
+    background: #eee;
+    color: #111;
+    padding: 50px;
+}
+
 #clients-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -154,6 +162,17 @@ a {
     font-weight: bold;
 }
 
+/* Product */
+#product {
+    width: 100%;
+    padding: 50px;
+}
+
+#product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 #items {
     width: 650px;
@@ -177,42 +196,40 @@ a {
     border-radius: 5px;
 }
 
+#testimonials {
+    width: 100%;
+    background: #222;
+    color: #eee;
+    padding: 50px;
+}
+
+#testimonials-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.testimonial .testimonial-image {
+    height: 200px;
+    width: auto;
+    border-radius: 50%;
+    margin: 15px;
+}
+
 /* Gallery */
 #gallery {
-    width: 100%;
-    margin: auto;
-    padding: 50px;
-    height: 3300px;
-    background-color: #049cd8;
-}
-
-@media only screen and (max-device-width: 100px) {
-    /* Gallery */
-#gallery {
-    width: 100%;
-    left: 0;
-    margin: auto;
-    position: absolute;
-    padding: 50px;
-    background-color: #049cd8;
-    }
-}
-
-@media only screen and (min-device-width: 1201px) {
-    /* Gallery */
-#gallery {
-    width: 100%;
-    position: absolute;
-    left: 0;
+    width: 90%;
     margin: auto;
     padding: 50px;
     background-color: #049cd8;
-    }
 }
 
 #gallery-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    display: grid;
     justify-items: center;
 }
 
@@ -228,58 +245,6 @@ a {
     color: #eee;
     padding: 30px;
     text-align: center;
-    top: 3800px;
-    width: 100%;
-    position: absolute;
-}
-
-@media only screen and (min-device-width: 1201px) {
-    #footer {
-        background: #222;
-        color: #eee;
-        padding: 30px;
-        text-align: center;
-        top: 3790px;
-        width: 100%;
-        position: absolute;
-    }
-}
-
-#jogo1{
-    width: 400px;
-    left: 490px;
-    position: absolute;
-}
-#jogo2{
-    width: 400px;
-    left: 490px;
-    top: 700px;
-    position: absolute;
-}
-#jogo3{
-    width: 400px;
-    left: 490px;
-    top: 1200px;
-    position: absolute;
-}
-#jogo4{
-    width: 400px;
-    left: 490px;
-    top: 1850px;
-    position: absolute;
-}
-#jogo5{
-    width: 400px;
-    left: 490px;
-    top: 2270px;
-    position: absolute;
-}
-
-#jogo6{
-    width: 400px;
-    left: 490px;
-    top: 2760px;
-    position: absolute;
 }
 
 .touro{

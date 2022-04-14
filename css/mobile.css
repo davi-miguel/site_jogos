@@ -1,3 +1,7 @@
+#gallery-container {
+    grid-template-columns: 1fr;
+}
+
 .gallery-image {
-    width: 50%;
+    width: 90%;
 }
