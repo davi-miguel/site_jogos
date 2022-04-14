@@ -17,14 +17,14 @@ h3{
 
 .botoes button{
 	margin: 20px;
-	left: 300px;
+	left: 650px;
 	top: 500px;
 	color: #000000;
 	background-color: #e52521;
 	display: flex;
 }
 
-@media only screen and (min-device-width: 1200px) {
+@media only screen and (max-device-width: 100px) {
 	#moveEsquerda{
 		position: absolute;
 		display: none;
@@ -33,6 +33,28 @@ h3{
 		position: absolute;
 		display: none;
 	}
+}
+
+@media only screen and (min-device-width: 1201px) {
+	#moveEsquerda{
+		position: absolute;
+		display: none;
+	}
+	.botoes button{
+		position: absolute;
+		display: none;
+	}
+}
+
+#canvas{
+	width: 400px; 
+	height: 500px;
+	position: 
+	relative; 
+	margin: 0 auto;
+	border: solid 6px blue;
+	background-color: #fff;
+	top: 10px;
 }
 
 a {
