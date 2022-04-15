@@ -14,5 +14,20 @@
     .gallery-image {
         width: 100%;
         display: block;
+        left: 20px;
+        position: absolute;
+    }
+}
+
+@media only screen and (max-device-width: 100px) {
+	#gallery-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-image {
+        width: 100%;
+        display: block;
+        left: 20px;
+        position: absolute;
     }
 }
