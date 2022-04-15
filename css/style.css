@@ -92,25 +92,28 @@ a {
 }
 
 /* Showcase */
-#showcase {
+#showcase{
     height: 100vh;
     display: grid;
     justify-content: center;
     align-items: center;
     color: #000;
     /* Overlay */
+    text-align: center;
     background-color: black;
     background-blend-mode: color;
 }
 
-#showcase-container {
+#showcase-container{
     text-align: center;
     justify-items: center;
-    display: grid;
+    
 }
 
 #showcase-container h2 {
     font-size: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     display: grid;
     position: absolute;
     justify-items: center;
@@ -125,8 +128,7 @@ a {
     color: white;
     position: absolute;
     top: 500px;
-    left: 480px;
-    display: grid;
+    left: 530px;
     justify-items: center;
 }
 .m1{
@@ -252,7 +254,6 @@ a {
     display: grid;
     justify-items: center;
 }
-
 .gallery-image {
     display: inline-block;
     width: 640px;
