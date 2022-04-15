@@ -41,7 +41,6 @@ function logar1(){
      }
      function logar5(){
         location.href="flappy_bird.html";
-
      }
 
      function logar6(){
