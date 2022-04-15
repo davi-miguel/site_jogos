@@ -113,8 +113,6 @@ a {
 #showcase-container h2 {
     font-size: 2.5rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    display: grid;
     position: absolute;
     justify-items: center;
     top: 460px;
