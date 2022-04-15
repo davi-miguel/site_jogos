@@ -60,6 +60,18 @@ a {
     align-items: center;
 }
 
+@media only screen and (min-device-width: 1201px) {
+	#navbar-container {
+        width: 80%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        left: 10px;
+    }
+}
+
 .logo {
     font-size: 2rem;
     color: #f00;
