@@ -75,7 +75,16 @@ a {
 #navbar-items {
     display: flex;
     list-style: none;
-    text-transform: capitalize;
+    text-transform: uppercase;
+}
+
+@media only screen and (min-device-width: 1201px) {
+	#navbar-items {
+        display: flex;
+        list-style: none;
+        text-transform: uppercase;
+        left: 500px;
+    }
 }
 
 #navbar-items li {
@@ -85,7 +94,7 @@ a {
 /* Showcase */
 #showcase {
     height: 100vh;
-    display: block;
+    display: grid;
     justify-content: center;
     align-items: center;
     color: #000;
@@ -96,25 +105,18 @@ a {
 
 #showcase-container {
     text-align: center;
+    justify-items: center;
+    display: grid;
 }
 
 #showcase-container h2 {
     font-size: 2.5rem;
+    display: grid;
     position: absolute;
+    justify-items: center;
     top: 460px;
     left: 570px;
     color: #fbd000;
-}
-
-@media only screen and (min-device-width: 1700px) {
-	
-}
-
-@media only screen and (max-device-width: 100px) {
-	#showcase-container h2 {
-        top: 460px;
-        left: 5px;
-    }
 }
 
 #showcase-container p {
@@ -124,6 +126,8 @@ a {
     position: absolute;
     top: 500px;
     left: 480px;
+    display: grid;
+    justify-items: center;
 }
 .m1{
     background-color: #0f0;
