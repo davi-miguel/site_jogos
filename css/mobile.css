@@ -1,15 +1,17 @@
 #gallery-container {
     grid-template-columns: 1fr;
-    align-items: center;
 }
 
 #gallery{
     width: 100%;
 }
 
+#showcase{
+    padding: 40px;
+}
+
 .gallery-image {
     width: 100%;
-    margin-left: 2px;
 }
 
 .gallery-image-ping{
