@@ -1,10 +1,10 @@
 #gallery-container {
     grid-template-columns: 1fr;
+    margin-left: 2px;
 }
 
 #gallery{
     width: 100%;
-    align-items: center;
 }
 
 .gallery-image {
