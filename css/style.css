@@ -216,8 +216,7 @@ a {
     grid-template-columns: repeat(3, 1fr);
     display: grid;
     width: 100%;
-    align-items: center;
-    justify-items: center;
+
 }
 
 .gallery-image {
