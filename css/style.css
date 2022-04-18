@@ -205,40 +205,48 @@ a {
 
 /* Gallery */
 #gallery {
-    width: 100%;
+    width: 90%;
     margin: auto;
     padding: 50px;
-    background-color: #049cd8;
 }
 
 #gallery-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     display: grid;
-    width: 100%;
+    justify-items: center;
 }
 
-.gallery-image {
+.gallery-image{
     width: 340px;
     height: 590px;
+    border-radius: 10px;
 }
 
 .gallery-image-ping{
+    display: inline-block;
     width: 340px;
+    border-radius: 10px;
     height: 700px;
 }
 
 .gallery-image-nave{
+    display: inline-block;
     width: 360px;
+    border-radius: 10px;
     height: 480px;
 }
 .gallery-image-flappy{
+    display: inline-block;
     width: 410px;
+    border-radius: 10px;
     height: 480px;
 }
 
 .gallery-image-bola{
+    display: inline-block;
     width: 410px;
+    border-radius: 10px;
     height: 410px;
 }
 

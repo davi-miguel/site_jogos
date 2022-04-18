@@ -1,6 +1,5 @@
 #gallery-container {
     grid-template-columns: 1fr;
-    align-items: center;
 }
 
 #gallery{
