@@ -217,10 +217,29 @@ a {
     display: grid;
     justify-items: center;
 }
+
 .gallery-image {
-    display: inline-block;
-    width: 640px;
-    height: 460px;
+    width: 340px;
+    height: 590px;
+}
+
+.gallery-image-ping{
+    width: 340px;
+    height: 700px;
+}
+
+.gallery-image-nave{
+    width: 360px;
+    height: 480px;
+}
+.gallery-image-flappy{
+    width: 410px;
+    height: 480px;
+}
+
+.gallery-image-bola{
+    width: 410px;
+    height: 410px;
 }
 
 /* Footer */

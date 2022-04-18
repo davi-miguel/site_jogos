@@ -8,8 +8,24 @@
 }
 
 .gallery-image {
-    width: 90%;
+    width: 100%;
     margin-left: 2px;
+}
+
+.gallery-image-ping{
+    width: 100%;
+}
+
+.gallery-image-nave{
+    width: 100%;
+}
+
+.gallery-image-flappy{
+    width: 100%;
+}
+
+.gallery-image-bola{
+    width: 100%;
 }
 
 #navbar{
