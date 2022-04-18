@@ -68,7 +68,7 @@ a {
 }
 
 #navbar-items li {
-    padding: 10px;
+    padding: 140px;
 }
 
 /* Showcase */
@@ -205,7 +205,7 @@ a {
 
 /* Gallery */
 #gallery {
-    width: 90%;
+    width: 100%;
     margin: auto;
     padding: 50px;
     background-color: #049cd8;
@@ -259,4 +259,43 @@ button{
 .btn:hover {
     cursor: pointer;
     background: #000;
+}
+
+.snake{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.velha{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.ping{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.nave{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.flappy{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.bola{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }

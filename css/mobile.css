@@ -4,15 +4,16 @@
 
 #gallery{
     width: 100%;
+    align-items: center;
 }
 
 .gallery-image {
     width: 90%;
-    margin-left: 5px;
+    margin-left: 2px;
 }
 
 #navbar{
-    height: 180px;
+    height: 110px;
     position: fixed;
 }
 
@@ -29,4 +30,7 @@
 #navbar li:nth-child(2){
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
+}
+#navbar-items li{
+    padding: 5px;
 }
