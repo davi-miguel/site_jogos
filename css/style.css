@@ -213,10 +213,9 @@ a {
 
 #gallery-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     display: grid;
     width: 100%;
-
 }
 
 .gallery-image {
