@@ -27,7 +27,6 @@ window.addEventListener("scroll", function () {
 function logar1(){
     location.href="cobrinha.html";
  }
-
  function logar2(){
         location.href="jogo da velha teste.html";
 
