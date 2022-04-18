@@ -5,8 +5,8 @@
 #gallery{
     width: 100%;
     align-items: center;
-    margin-left: 1px;
-    margin-right: 1px;
+    padding-left: 0.25px;
+    padding-right: 1px;
 }
 
 #showcase{
