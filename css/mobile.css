@@ -2,6 +2,10 @@
     grid-template-columns: 1fr;
 }
 
+#gallery{
+    width: 100%;
+}
+
 .gallery-image {
     width: 100%;
 }
