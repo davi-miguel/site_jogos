@@ -8,8 +8,7 @@
 
 .gallery-image {
     width: 90%;
-    position: absolute;
-    left: 10px;
+    margin-left: 5px;
 }
     #tou{
         margin-left: 95px;
