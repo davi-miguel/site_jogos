@@ -24,24 +24,23 @@ window.addEventListener("scroll", function () {
 });
 
 
-function logar1(){
-    location.href="cobrinha.html";
+function logan1(){
+    location.href="snake.html";
  }
- function logar2(){
-        location.href="jogo da velha teste.html";
-
+ function logan2(){
+        location.href="game.html";
      }
-     function logar3(){
+     function logan3(){
         location.href="ping_pong.html";
      }
-     function logar4(){
-        location.href="./batalha_espacial.html";
+     function logan4(){
+        location.href="./nave.html";
 
      }
-     function logar5(){
+     function logan5(){
         location.href="flappy_bird.html";
      }
 
-     function logar6(){
-        location.href="bolinha_amarela.html";
+     function logan6(){
+        location.href="bola_yellow.html";
      }

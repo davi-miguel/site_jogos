@@ -10,22 +10,23 @@
     width: 90%;
     margin-left: 5px;
 }
-    #tou{
-        margin-left: 95px;
-    }
-    #showcase{
-        position: relative;
-        height: 100vh;
-    }
-    #navbar{
-        text-align: center;
-    }
 
-    #navbar-items{
-        display: block;
-        float: left;
-        padding: 5px;
-        border: 2 solid orange;
-        width: 220px;
-        padding: 10px;
-    }
+#navbar{
+    height: 180px;
+    position: fixed;
+}
+
+#navbar-container{
+    flex-direction: column;
+    padding: 20px 0;
+}
+#navbar-items{
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+#navbar li:nth-child(2){
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}

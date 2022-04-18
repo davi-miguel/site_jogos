@@ -48,6 +48,7 @@ a {
     background: #111;
     color: #eee;
     height: 80px;
+    align-items: center;
     position: fixed;
 }
 
@@ -60,31 +61,10 @@ a {
     align-items: center;
 }
 
-@media only screen and (min-device-width: 1201px) {
-	#navbar-container {
-        width: 80%;
-        height: 100%;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        left: 10px;
-    }
-}
-
 #navbar-items {
     display: flex;
     list-style: none;
     text-transform: uppercase;
-}
-
-@media only screen and (min-device-width: 1201px) {
-	#navbar-items {
-        display: flex;
-        list-style: none;
-        text-transform: uppercase;
-        left: 500px;
-    }
 }
 
 #navbar-items li {
@@ -94,36 +74,25 @@ a {
 /* Showcase */
 #showcase{
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    color: #eee;
     align-items: center;
-
-    /* Overlay */
-    text-align: center;
-    display: grid;
     background-color: black;
 }
 
 #showcase-container{
     text-align: center;
-    justify-items: center;
 }
 
 #showcase-container h2 {
     font-size: 2.5rem;
-    position: absolute;
-    justify-items: center;
-    top: 460px;
-    left: 570px;
     color: #fbd000;
 }
 
-#showcase-container span {
+#showcase-container p {
     font-size: 1.2rem;
     padding: 7px 0;
-    color: white;
-    position: absolute;
-    top: 500px;
-    left: 490px;
-    justify-items: center;
 }
 .m1{
     background-color: #0f0;
@@ -261,13 +230,6 @@ a {
     padding: 30px;
     text-align: center;
 }
-
-.touro{
-    display: flex;
-    position: absolute;
-    left: 527px;
-    top: 10px;
-}
 button{
     background-color: #000;
     color: #f00;
@@ -297,16 +259,4 @@ button{
 .btn:hover {
     cursor: pointer;
     background: #000;
-}
-#jogos{
-    left: 610px;
-    position: absolute;
-}
-#inicio{
-    left: 400px;
-    position: absolute;
-}
-#sobre{
-    left: 800px;
-    position: absolute;
 }
