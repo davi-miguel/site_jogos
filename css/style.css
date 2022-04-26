@@ -242,6 +242,13 @@ a {
     border-radius: 10px;
     height: 550px;
 }
+
+.gallery-image-nave2{
+    display: inline-block;
+    width: 360px;
+    border-radius: 10px;
+    height: 550px;
+}
 .gallery-image-flappy{
     display: inline-block;
     width: 410px;
