@@ -11,6 +11,24 @@ body {
     background-color: #049cd8;
 }
 
+#touro{
+    max-width: 640px;
+    transform: translatey(0px);
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{
+    transform: translatey(0px);
+}
+50%{
+    transform: translatey(-90px);
+}
+100%{
+    transform: translatey(0px);
+    }
+}
+
 a {
     text-decoration: none;
     color: inherit;
