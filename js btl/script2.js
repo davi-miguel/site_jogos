@@ -111,6 +111,7 @@
 			case SPACE:
 				if(!spaceIsDown){
 					shoot = true;
+					spaceIsDown = true;
 				}
 				break;
 			
@@ -153,7 +154,6 @@
 					}
 				}
 				break;
-
 			case SPACE:
 				spaceIsDown = false;
 				break;
@@ -189,6 +189,26 @@
 				break;
 		}
 		render();
+	}
+
+	function atiraCanhao(){
+		if(!Atira){
+			alert("atira");
+		}
+	}
+
+	function direita(){
+		//move para a direita
+		if(mvRight && !mvLeft){
+			defender.vx = 5;
+		}
+	}
+
+	function esquerda(){
+		if(mvLeft && !mvRight){
+			defender.vx = -5;
+		
+		}
 	}
 	
 	function update(){
@@ -297,7 +317,7 @@
 	//criação dos mísseis
 	function fireMissile(){
 		var missile = new Sprite(136,12,8,13,defender.centerX() - 4,defender.y - 13);
-		missile.vy = - 8;
+		missile.vy = - 0.1;
 		sprites.push(missile);
 		missiles.push(missile);
 		shots++;

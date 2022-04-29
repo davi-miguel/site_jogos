@@ -36,8 +36,11 @@ function logan1(){
      function logan4(){
         location.href="./nave.html";
      }
+     function logan8(){
+        location.href="./tele-bomba.html";
+     }
      function logan7(){
-        location.href="./Batalha_de_ bombas.html";
+        location.href="./mina espacial.html";
      }
      function logan5(){
         location.href="flappy_bird.html";
