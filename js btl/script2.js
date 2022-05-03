@@ -18,7 +18,7 @@
 	var shots = 0;
 	var hits = 0;
 	var acuracy = 0;
-	var scoreToWin = 100;
+	var scoreToWin = 450;
 	var FIRE = 0;
 	var EXPLOSION = 1;
 	
@@ -32,16 +32,16 @@
 	sprites.push(defender);
 	
 	//mensagem da tela inicial
-	var startMessage = new ObjectMessage(cnv.height/2,"PRESS ENTER","#f00");
+	var startMessage = new ObjectMessage(cnv.height/2,"PRESS ENTER","green");
 	messages.push(startMessage);
 	
 	//mensagem de pausa
-	var pausedMessage = new ObjectMessage(cnv.height/2,"PAUSED","#f00");
+	var pausedMessage = new ObjectMessage(cnv.height/2,"PAUSED","blue");
 	pausedMessage.visible = false;
 	messages.push(pausedMessage);
 
 	//mensagem de game over
-	var gameOverMessage = new ObjectMessage(cnv.height/2,"","#f00");
+	var gameOverMessage = new ObjectMessage(cnv.height/2,"","#3ef");
 	gameOverMessage.visible = false;
 	messages.push(gameOverMessage);
 	//placar
@@ -111,7 +111,6 @@
 			case SPACE:
 				if(!spaceIsDown){
 					shoot = true;
-					spaceIsDown = true;
 				}
 				break;
 			
@@ -189,26 +188,6 @@
 				break;
 		}
 		render();
-	}
-
-	function atiraCanhao(){
-		if(!Atira){
-			alert("atira");
-		}
-	}
-
-	function direita(){
-		//move para a direita
-		if(mvRight && !mvLeft){
-			defender.vx = 5;
-		}
-	}
-
-	function esquerda(){
-		if(mvLeft && !mvRight){
-			defender.vx = -5;
-		
-		}
 	}
 	
 	function update(){
