@@ -2,5 +2,6 @@
     "compile-hero.disable-compile-files-on-did-save-code": true,
     "files.associations": {
         "DNAs.C": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }

@@ -51,3 +51,6 @@ function logan1(){
      function logan6(){
         location.href="bola_yellow.html";
      }
+     function logan9(){
+        location.href="tetris.html"
+     }
