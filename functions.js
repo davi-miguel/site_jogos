@@ -1,3 +1,11 @@
+const som_morto = new Audio();
+
+som_morto.src = './fim de jogo.mp3';
+
+const som_win = new Audio();
+
+som_win.src = './win.wav';
+
 function drawBoard() {
     for (let currentRow = 0; currentRow < ROW; currentRow++) {
         for(let currentCol = 0; currentCol < COL; currentCol++) {
@@ -88,6 +96,8 @@ function updateRowAndScore(row) {
         speed -= 20;
     }
 
+    som_win.play()
+
     canMove = true;
 }
 
@@ -96,7 +106,8 @@ function removeRow(rowToRemove, colToRemove) {
 }
 
 function gameOver() {
-    let warning = confirm("Game over! Continue?");
+    som_morto.play();
+    let warning = confirm("Game over! Vamos jogar de novo");
 
     if (warning) {
         resetGame();
