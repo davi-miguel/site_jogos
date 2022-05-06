@@ -60,3 +60,6 @@ function logan1(){
      function logan11(){
         location.href="dino.html"
      }
+     function logan12(){
+        location.href="atari breakout.html"
+     }
