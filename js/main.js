@@ -57,3 +57,6 @@ function logan1(){
      function logan10(){
         location.href="color blast.html"
      }
+     function logan11(){
+        location.href="dino.html"
+     }
