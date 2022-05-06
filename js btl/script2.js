@@ -331,7 +331,6 @@
 	function destroyAlien(alien){
 		alien.state = alien.EXPLODED;
 		alien.explode();
-		playSound(GAMEOVER)
 		playSound(EXPLOSION)
 		setTimeout(function(){
 			removeObjects(alien,aliens);
