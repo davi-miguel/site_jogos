@@ -54,3 +54,6 @@ function logan1(){
      function logan9(){
         location.href="tetris - Cópia.html"
      }
+     function logan10(){
+        location.href="color blast.html"
+     }
