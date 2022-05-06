@@ -6,6 +6,36 @@ const som_win = new Audio();
 
 som_win.src = './win.wav';
 
+const btn_esquerda = document.getElementById("moveEsquerda")
+	btn_esquerda.addEventListener("touchstart", () => {
+
+            piece.moveLeft();
+            dropStart = Date.now();
+
+	})
+
+	const btn_direita = document.getElementById('moveDireita')
+	btn_direita.addEventListener("touchstart", () => {
+
+		piece.moveRight();
+        dropStart = Date.now();
+
+	})
+
+	const btn_atira = document.getElementById('posisao')
+	btn_atira.addEventListener("touchstart", () => {
+
+		piece.rotate();
+            dropStart = Date.now();
+
+	})
+	const btn_baixo = document.getElementById('descer')
+	btn_atira.addEventListener("touchstart", () => {
+
+		piece.moveDown();
+
+	})
+
 function drawBoard() {
     for (let currentRow = 0; currentRow < ROW; currentRow++) {
         for(let currentCol = 0; currentCol < COL; currentCol++) {

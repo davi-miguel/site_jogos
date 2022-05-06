@@ -18,9 +18,10 @@
 	var shots = 0;
 	var hits = 0;
 	var acuracy = 0;
-	var scoreToWin = 450;
+	var scoreToWin = 300;
 	var FIRE = 0;
 	var EXPLOSION = 1;
+	var GAMEOVER = 2;
 	
 	//sprites
 	//cenário
@@ -265,7 +266,7 @@
 				destroyAlien(alien);
 				removeObjects(defender,sprites);
 				gameState = OVER;
-				playSound(EXPLOSION);
+				playSound(GAMEOVER);
 			}
 			
 			//confere se algum alien foi destruido
@@ -310,16 +311,16 @@
 		var alienPosition = (Math.floor(Math.random() * 8)) * 50;
 		
 		var alien = new Alien(30,0,50,50,alienPosition,-50);
-		alien.vy = 1;
+		alien.vy = 2;
 		
 		//otimização do alien
 		if(Math.floor(Math.random() * 11) > 7){
 			alien.state = alien.CRAZY;
-			alien.vx = 3;
+			alien.vx = 4;
 		}
 		
 		if(Math.floor(Math.random() * 11) > 5){
-			alien.vy = 2;
+			alien.vy = 3;
 		}
 		
 		sprites.push(alien);
@@ -330,6 +331,7 @@
 	function destroyAlien(alien){
 		alien.state = alien.EXPLODED;
 		alien.explode();
+		playSound(GAMEOVER)
 		playSound(EXPLOSION)
 		setTimeout(function(){
 			removeObjects(alien,aliens);
@@ -391,6 +393,9 @@
 			sound.src = "sound/explosion.ogg";
 		}else{
 			sound.src = "sound/fire.ogg";
+		}
+		if(soundType === GAMEOVER){
+			sound.src = "fim de jogo1.mp4"
 		}
 		sound.addEventListener("canplaythrough",function(){
 			sound.play(); 
