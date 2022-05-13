@@ -48,7 +48,7 @@ var keys =[];
 
 // ################################################################### score and lives
 var score = 0;
-var allowedLives = 3;
+var allowedLives = 6;
 var lives = allowedLives;
 var hasLifeDecreased = false;
 var gameRunning = false;
@@ -148,7 +148,7 @@ function gameLoop(){
   //game won by killing invaders
   if(aliveInvaders == 0){
     gameRunning=false;
-    drawGameOver("you won");
+    drawGameOver("you win");
     drawBottomHelper();
     return false;
   }
