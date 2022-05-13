@@ -64,5 +64,8 @@ function logan1(){
         location.href="atari  breakout.html"
      }
      function logan13(){
-        location.href="https://codingwith-adam.github.io/space-invaders/index.html"
+        location.href="./Space Shooter Game using JavaScript/assets/game.html"
+     }
+     function logan14(){
+        location.href="./Space Invader Game using JavaScript/space invader.html"
      }

@@ -258,7 +258,7 @@
 			//confere se algum alien chegou à Terra
 			if(alien.y > cnv.height + alien.height){
 				gameState = OVER;
-				playSound(EXPLOSION);
+				playSound(GAMEOVER);
 			}
 
 			//confere se algum alien colidiu com a nave
@@ -389,9 +389,9 @@
 	function playSound(soundType){
 		var sound = document.createElement("audio");
 		if(soundType === EXPLOSION){
-			sound.src = "sound/explosion.ogg";
+			sound.src = "sounds/enemy-death.wav";
 		}else{
-			sound.src = "sound/fire.ogg";
+			sound.src = "sounds/shoot.wav";
 		}
 		if(soundType === GAMEOVER){
 			sound.src = "fim de jogo1.mp4"

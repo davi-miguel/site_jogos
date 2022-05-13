@@ -39,10 +39,10 @@
 
     // colours
     const COLOR_BACKGROUND = "black";
-    const COLOR_BALL = "white";
-    const COLOR_PADDLE = "white";
+    const COLOR_BALL = "red";
+    const COLOR_PADDLE = "blue";
     const COLOR_TEXT = "white";
-    const COLOR_WALL = "grey";
+    const COLOR_WALL = "gray";
 
     // text
     const TEXT_FONT = "Lucida Console";
@@ -64,7 +64,7 @@
         EXTENSION: {color: "dodgerblue", symbol: "="},
         LIFE: {color: "hotpink", symbol: "+"},
         STICKY: {color: "forestgreen", symbol: "~"},
-        SUPER: {color: "magenta", symbol: "s"}
+        SUPER: {color: "magenta", symbol: "s"}, 
     }
 
     // set up the game canvas and context
@@ -160,7 +160,7 @@
         let rows = BRICK_ROWS + level * 2;
         let color, left, rank, rankHigh, score, spdMult, top;
         numBricks = cols * rows;
-        rankHigh = rows * 0.5 - 1;
+        rankHigh = rows * 0.5 - 0.5;
         for (let i = 0; i < rows; i++) {
             bricks[i] = [];
             rank = Math.floor(i * 0.5);
@@ -278,10 +278,11 @@
         let fraction = rank / highestRank;
         let r, g, b = 0;
 
-        // red to orange to yellow (increase green)
+        // red to orange to yellow to pink (increase green)
         if (fraction <= 0.67) {
             r = 255;
             g = 255 * fraction / 0.67;
+            p = 245;
         }
 
         // yellow to green (reduce red)
