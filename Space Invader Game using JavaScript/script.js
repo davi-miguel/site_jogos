@@ -3,6 +3,17 @@ let canvas = document.getElementById('myCanvas');
 let ctx = canvas.getContext("2d");
 
 
+const som_tiro = new Audio();
+const som_explo = new Audio();
+const som_explo1 = new Audio();
+const som_fim = new Audio();
+
+som_tiro.src = './shoot.wav';
+som_explo.src = './enemy-death.wav';
+som_explo1.src = './explosion.mp3';
+som_fim.src = './fim de jogo.mp4';
+
+
 
 //globals
 (function () {
@@ -130,7 +141,7 @@ function gameLoop(){
     ctx.clearRect(0,0,canvas.width,canvas.height);    
     drawScore();
     drawLives();    
-    drawGameOver("you lost");
+    drawGameOver("you lost", som_fim.play());
     drawBottomHelper();
     return false;
   }
@@ -422,6 +433,8 @@ function fireTankBullet(){
     drawBullet(tankBullet__x,tankBullet__y);
     moveTankBullet();
     shouldMoveTankBullet = true;
+              
+    som_tiro.play()
 }
 
 function moveTankBullet(){
@@ -506,8 +519,10 @@ function drawInvaderBullet(ix, iy){
   ctx.moveTo(ix, iy);    // Move the pen to (30, 50)
   ctx.lineTo(ix, iy+bullet__height);  // Draw a line to (150, 100)
   ctx.lineWidth = bullet__width;
-  ctx.strokeStyle = "#FFF";
+  ctx.strokeStyle = "#f00";
   ctx.stroke();
+            
+  som_tiro.play()
 }
 
 function drawGameOver(message){
@@ -558,7 +573,6 @@ function drawScreen__line2(message){
 
 // Draw explosion(s)
 function drawExplosion() {
-
   if (explosions.length === 0) {
     return;
   }
@@ -582,6 +596,7 @@ function drawExplosion() {
       // If 0, remove
       if (particle.size <= 0) {
         particlesAfterRemoval.splice(ii, 1);
+      som_explo.play()
         continue;
       }
 

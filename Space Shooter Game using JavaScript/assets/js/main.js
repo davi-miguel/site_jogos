@@ -5,6 +5,14 @@ var graImg = 'img/graphic.png';
 var bgImg = 'img/bg.jpg';
 var effImg = 'img/effect0.gif';
 
+const som_tiro = new Audio();
+const som_explo = new Audio();
+const som_explo1 = new Audio();
+
+som_tiro.src = './shoot.wav';
+som_explo.src = './enemy-death.wav';
+som_explo1.src = './explosion.mp3';
+
 
 var Player = enchant.Class.create(enchant.Sprite, {
 	initialize: function(x, y) {
@@ -87,11 +95,11 @@ var ShootEnemy = enchant.Class.create(enchant.Sprite, {
 		this.y = y;
 		this.frame = 2;
 		this.direction = direction;
-		this.moveSpeed = 10;
-		
+		this.moveSpeed = 20;	
 		this.addEventListener('enterframe', function() {
 			this.x += this.moveSpeed * Math.cos(this.direction);
 			this.y += this.moveSpeed * Math.sin(this.direction);
+			som_tiro.play()
 			
 			if (this.y > 320 || this.x > 480 || this.x < -this.width || this.y < -this.height) {
 				this.remove();
@@ -148,6 +156,7 @@ var PlayerShoot = enchant.Class.create(ShootEnemy, { // succeeds bullet class
 					
 					
 					// eliminates enemy if hit
+					som_explo.play();
 					this.remove();
 					enemies[i].remove();
 					
@@ -167,7 +176,8 @@ var EnemyShoot = enchant.Class.create(ShootPlayer, { // Succeeds bullet class
 		this.addEventListener('enterframe', function() {
 			if (player.within(this, 8)){ // 	bullet has hit player
 				var blast = new Blast(player.x, player.y);
-				
+
+				som_explo1.play();
 				
 				game.end(game.score, "SCORE: " + game.score);
 			}
@@ -184,7 +194,7 @@ var Blast = enchant.Class.create(enchant.Sprite, {
 		
 		this.image = game.assets[effImg];
 		this.frame = 0;
-		this.duration = 20;
+		this.duration = 100;
 		
 		this.addEventListener('enterframe', function(){
 			// explosion animation
