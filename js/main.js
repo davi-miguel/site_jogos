@@ -46,7 +46,7 @@ function logan1(){
         location.href="./mina espacial.html";
      }
      function logan8(){
-        location.href="flappy_bird.html";
+        location.href="https://playcanv.as/p/2OlkUaxF/";
      }
      function logan6(){
         location.href="bola_yellow.html";
