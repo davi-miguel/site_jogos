@@ -7,11 +7,13 @@ const som_tiro = new Audio();
 const som_explo = new Audio();
 const som_explo1 = new Audio();
 const som_fim = new Audio();
+const som_fim1 = new Audio();
 
 som_tiro.src = './shoot.wav';
 som_explo.src = './enemy-death.wav';
 som_explo1.src = './explosion.mp3';
 som_fim.src = './fim de jogo.mp4';
+som_fim.src = './fim de jogo 1.mp4';
 
 
 
@@ -26,7 +28,7 @@ var animationID;
 // ################################################################### load sprites
 let spriteBase64 = "sprite_.png";
 const tank = new Image();
-tank.src = spriteBase64;
+tank.src = "nave.png"
 const invader = new Image();
 invader.src = spriteBase64;
 var startScreenTimeout;
@@ -35,26 +37,26 @@ var startScreenTimeout;
 var frameCount=0;
 var armyPrevFrameCount=0;
 var framesInOneSec = 1000/16;
-var spritUnitHeight = 35;
+var spritUnitHeight = 85;
 var spriteUnitWidth = 64;
 var scoreBarHeight = 50;
 var tank__bottomOffset = (spritUnitHeight/2) + scoreBarHeight;
 var tankX=canvas.width/2;
 var tankdX = 4;
 var tankY=canvas.height-(tank__bottomOffset);
-var tankWidth= spriteUnitWidth/2;
-var tankHeight =spritUnitHeight/2
+var tankWidth= spriteUnitWidth/1.5;
+var tankHeight =spritUnitHeight/1.5;
 var keys =[];
 
 // ################################################################### score and lives
 var score = 0;
-var allowedLives = 6;
+var allowedLives = 8;
 var lives = allowedLives;
 var hasLifeDecreased = false;
 var gameRunning = false;
 // ################################################################### Invaders rows columns
-var invaderWidth = spriteUnitWidth/2.5;
-var invaderHeight = spritUnitHeight/2.5;
+var invaderWidth = spriteUnitWidth/2.9;
+var invaderHeight = spritUnitHeight/2.9;
 var invaderSpriteHeight = spritUnitHeight;
 var invaderSpriteHeightsArray = [[68,102],[102,134],[102,134],[0,34],[0,34]];
 var spriteSelector =0;
@@ -62,7 +64,7 @@ var armyRows = 5;
 var armyColumns = 10;
 var armyX = 60;
 var armyY = 60;
-var invaderLeftOffset = 15;
+var invaderLeftOffset = 17;
 var invaderTopOffset = 20;
 var armyDirection = "right";
 var armyDx = 10;
@@ -141,7 +143,7 @@ function gameLoop(){
     ctx.clearRect(0,0,canvas.width,canvas.height);    
     drawScore();
     drawLives();    
-    drawGameOver("you lost", som_fim.play());
+    drawGameOver("you lost", som_fim.play(), som_fim1.play(),);
     drawBottomHelper();
     return false;
   }
@@ -270,9 +272,9 @@ function moveInvaderBullets(){
       iB.y < tankY + tankHeight
     )
     {
-      explosionColor="blue";
-      particlesPerExplosion   = 150;
-      particlesMaxSize      = 4;
+      explosionColor="red";
+      particlesPerExplosion = 150;
+      particlesMaxSize = 4;
       triggerExplosion(tankX+tankWidth/2,tankY+tankHeight/2);
       invaderBulletsArray.splice(i,1);
       console.log("lost 1 life");            
@@ -423,7 +425,7 @@ function drawBullet(bx,by){
   ctx.moveTo(bx, by);    // Move the pen to (30, 50)
   ctx.lineTo(bx, by-bullet__height);  // Draw a line to (150, 100)
   ctx.lineWidth = bullet__width+2;
-  ctx.strokeStyle = "blue";
+  ctx.strokeStyle = "yellow";
   ctx.stroke();
 }
 
@@ -457,9 +459,9 @@ function moveTankBullet(){
             shouldMoveTankBullet=false;
             aliveInvaders--;
             score++;            
-            explosionColor = "white";
-            particlesPerExplosion   = 50;
-            particlesMaxSize        = 3;
+            explosionColor = "#611916";
+            particlesPerExplosion = 50;
+            particlesMaxSize = 4;
             triggerExplosion(soldier.x+invaderWidth/2,soldier.y+invaderHeight/2);
             //increase speed
             if((aliveInvaders)%armyColumns==0 && armySpeed > 10){
@@ -484,8 +486,8 @@ function drawScoreSeprateLine(){
   ctx.shadowBlur = 5;
   ctx.shadowOffsetY=1;
   ctx.shadowOffsetY=-1;
-  ctx.shadowColor="blue";
-  ctx.strokeStyle = "blue";
+  ctx.shadowColor="red";
+  ctx.strokeStyle = "pink";
   ctx.stroke();
   ctx.shadowBlur = 0;
   ctx.shadowOffsetY=0;
@@ -496,8 +498,8 @@ function drawScoreSeprateLine(){
 
 function drawBottomMessage(message,sx){
   ctx.beginPath();
-  ctx.font = "20px Play";
-  ctx.fillStyle="white";
+  ctx.font = "22px Play";
+  ctx.fillStyle="yellow";
   ctx.fillText(message, sx, canvas.height-10);  
   ctx.closePath();
 }
@@ -507,7 +509,6 @@ function drawScore(){
 function drawLives(){
   drawBottomMessage("Lives: "+lives,10)
 }
-
 function drawBottomHelper(){
   drawBottomMessage("Press enter to play",150)
 }
@@ -526,7 +527,7 @@ function drawInvaderBullet(ix, iy){
 }
 
 function drawGameOver(message){
-  drawBlinker(function(){ drawScreen__line1("Game Over ") },function(){ drawScreen__line2(message) });
+  drawBlinker(function(){ drawScreen__line1("Game Over ") },function(){ drawScreen__line2("press enter to play") });
 }
 
 
@@ -550,7 +551,7 @@ function drawScreen__line1(message){
     ctx.save();
     ctx.beginPath();
     ctx.font = "60px Play";
-    ctx.fillStyle="white";
+    ctx.fillStyle="blue";
     ctx.textAlign = "center";
     ctx.fillText(message, canvas.width/2,canvas.height/2);  
     ctx.closePath();
@@ -559,9 +560,9 @@ function drawScreen__line1(message){
 function drawScreen__line2(message){
     ctx.save();
     ctx.beginPath();
-    ctx.fillStyle="blue";
+    ctx.fillStyle="red";
     ctx.textAlign = "center";
-    ctx.font = "40px Play";
+    ctx.font = "50px Play";
     ctx.fillText(message, canvas.width/2,canvas.height/2+60);  
     ctx.closePath();
     ctx.restore();
