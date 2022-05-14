@@ -9,7 +9,7 @@ const som_tiro = new Audio();
 const som_explo = new Audio();
 const som_explo1 = new Audio();
 
-som_tiro.src = './shoot.wav';
+som_tiro.src = './shoot.mp4';
 som_explo.src = './enemy-death.wav';
 som_explo1.src = './explosion.mp3';
 
