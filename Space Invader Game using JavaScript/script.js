@@ -527,7 +527,7 @@ function drawInvaderBullet(ix, iy){
 }
 
 function drawGameOver(message){
-  drawBlinker(function(){ drawScreen__line1("Game Over ") },function(){ drawScreen__line2("press enter to play") });
+  drawBlinker(function(){ drawScreen__line1("Game Over ") },function(){ drawScreen__line2(message) });
 }
 
 
