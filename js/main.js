@@ -72,3 +72,6 @@ function logan1(){
      function logan15(){
         location.href="./jogoDaForca-master/forca.html"
      }
+     function logan16(){
+        location.href="./menja.html"
+     }
