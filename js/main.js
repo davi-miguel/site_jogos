@@ -69,3 +69,6 @@ function logan1(){
      function logan14(){
         location.href="./Space Invader Game using JavaScript/space invader.html"
      }
+     function logan15(){
+        location.href="./jogoDaForca-master/forca.html"
+     }
