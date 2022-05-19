@@ -75,3 +75,6 @@ function logan1(){
      function logan16(){
         location.href="./menja.html"
      }
+     function logan17(){
+        location.href="./planet.html"
+     }
