@@ -5,34 +5,34 @@ let palavraSecretaSorteada;
 const palavras = [
     palavra001 = {
         nome: "IRLANDA",
-        categoria:"LUGARES"
+        categoria:"e um lugar da europa"
     },
     palavra002 = {
-        nome: "EQUADOR",
-        categoria:"LUGARES"
+        nome: "JAPAO",
+        categoria:"E UM LUGAR PERTO DA ASIA"
     },
     palavra003 = {
-        nome: "CHILE",
-        categoria:"LUGARES"
+        nome: "CHINA",
+        categoria:"E UM LUGAR DO LADO DO JAPAO"
     },
     palavra004 = {
         nome: "INDONESIA",
-        categoria:"LUGARES"
+        categoria:"E UM LUGAR DO SUL DA ASIA"
     },
     palavra005 = {
-        nome: "MALDIVAS",
-        categoria:"LUGARES"
+        nome: "NOVA ZELANDIA",
+        categoria:"E UM LUGAR NOVO"
     },
     palavra006 = {
         nome: "INGLATERRA",
-        categoria:"LUGARES"
+        categoria:"E UM LUGAR DA EUROPA"
     },
     palavra007 = {
         nome: "GROELANDIA",
         categoria:"LUGARES"
     },
     palavra008 = {
-        nome: "UZBEQUISTAO",
+        nome: "PAQUISTAO",
         categoria:"LUGARES"
     },
     palavra009 = {
@@ -140,19 +140,19 @@ const palavras = [
         categoria:"ALIMENTOS"
     },
     palavra035 = {
-        nome: "JANTAR",
+        nome: "CAJU",
         categoria:"ALIMENTOS"
     },
     palavra036 = {
-        nome: "SABOROSO",
+        nome: "MELAO",
         categoria:"ALIMENTOS"
     },
     palavra037 = {
-        nome: "DESJEJUM",
+        nome: "XUXU",
         categoria:"ALIMENTOS"
     },
     palavra038 = {
-        nome: "MASTIGAR",
+        nome: "CAQUI",
         categoria:"ALIMENTOS"
     },
     palavra039 = {
