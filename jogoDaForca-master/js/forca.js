@@ -1,3 +1,11 @@
+const som_win = new Audio();
+som_win.src = './win.wav';
+
+const GAME_OVER = new Audio();
+GAME_OVER.src = './game over.wav';
+
+// game over
+
 let tentativas = 6;
 let listaDinamica = [];
 let palavraSecretaCategoria;
@@ -5,7 +13,7 @@ let palavraSecretaSorteada;
 const palavras = [
     palavra001 = {
         nome: "IRLANDA",
-        categoria:"e um lugar da europa"
+        categoria:"E UM LUGAR NO OESTE DA EUROPA"
     },
     palavra002 = {
         nome: "JAPAO",
@@ -29,31 +37,31 @@ const palavras = [
     },
     palavra007 = {
         nome: "GROELANDIA",
-        categoria:"LUGARES"
+        categoria:"É UM LUGAR FRIO"
     },
     palavra008 = {
         nome: "PAQUISTAO",
-        categoria:"LUGARES"
+        categoria:"FICA NA ASIA"
     },
     palavra009 = {
         nome: "INDONESIA",
-        categoria:"LUGARES"
+        categoria:"É UM LUGAR FRIO"
     },
     palavra010 = {
-        nome: "CREGUENHEM",
-        categoria:"LUGARES"
+        nome: "AMAZONIA",
+        categoria:"É UM LUGAR NO SUDOESTE DO BRASIL"
     },
     palavra011 = {
         nome: "BICICLETA",
-        categoria:"TRANSPORTE"
+        categoria:"TEM DUAS RODAS"
     },
     palavra012 = {
         nome: "LANCHA",
-        categoria:"TRANSPORTE"
+        categoria:"É MUITO RAPIDO"
     },
     palavra013 = {
         nome: "NAVIO",
-        categoria:"TRANSPORTE"
+        categoria:"É UM TRANSPORTE MUITO GRANDE"
     },
     palavra014 = {
         nome: "TELEFERICO",
@@ -61,151 +69,147 @@ const palavras = [
     },
     palavra015 = {
         nome: "MOTOCICLETA",
-        categoria:"TRANSPORTE"
+        categoria:"TEM MOTOR E É DE DUAS RODAS"
     },
     palavra016 = {
         nome: "BARCO",
-        categoria:"TRANSPORTE"
+        categoria:"É PEQUENO"
     },
     palavra017 = {
         nome: "AERONAVE",
-        categoria:"TRANSPORTE"
+        categoria:"VOA"
     },
     palavra018 = {
         nome: "TREM",
-        categoria:"TRANSPORTE"
-    },
-    palavra019 = {
-        nome: "CAIAQUE",
-        categoria:"TRANSPORTE"
+        categoria:"PIUIIIII"
     },
     palavra020 = {
-        nome: "FUNICULAR",
-        categoria:"TRANSPORTE"
+        nome: "PIRUA",
+        categoria:"É UM TRANSPORTE GRANDE"
     },
     palavra021 = {
         nome: "XICARA",
-        categoria:"OBJETOS"
+        categoria:"É USADA PARA BEBER"
     },
     palavra022 = {
         nome: "MOEDA",
-        categoria:"OBJETOS"
+        categoria:"É UM OBJETO MUITO ANTIGO"
     },
     palavra023 = {
         nome: "ESPARADRAPO",
-        categoria:"OBJETOS"
+        categoria:"É USADO NO MACHUCADO"
     },
     palavra024 = {
         nome: "SINO",
-        categoria:"OBJETOS"
+        categoria:"FAZ BARULHO FINO"
     },
     palavra025 = {
         nome: "CHUVEIRO",
-        categoria:"OBJETOS"
+        categoria:"CAI AGUA"
     },
     palavra026 = {
-        nome: "TAMBORETE",
-        categoria:"OBJETOS"
+        nome: "TAMBOR",
+        categoria:"FAZ BARULHO"
     },
     palavra027 = {
         nome: "LAMPADA",
-        categoria:"OBJETOS"
+        categoria:"É OVAL"
     },
     palavra028 = {
-        nome: "BOCAL",
-        categoria:"OBJETOS"
+        nome: "PIA",
+        categoria:"TEM TONEIRA"
     },
     palavra029 = {
         nome: "CORTINA",
-        categoria:"OBJETOS"
+        categoria:"É USADO PARA TAMPAR ALGUMA COISA"
     },
     palavra030 = {
         nome: "LAPIS",
-        categoria:"OBJETOS"
+        categoria:"TEM QUE APONTAR"
     },
     palavra031 = {
-        nome: "MELANCIA",
-        categoria:"ALIMENTOS"
+        nome: "ABOBORA",
+        categoria:"É O MAIOR LEGUME DE TODOS"
     },
     palavra032 = {
         nome: "AMENDOIM",
-        categoria:"ALIMENTOS"
+        categoria:"NOS DESENHOS OS ELEFANTES GOSTAM"
     },
     palavra033 = {
         nome: "ESFIRRA",
-        categoria:"ALIMENTOS"
+        categoria:"É UMA PEQUENA TORTA QUE PODE SER ABERTA OU FECHADA"
     },
     palavra034 = {
-        nome: "GOROROBA",
-        categoria:"ALIMENTOS"
+        nome: "PIZZA",
+        categoria:"É FEITO DE MASSA"
     },
     palavra035 = {
         nome: "CAJU",
-        categoria:"ALIMENTOS"
+        categoria:"É UMA CASTANHA"
     },
     palavra036 = {
         nome: "MELAO",
-        categoria:"ALIMENTOS"
+        categoria:"É UMA FRUTA GIGANTE"
     },
     palavra037 = {
         nome: "XUXU",
-        categoria:"ALIMENTOS"
+        categoria:"É UM ALIMENTO GRUDANTE"
     },
     palavra038 = {
         nome: "CAQUI",
-        categoria:"ALIMENTOS"
+        categoria:"É DA FAMILIA DO TOMATE"
     },
     palavra039 = {
-        nome: "ENGOLIR",
-        categoria:"ALIMENTOS"
+        nome: "BALA",
+        categoria:"É UM DOCE PEQUENO"
     },
     palavra040 = {
-        nome: "DOCERIA",
-        categoria:"ALIMENTOS"
+        nome: "PIRULITO",
+        categoria:"É UM DOCE MUITO GOSTOSO"
     },
     palavra040 = {
         nome: "DRAGAO",
-        categoria:"ANIMAIS"
+        categoria:"NUNCA EXISTIU E SOLTA FOGO PELA BOCA"
     },
     palavra041 = {
         nome: "GALINHA",
-        categoria:"ANIMAIS"
+        categoria:"É UMA AVE QUE NÃO VOA"
     },
     palavra042 = {
         nome: "PAVAO",
-        categoria:"ANIMAIS"
+        categoria:"É COLORIDO"
     },
     palavra043 = {
         nome: "CAMELO",
-        categoria:"ANIMAIS"
+        categoria:"CONSEGUE FICAR MUITO TEMPO SEM BEBER ÁGUA"
     },
     palavra044 = {
         nome: "PERU",
-        categoria:"ANIMAIS"
+        categoria:"É UMA AVE, QUE SÓ OS MACHOS TEM CARÚNCULA"
     },
     palavra045 = {
         nome: "ZEBRA",
-        categoria:"ANIMAIS"
+        categoria:"TEM LISTRAS"
     },
     palavra046 = {
         nome: "DROMEDARIO",
-        categoria:"ANIMAIS"
+        categoria:"VIVE NO DESERTO"
     },
     palavra047 = {
-        nome: "CALANGO",
-        categoria:"ANIMAIS"
+        nome: "CROCODILO",
+        categoria:"E UM ANIMAL COM ESCAMAS, QUE O TAMANHO CHEGA ATÉ 6,10 METROS DE COMPRIMENTO"
     },
     palavra048 = {
-        nome: "SAGUI",
-        categoria:"ANIMAIS"
+        nome: "JACARE",
+        categoria:"É UM RÉPTIL DE BOCA GRANDE CHEIA DE DENTES"
     },
     palavra049 = {
         nome: "LAGARTIXA",
-        categoria:"ANIMAIS"
+        categoria:"PARECE UM LAGARTO"
     },
     palavra050 = {
         nome: "HIPOPOTAMO",
-        categoria:"ANIMAIS"
+        categoria:"E UM ANIMAL GRANDE, E TERRITORIAL"
     }
 ];
 
@@ -249,7 +253,7 @@ function verificaLetraEscolhida(letra){
 
 function mudarStyleLetra(tecla){
     document.getElementById(tecla).style.background = "black";
-    document.getElementById(tecla).style.color = "#333";
+    document.getElementById(tecla).style.color = "#109";
 }
 
 function comparalistas(letra){
@@ -260,6 +264,7 @@ function comparalistas(letra){
 
         if(tentativas == 0){
             abreModal("OPS!", "Não foi dessa vez ... A palavra secreta era <br>" + palavraSecretaSorteada);
+            GAME_OVER.play()
         }
     }
     else{
@@ -281,6 +286,7 @@ function comparalistas(letra){
     {
         abreModal("PARABÉNS!", "Você venceu...");
         tentativas = 0;
+        som_win.play()
     }
 }
 
