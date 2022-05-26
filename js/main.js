@@ -78,3 +78,10 @@ function logan1(){
      function logan17(){
         location.href="./planet.html"
      }
+     function logan18(){
+        location.href="mario-main/mario-main/index.html"
+     }
+     function logan19(){
+        location.href="bomberman-main/index.html"
+     }
+     
