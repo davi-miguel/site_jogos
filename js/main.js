@@ -33,6 +33,9 @@ function logan1(){
      function logan3(){
         location.href="ping_pong.html";
      }
+     function logan90(){
+        location.href="Ping-Pong-Game-JavaScript-master/Ping-Pong-Game-JavaScript-master/index.html";
+     }
      function logan4(){
         location.href="./nave.html";
      }
@@ -84,4 +87,9 @@ function logan1(){
      function logan19(){
         location.href="bomberman-main/index.html"
      }
-     
+     function logan20(){
+        location.href="mario bros/super mario bros game.html"
+     }
+     function logan21(){
+        location.href="reator/reator/start reator.html"
+     }

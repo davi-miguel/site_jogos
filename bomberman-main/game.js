@@ -69,27 +69,27 @@ scene('game', ({level, score}) => {
   const maps = [
     [
       'aaaaaaaaaaaaaaaaaaaaaaa',
-      'azzzz&*w   &         sa',
+      'azzzz&*w   &      w& sa',
       'awazazazazazazzz} aaaaa',
       'awzzwzwzwzwzwwzz  aaaaaaa',
-      'a&& wwwwww  }     $     a',
+      'a&*&wwwwww  }     $     a',
       'awazazazazazazzz  aaaaa%a',
       'a zzz   *& &z zz  w % a a',
       'a azazazazaza zz  z   a a',
       'a wwww}zzz zz zz  z  &a%a',
-      'adwzzz}   * &}zz} z   a aaa',
-      'awzzww      *wzz  w %sa  da',
-      'aaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+      'a wzzz} *** &}zz} z **a aaa',
+      'awzzww  ** &*wzz  w %sa  da',
+      'aaaaaaaaaaaaaaaaaaaaaaaaaaa',
     ],
     [
       'bbbbbbbbbbbbbbbbbbbbbbbbb',
       'b}      *&**wwb}b}    &* db',
       'b bwbwbwbwbwbwb b bbbbbbb',
-      'b &wwwwwww**    b&b',
+      'b &wwwwwww**&&  b&b',
       'bwbwbwbwbwbwb b b b',
       'b www$   }wwwwb b b',
       'b bwbwbwb bwb b b b',
-      'b www       w b b b',
+      'b www  **** w b b b',
       'b bwbwbwb bwbwb}b b',
       'b  www *& www b b b',
       'b bwbwbwbwbwwsb  &b',
@@ -111,7 +111,7 @@ scene('game', ({level, score}) => {
     ],
     [
       'aaaaaaaaaaaaaaaabababababab',
-      'aab&$*         *         db',
+      'aab&$*         *&&&      db',
       'azazazazazazabaababababbabb',
       'azazabazabaza%a',
       'azzzz&$  zzzz a',
@@ -119,22 +119,22 @@ scene('game', ({level, score}) => {
       'a zzzzzzzzzzz a',
       'b bwbwbwb bwbwb',
       'b wwwwwwwwwwwwb',
-      'bbwbwbwbwbwbwb',
+      'bb& bwbwbwbwbwb',
       'bww&  $   wwwqb',
       'bbbbbbbbbbbbbbb',
     ],
     [
       'aaaaaaaaaaaaaaaaaaa',
       'azzzz&    a  &   %aaaaaaaaa',
-      'awazaz za azazzz} ad  $*  a',
-      'awzzwz zw wzwwzz  aaaaaaa}a',
-      'a &%ww ww a }   $ &     a a',
-      'a$a az za azazzz  aaaaa%a a',
-      'a z z   *& &z zz  w %}a a%a',
-      'a a az za aza zz  z   a a a',
-      'a w ww}zz  zz zz  z  $a%a a',
-      'a w%zz}z  * &}zz}%z   a a a',
-      'awz    z    *wzz sw %}a$  a',
+      'awazaz ba bzazzz} ad  $*  a',
+      'awzzwz bw bzwwzz  aaaaaaa}a',
+      'a*&%ww ww b }   $ &     a a',
+      'a$b az ba bzazzz  aaaaa%a a',
+      'a*b*b&*b &b&z zz  w %}a a%a',
+      'a b az ba bza zz  z   a a a',
+      'a b ww}bz bzz zz  z  $a%a a',
+      'a b%zz}b *b &}zz}%z   a a a',
+      'abz    b    *wzz sw %}a$  a',
       'aaaaaaaaaaaaaaaaaaaaaaaaaaaa',
     ]
   ]
@@ -146,13 +146,14 @@ scene('game', ({level, score}) => {
     z: [sprite('brick-red'), 'wall-brick', solid(), 'wall'],
     s: [sprite('door'), 'wall-brick', solid(), 'wall'],
     d: [sprite('door'), 'door', 'wall', solid()],
+    t: [sprite('brick-red'), 'wall-brick-dool', solid(), 'wall'],
     q: [sprite('door'), 'wall-brick-dool', solid(), 'wall'],
     b: [sprite('wall-gold'), 'wall-gold', solid(), 'wall'],
     w: [sprite('brick-wood'), 'wall-brick', solid(), 'wall'],
     p: [sprite('brick-wood'), 'wall-brick-dool', solid(), 'wall'],
     '}': [sprite('ghost'), 'dangerous', 'ghost', { dir: -1, timer: 0 }],
     '&': [sprite('slime'), 'slime', { dir: -1 }, 'dangerous', { timer: 0 }],    
-    '*': [sprite('baloon'), 'baloon', { dir: -1 }, 'dangerous', { timer: 0 }],
+    '*': [sprite('baloon'), 'baloon', { dir: -1 }, { timer: 0 }],
     '$': [sprite('goomba'), 'goomba', { dir: -1 }, 'dangerous', { timer: 0 }],
     '%': [sprite('goomba1'), 'goomba1', { dir: -1 }, 'dangerous', { timer: 0 }],
   }
@@ -318,7 +319,7 @@ scene('game', ({level, score}) => {
     obj.pushOutAll();
     obj.play("move");
 
-    wait(5, () => {
+    wait(7, () => {
       destroy(obj);
 
       obj.dir = vec2(1,0)
@@ -351,8 +352,8 @@ scene('game', ({level, score}) => {
   })
 
   collides('kaboom', 'dangerous', (k,s) => {
-    camShake(1000);
-     wait(0.1, () => {
+    camShake(10000);
+     wait(0, () => {
        destroy(k)
      })
      destroy(s);
