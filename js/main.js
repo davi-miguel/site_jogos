@@ -39,17 +39,14 @@ function logan1(){
      function logan5(){
         location.href="./tele-bomba.html";
      }
-     function logan8(){
-        location.href="./tele-bomba.html";
+     function logan6(){
+      location.href="bola_yellow.html";
      }
      function logan7(){
-        location.href="./mina espacial.html";
-     }
+      location.href="./mina espacial.html";
+   }
      function logan8(){
         location.href="https://playcanv.as/p/2OlkUaxF/";
-     }
-     function logan6(){
-        location.href="bola_yellow.html";
      }
      function logan9(){
         location.href="tetris - Cópia.html"
