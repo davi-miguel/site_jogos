@@ -28,7 +28,7 @@ var animationID;
 // ################################################################### load sprites
 let spriteBase64 = "sprite_.png";
 const tank = new Image();
-tank.src = "nave.png"
+tank.src = "nave.gif"
 const invader = new Image();
 invader.src = spriteBase64;
 var startScreenTimeout;
@@ -44,10 +44,9 @@ var tank__bottomOffset = (spritUnitHeight/2) + scoreBarHeight;
 var tankX=canvas.width/2;
 var tankdX = 4;
 var tankY=canvas.height-(tank__bottomOffset);
-var tankWidth= spriteUnitWidth/1.5;
-var tankHeight =spritUnitHeight/1.5;
+var tankWidth= spriteUnitWidth/0.9;
+var tankHeight =spritUnitHeight/0.9;
 var keys =[];
-
 // ################################################################### score and lives
 var score = 0;
 var allowedLives = 8;

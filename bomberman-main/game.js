@@ -153,7 +153,7 @@ scene('game', ({level, score}) => {
     p: [sprite('brick-wood'), 'wall-brick-dool', solid(), 'wall'],
     '}': [sprite('ghost'), 'dangerous', 'ghost', { dir: -1, timer: 0 }],
     '&': [sprite('slime'), 'slime', { dir: -1 }, 'dangerous', { timer: 0 }],    
-    '*': [sprite('baloon'), 'baloon', { dir: -1 }, { timer: 0 }],
+    '*': [sprite('baloon'), 'baloon', { dir: -1 }, { timer: 0 }, solid()],
     '$': [sprite('goomba'), 'goomba', { dir: -1 }, 'dangerous', { timer: 0 }],
     '%': [sprite('goomba1'), 'goomba1', { dir: -1 }, 'dangerous', { timer: 0 }],
   }

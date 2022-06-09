@@ -6,8 +6,8 @@ const speedElement = document.getElementById("speed");
 const ROW = 20;
 const COL = 10;
 const SQ = 30;
-const defaultColor = "#111111";
-const defaultBorder = "rgba(255,255,255,0.1)";
+const defaultColor = "#000000";
+const defaultBorder = "rgba(255,255,255,0.3)";
 
 let canMove = true;
 let speed = 500;
@@ -26,12 +26,14 @@ drawBoard();
 
 const PIECES = [
     [Z,'red'],
+    [k,'#103'],
+    [J,'orange'],
     [S,'green'],
     [T,'yellow'],
     [O,'blue'],
     [L,'purple'],
     [I,'cyan'],
-    [J,'orange'],
+
 ];
 
 let piece = randomPiece();

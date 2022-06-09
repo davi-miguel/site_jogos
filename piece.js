@@ -5,10 +5,11 @@ class Piece {
 
         this.pieceN = 0;
         this.activePiece = this.piece[this.pieceN];
-
         this.x = 3;
         this.y = -2;
     }
+
+    
 
     fill(color) {
         for (let currentRow = 0; currentRow < this.activePiece.length; currentRow++) {

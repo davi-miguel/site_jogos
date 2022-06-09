@@ -85,5 +85,5 @@ function logan1(){
         location.href="reator/reator/start reator.html"
      }
      function logan21(){
-        location.href="Ping-Pong-Game-JavaScript-master/Ping-Pong-Game-JavaScript-master/index.html"
+        location.href="traffic_racer/index.html"
      }

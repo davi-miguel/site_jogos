@@ -6,20 +6,9 @@ const som_win = new Audio();
 
 som_win.src = './win.wav';
 
-const btn_esquerda = document.getElementById("moveEsquerda")
-	btn_esquerda.addEventListener("touchstart", () => {
-
-            piece.moveLeft();
-            dropStart = Date.now();
-
-	})
-
 	const btn_direita = document.getElementById('moveDireita')
 	btn_direita.addEventListener("touchstart", () => {
-
-		piece.moveRight();
-        dropStart = Date.now();
-
+		ArrowLeft()
 	})
 
 	const btn_atira = document.getElementById('posisao')
@@ -29,10 +18,10 @@ const btn_esquerda = document.getElementById("moveEsquerda")
             dropStart = Date.now();
 
 	})
-	const btn_baixo = document.getElementById('descer')
-	btn_atira.addEventListener("touchstart", () => {
+	const btn_baixo = document.getElementById('btn_descer')
+	btn_baixo.addEventListener("touchstart", () => {
 
-		piece.moveDown();
+		document.addEventListener("keydown", CONTROL);
 
 	})
 
