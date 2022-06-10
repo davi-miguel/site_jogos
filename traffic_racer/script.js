@@ -145,7 +145,7 @@ $(function() {
         car_down(car_8);
         car_down(car_9);
         car_down(car_10);
-        car_down(car_11);
+        car_down(car_11)
         car_down(car_12);
 
         line_down(line_1);
