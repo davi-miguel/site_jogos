@@ -1,6 +1,7 @@
 const Game_over = new Audio()
 Game_over.src = "gammeover.mp4"
-
+const engine = new Audio()
+engine.src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/155629/engine.wav"
 
 $(function() {
 
@@ -20,7 +21,6 @@ $(function() {
     var car_9 = $('#car_9');
     var car_10 = $('#car_10');
     var car_11 = $('#car_11');
-    var car_12 = $('#car_12');
     var line_1 = $('#line_1');
     var line_2 = $('#line_2');
     var line_3 = $('#line_3');
@@ -105,6 +105,7 @@ $(function() {
         if (game_over === false && parseInt(car.css('top')) > 0) {
             car.css('top', parseInt(car.css('top')) - 3);
             move_up = requestAnimationFrame(up);
+            engine.play();
         }
     }
 
@@ -112,6 +113,7 @@ $(function() {
         if (game_over === false && parseInt(car.css('top')) < container_height - car_height) {
             car.css('top', parseInt(car.css('top')) + 3);
             move_down = requestAnimationFrame(down);
+            engine.play()
         }
     }
 
@@ -119,7 +121,7 @@ $(function() {
     anim_id = requestAnimationFrame(repeat);
 
     function repeat() {
-        if (collision(car, car_1) || collision(car, car_2) || collision(car, car_3) || collision(car, car_4) || collision(car, car_5) || collision(car, car_6 ) || collision(car, car_7) || collision(car, car_8) || collision(car, car_9) || collision(car, car_10) || collision(car, car_11) || collision(car, car_12)) {
+        if (collision(car, car_1) || collision(car, car_2) || collision(car, car_3) || collision(car, car_4) || collision(car, car_5) || collision(car, car_6 ) || collision(car, car_7) || collision(car, car_8) || collision(car, car_9) || collision(car, car_10) || collision(car, car_11)) {
             Game_over.play()
             stop_the_game();
             return;
@@ -145,9 +147,8 @@ $(function() {
         car_down(car_8);
         car_down(car_9);
         car_down(car_10);
-        car_down(car_11)
-        car_down(car_12);
-
+        car_down(car_11);
+        
         line_down(line_1);
         line_down(line_2);
         line_down(line_3);
