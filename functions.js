@@ -6,25 +6,6 @@ const som_win = new Audio();
 
 som_win.src = './win.wav';
 
-	const btn_direita = document.getElementById('moveDireita')
-	btn_direita.addEventListener("touchstart", () => {
-		ArrowLeft()
-	})
-
-	const btn_atira = document.getElementById('posisao')
-	btn_atira.addEventListener("touchstart", () => {
-
-		piece.rotate();
-            dropStart = Date.now();
-
-	})
-	const btn_baixo = document.getElementById('btn_descer')
-	btn_baixo.addEventListener("touchstart", () => {
-
-		document.addEventListener("keydown", CONTROL);
-
-	})
-
 function drawBoard() {
     for (let currentRow = 0; currentRow < ROW; currentRow++) {
         for(let currentCol = 0; currentCol < COL; currentCol++) {

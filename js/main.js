@@ -87,3 +87,9 @@ function logan1(){
      function logan21(){
         location.href="traffic_racer/index.html"
      }
+     function logan22(){
+        location.href="batle/BatalhaNaval-master/battleship.html"
+     }
+     function logan23(){
+        location.href="Dash/Dash/index.html"
+     }
