@@ -28,7 +28,7 @@ var animationID;
 // ################################################################### load sprites
 let spriteBase64 = "sprite_.png";
 const tank = new Image();
-tank.src = "nave.gif"
+tank.src = "nave.png"
 const invader = new Image();
 invader.src = spriteBase64;
 var startScreenTimeout;

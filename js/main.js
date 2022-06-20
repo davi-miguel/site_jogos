@@ -93,3 +93,6 @@ function logan1(){
      function logan23(){
         location.href="Dash/Dash/index.html"
      }
+     function logan24(){
+        location.href="projeto nave/saveThePlanet.html"
+     }

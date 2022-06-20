@@ -1,3 +1,9 @@
+/*sons*/
+const win = new Audio()
+win.src = "win.wav"
+const ex = new Audio()
+ex.src = "explo.mp4"
+
 /* Informação usada para desenhar os navios */
 var ship =  [[[1,5], [1,2,5], [1,2,3,5], [1,2,3,4,5]], [[6,10], [6,7,10], [6,7,8,10], [6,7,8,9,10]]];
 
@@ -104,6 +110,7 @@ function showGrid(ispc) {
       document.write ('<a href="javascript:gridClick('+y+','+x+');"><img name="pc'+y+'_'+x+'" src="batt100.gif" width=16 height=16></a>');
       else
       document.write ('<a href="javascript:void(0);"><img name="ply'+y+'_'+x+'" src="batt'+player[y][x][0]+'.gif" width=16 height=16></a>');
+      
     }
     document.write('<br>');
   }
@@ -118,6 +125,7 @@ function gridClick(y,x) {
     if ( --computersships[shipno][1] == 0 ) {
       sinkShip(computer,shipno,true);
       alert("jogador afundou o "+shiptypes[computersships[shipno][0]][0]+" da cpu!");
+      ex.play();
       updateStatus();
       if ( --computerlives == 0 ) {
         alert("Voce venceu! reinicie\n"+

@@ -190,26 +190,6 @@
 		}
 		render();
 	}
-
-	function atiraCanhao(){
-		if(!Atira){
-			alert("atira");
-		}
-	}
-
-	function direita(){
-		//move para a direita
-		if(mvRight && !mvLeft){
-			defender.vx = 5;
-		}
-	}
-
-	function esquerda(){
-		if(mvLeft && !mvRight){
-			defender.vx = -5;
-		
-		}
-	}
 	
 	function update(){
 		
