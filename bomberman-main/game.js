@@ -151,7 +151,54 @@ scene('game', ({level, score}) => {
       'a yyyyyybybbbybbbbbbbbbb aa',
       'a bbbbbbbybbbyyyyyyyyyyy sa',
       'aeeeeeeeeeaaaaaaaaaaaaaaaaa',
-    ]
+    ],
+    
+    [
+      'a-------------------------a',
+      '/+++++++++++$&   $&    $&d/',
+      '/+++++++++++$&          $&/',
+      '/+++++++++++$           $&/',
+      '/ ++++++++++$&$          &/',
+      '/ ++++++++++$&$    &$   $&/',
+      '/ ++++++++++              /',
+      '/ ++++++++++ }} }  }    } /',
+      '/ ++++++++++ }} }  }    } /',
+      '/ ++++++++++ }} }  }    } /',
+      '/ ++++++++++$       &    &/',
+      '/ ++++++++++       $&$&$& /',
+      'a-------------------------a',
+    ],
+    
+    [
+      'aaaaaaaaaaaaaaaaaaaaaaaaaa',
+      '/}          $&   $&    $&d/',
+      '/}          $&          $&/',
+      '/}          $           $&/',
+      '/}        ++$&$          &/',
+      '/ ++++++++++$&$    &$   $&/',
+      '/ ++++++++++              /',
+      '/ ++++++++++ }} }  }    } /',
+      '/ ++++++++++ }} }  }    } /',
+      '/ ++++++++++ }} }  }    } /',
+      '/ ++++++++++$       &    &/',
+      '/ ++++++++++       $&$&$& /',
+      'a-------------------------a',
+    ],
+    [
+      'aaaaaaaaaaaaaaaaaaaaaaaaaa',
+      '/}          $&   $&    $&d/',
+      '/}          $&          $&/',
+      '/}          $           $&/',
+      '/}          $&$          &/',
+      '/           $&$    &$   $&/',
+      '/                         /',
+      '/    }}}}}}} }} }  }    } /',
+      '/            }} }  }    } /',
+      '/ +                       /',
+      '/      &                  /',
+      '/          &&&&    $&$&$& /',
+      'a-------------------------a',
+    ],
   ]
 
   const levelCfg = {
@@ -159,6 +206,9 @@ scene('game', ({level, score}) => {
     height: 26,
     a: [sprite('wall-steel'), 'wall-steel', solid(), 'wall'],
     z: [sprite('brick-red'), 'wall-brick', solid(), 'wall'],
+    '+': [sprite('slime'), 'wall-brick', solid(), 'wall'],
+    '-': [sprite('baloon'), 'wall-steel', solid(), 'wall'],
+    '/': [sprite('ghost'), 'wall-steel', solid(), 'wall'],
     v: [sprite('door'), 'wall-brick', { dir: -1 }, 'dangerous', { timer: 0 }],
     s: [sprite('door'), 'wall-brick', solid(), 'wall'],
     d: [sprite('door'), 'door', 'wall', solid()],
@@ -370,7 +420,7 @@ scene('game', ({level, score}) => {
   })
 
   collides('kaboom', 'dangerous', (k,s) => {
-    camShake(10);
+    camShake(100000000000000000);
      wait(4, () => {
        destroy(k)
      })
@@ -380,12 +430,13 @@ scene('game', ({level, score}) => {
   })
 
   player.collides('kaboom', () => {
+    camShake(100000000000000000)
     go('lose', {score: scoreLabel.value});
     som_gameover.play()
   })
 
   collides('kaboom', 'wall-brick', (k,s) => {
-    camShake(4);
+    camShake(10000);
      wait(1, () => {
        destroy(k)
      })
@@ -405,7 +456,7 @@ scene('game', ({level, score}) => {
   })
 
   collides('kaboom', 'wall-brick-dool', (k,s) => {
-    camShake(100000000000000000);
+    camShake(100000000);
     wait(0.1, () => {
       destroy(k);
     })
