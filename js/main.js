@@ -55,10 +55,10 @@ window.addEventListener("scroll", function () {
      function logan10(){
         location.href="color blast.html"
      }
-     function logan25(){
-      location.href="Labirinto/index.html"
-   }
      function logan11(){
+      location.href="labirinto/index.html.html"
+   }
+     function logan25(){
         location.href="dino.html"
      }
      function logan12(){
