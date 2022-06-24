@@ -24,9 +24,7 @@ window.addEventListener("scroll", function () {
 });
 
 
-function logan1(){
-    location.href="snake.html";
- }
+
  function logan2(){
         location.href="game.html";
      }
@@ -44,6 +42,9 @@ function logan1(){
      }
      function logan7(){
       location.href="./mina espacial.html";
+   }
+   function logan1(){
+      location.href="snake.html";
    }
      function logan8(){
         location.href="https://playcanv.as/p/2OlkUaxF/";
@@ -76,7 +77,7 @@ function logan1(){
         location.href="./planet.html"
      }
      function logan18(){
-        location.href="labirinto/index.html"
+        location.href="mario-main/mario-main/index.html"
      }
      function logan19(){
         location.href="bomberman-main/index.html"
@@ -97,5 +98,5 @@ function logan1(){
         location.href="projeto nave/saveThePlanet.html"
      }
      function logan25(){
-        location.href="mario-main/mario-main/index.html"
+        location.href="C:/Users/paraf/OneDrive/Área de Trabalho/projetos,de,html,css,javascript/Site/site_jogos/Labirinto/index.html"
      }
