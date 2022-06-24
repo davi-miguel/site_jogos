@@ -56,7 +56,7 @@ window.addEventListener("scroll", function () {
         location.href="color blast.html"
      }
      function logan25(){
-      location.href="C:/Users/paraf/OneDrive/Área de Trabalho/projetos,de,html,css,javascript/Site/site_jogos/Labirinto/index.html"
+      location.href="Labirinto/index.html"
    }
      function logan11(){
         location.href="dino.html"
