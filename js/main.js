@@ -55,6 +55,9 @@ window.addEventListener("scroll", function () {
      function logan10(){
         location.href="color blast.html"
      }
+     function logan25(){
+      location.href="C:/Users/paraf/OneDrive/Área de Trabalho/projetos,de,html,css,javascript/Site/site_jogos/Labirinto/index.html"
+   }
      function logan11(){
         location.href="dino.html"
      }
@@ -97,6 +100,4 @@ window.addEventListener("scroll", function () {
      function logan24(){
         location.href="projeto nave/saveThePlanet.html"
      }
-     function logan25(){
-        location.href="C:/Users/paraf/OneDrive/Área de Trabalho/projetos,de,html,css,javascript/Site/site_jogos/Labirinto/index.html"
-     }
+     
