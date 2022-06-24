@@ -96,3 +96,6 @@ function logan1(){
      function logan24(){
         location.href="projeto nave/saveThePlanet.html"
      }
+     function logan25(){
+        location.href="labirinto/index.html"
+     }

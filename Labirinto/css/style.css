@@ -17,4 +17,5 @@ body{
 	font-family: emulogic;
 	visibility: hidden;
 	position: absolute;
+	align-items: center;
 }
