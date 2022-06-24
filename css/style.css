@@ -254,9 +254,9 @@ a {
 
 .gallery-image-ping{
     display: inline-block;
-    width: 340px;
+    width: 360px;
     border-radius: 10px;
-    height: 760px;
+    height: 610px;
 }
 
 .gallery-image-nave{
@@ -282,7 +282,13 @@ a {
     display: inline-block;
     width: 410px;
     border-radius: 10px;
-    height: 580px;
+    height: z80px;
+}
+.gallery-image-bros{
+    display: inline-block;
+    width: 400px;
+    border-radius: 10px;
+    height: 400px;
 }
 
 .gallery-image-bola{
@@ -290,6 +296,13 @@ a {
     width: 410px;
     border-radius: 10px;
     height: 440px;
+}
+
+.gallery-image-s{
+    display: inline-block;
+    width: 400px;
+    border-radius: 10px;
+    height: 450px;
 }
 
 /* Footer */
