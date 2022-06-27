@@ -107,9 +107,9 @@ function showGrid(ispc) {
   for (y=0;y<gridy;++y) {
     for (x=0;x<gridx;++x) {
       if ( ispc )
-      document.write ('<a href="javascript:gridClick('+y+','+x+');"><img name="pc'+y+'_'+x+'" src="batt100.gif" width=16 height=16></a>');
+      document.write ('<a href="javascript:gridClick('+y+','+x+');"><img name="pc'+y+'_'+x+'" src="batt100.gif" width=25 height=25></a>');
       else
-      document.write ('<a href="javascript:void(0);"><img name="ply'+y+'_'+x+'" src="batt'+player[y][x][0]+'.gif" width=16 height=16></a>');
+      document.write ('<a href="javascript:void(0);"><img name="ply'+y+'_'+x+'" src="batt'+player[y][x][0]+'.gif" width=25 height=25></a>');
       
     }
     document.write('<br>');
