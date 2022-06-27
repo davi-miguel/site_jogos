@@ -1,4 +1,4 @@
-var stage1State = {
+var stage3State = {
 	create: function(){
 		this.onGame = true;
 		//Música e sons
@@ -16,16 +16,16 @@ var stage1State = {
 		game.add.sprite(0,0,'bg');
 		
 		this.maze = [
-			[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-			[1,3,0,0,0,0,0,0,0,0,0,0,0,3,1],
-			[1,0,1,1,0,1,0,1,1,1,0,1,1,0,1],
-			[1,0,1,3,0,1,3,0,0,1,0,3,1,0,1],
-			[1,0,0,0,1,1,1,1,0,1,0,1,1,0,1],
-			[1,0,0,0,0,1,0,2,0,0,0,0,0,0,1],
-			[1,0,1,3,0,0,0,0,1,0,0,3,1,0,1],
-			[1,0,1,1,1,1,0,1,1,0,1,1,1,0,1],
-			[1,3,0,0,0,0,0,3,1,0,0,0,0,3,1],
-			[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+			[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+			[1,3,0,0,0,0,1,3,0,0,0,0,0,3,0,0,0,0,3,0,0,0,0,2,3,1],
+			[1,0,1,3,1,0,1,1,0,1,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1],
+			[1,0,1,1,1,3,0,0,0,1,3,1,0,0,1,0,0,0,0,0,0,0,0,3,0,1],
+			[1,0,1,0,0,1,1,1,3,1,0,0,0,1,1,0,1,3,1,1,1,1,1,1,1,1],
+			[1,0,0,1,3,1,3,1,1,1,0,1,0,1,1,0,0,0,0,1,0,0,1,0,1,1],
+			[1,0,0,1,0,0,0,0,0,0,0,1,3,0,1,0,1,1,0,1,0,0,1,0,0,1],
+			[1,0,1,1,0,1,1,0,1,1,0,1,1,0,1,0,1,1,0,1,0,0,0,0,0,1],
+			[1,3,3,0,0,1,3,0,3,1,0,0,0,3,1,0,3,1,3,3,0,0,0,0,3,1],
+			[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
 		];
 		
 		this.blocks = game.add.group();
@@ -100,7 +100,7 @@ var stage1State = {
 		this.emitter.gravity.y = 0;
 		
 		//Timer
-		this.time = 95;
+		this.time = 200;
 		this.txtTimer = game.add.text(game.world.width - 15,15,'TIME: ' + this.getText(this.time),{font:'15px emulogic',fill:'#fff'});
 		this.txtTimer.anchor.set(1,0);
 		this.timer = game.time.events.loop(1000,function(){
@@ -118,7 +118,7 @@ var stage1State = {
 			this.moveEnemy();
 			this.movePlayer();
 			
-			if(this.time < 1 || this.coins >= 10){
+			if(this.time < 1 || this.coins >= 20){
 				this.gameOver();
 			}
 		}
@@ -137,7 +137,7 @@ var stage1State = {
 		this.enemy.animations.stop();
 		this.enemy.frame = 0;
 		
-		if(this.coins >= 10){//Passou de fase
+		if(this.coins >= 20){//Passou de fase
 			var txtLevelComplete = game.add.text(game.world.centerX,150,'LEVEL COMPLETE',{font:'20px emulogic',fill:'#fff'});
 				txtLevelComplete.anchor.set(.5);
 				
@@ -165,8 +165,8 @@ var stage1State = {
 			
 		game.time.events.add(5000,function(){
 			this.music.stop();
-			if(this.coins >= 10){
-				game.state.start('stage2');
+			if(this.coins >= 20){
+				game.state.start('end');
 			} else {
 				game.state.start('menu');
 			}
