@@ -64,7 +64,7 @@ a {
 #navbar {
     width: 100%;
     background: #111;
-    color: #eee;
+    color: yellow;
     height: 80px;
     align-items: center;
     position: fixed;
@@ -282,7 +282,7 @@ a {
     display: inline-block;
     width: 410px;
     border-radius: 10px;
-    height: z80px;
+    height: 80px;
 }
 .gallery-image-bros{
     display: inline-block;
@@ -345,12 +345,12 @@ button{
 }
 
 .snake{
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-family: sans-serif;
-    font-size: 14px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-family: sans-serif "Roboto";
+    font-size: 15px;
 }
 
 .velha{
@@ -358,42 +358,42 @@ button{
     padding-right: 2px;
     padding-top: 2px;
     padding-bottom: 2px;
-    font-family: sans-serif;
-    font-size: 14px;
+    font-family: sans-serif "Roboto";
+    font-size: 15px;
 }
 
 .ping{
     padding-left: 2px;
     padding-right: 2px;
     padding-top: 2px;
-    padding-bottom: 1px;
-    font-family: sans-serif;
-    font-size: 14px;
+    padding-bottom: 2px;
+    font-family: sans-serif "Roboto";
+    font-size: 15px;
 }
 .nave{
     padding-left: 2px;
     padding-right: 2px;
     padding-top: 2px;
     padding-bottom: 2px;
-    font-family: sans-serif;
-    font-size: 14px;
+    font-family: sans-serif "Roboto";
+    font-size: 15px;
 }
 .flappy{
     padding-left: 2px;
     padding-right: 2px;
-    padding-top: 30px;
+    padding-top: 2px;
     padding-bottom: 2px;
-    font-family: sans-serif;
-    font-size: 14px;
+    font-family: sans-serif "Roboto";
+    font-size: 15px;
 }
 .bola{
     padding-left: 2px;
     padding-right: 2px;
     padding-top: 2px;
     padding-bottom: 2px;
-    font-family: sans-serif;
-    font-size: 14px;
+    font-family: sans-serif "Roboto";
+    font-size: 15px;
 }
 f{
-    font-family: sans-serif 'Open Sans';
+    font-size: 15px;
 }
