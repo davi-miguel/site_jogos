@@ -81,15 +81,14 @@ a {
 <body>
     <div class="container">
         <div class="game-wrap">
-            <canvas width="960px" height="540" id="game"></canvas>
-            <article class="content">
+			<article class="content">
                 <h1 class="title"><span>C</span><span>o</span><span>l</span><span>o</span><span>r</span><span> </span><span>B</span><span>l</span><span>a</span><span>s</span><span>t</span></h1>
             </article>
+            <canvas width="960px" height="540" id="game"></canvas>
         </div>
     </div>
 </body>
 <script>
-
 (function(window){
 var Game = {
 
@@ -296,9 +295,9 @@ var Player = function(){
 	this.y = Game.c.height - this.height;
 	this.movingLeft = false;
 	this.movingRight = false;
-	this.speed = 8;
+	this.speed = 10;
 	this.invincible = false;
-	this.color = "purple";
+	this.color = "yellow";
 };
 
 
@@ -356,7 +355,7 @@ var Bullet = function(x){
 	this.vy = 8;
 	this.index = Game.bulletIndex;
 	this.active = true;
-	this.color = "blue,red,pink,orange,green,white,#111,#0ef,#1ef,#2ef,#6ef,#3ef,#9ef,#99f";
+	this.color = "blue,red,pink,orange,green,white,#111,#0ef,#1ef,#2ef,#6ef,#3ef,#9ef,#99f, beige, #999, yellow, #957, brown";
 	
 };
 

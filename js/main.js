@@ -98,3 +98,12 @@ window.addEventListener("scroll", function () {
      function logan11(){
         location.href="dino.html"
      }
+     function logan26(){
+        location.href="memoria/memoria/index.html"
+     }
+     function logan27(){
+        location.href="bilhar/bilhar/index.html"
+     }
+     function logan28(){
+        location.href="Xadrez/index.html"
+     }
