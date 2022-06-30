@@ -4,6 +4,20 @@ const engine = new Audio()
 engine.src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/155629/engine.wav"
 
 $(function() {
+    const btn_esquerda = document.getElementById("moveEsquerda")
+	btn_esquerda.addEventListener("touchstart", () => {
+            if (game_over === false && parseInt(car.css('left')) > 0) {
+                car.css('left', parseInt(car.css('left')) - 5);
+                move_left = requestAnimationFrame(left);
+            }
+	})
+    const btn_direita = document.getElementById("moveDireita")
+	btn_direita.addEventListener("touchstart", () => {
+            if (game_over === false && parseInt(car.css('left')) > 0) {
+                car.css('left', parseInt(car.css('left')) - 5);
+                move_left = requestAnimationFrame(left);
+            }
+	})
 
     var anim_id;
 
