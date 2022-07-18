@@ -118,7 +118,7 @@ var stage2State = {
 			this.moveEnemy();
 			this.movePlayer();
 			
-			if(this.time < 1 || this.coins >= 15){
+			if(this.time < 1 || this.coins >= 1){
 				this.gameOver();
 			}
 		}
@@ -137,7 +137,7 @@ var stage2State = {
 		this.enemy.animations.stop();
 		this.enemy.frame = 0;
 		
-		if(this.coins >= 15){//Passou de fase
+		if(this.coins >= 1){//Passou de fase
 			var txtLevelComplete = game.add.text(game.world.centerX,150,'LEVEL COMPLETE',{font:'20px emulogic',fill:'#fff'});
 				txtLevelComplete.anchor.set(.5);
 				
@@ -165,7 +165,7 @@ var stage2State = {
 			
 		game.time.events.add(5000,function(){
 			this.music.stop();
-			if(this.coins >= 15){
+			if(this.coins >= 1){
 				game.state.start('stage3');
 			} else {
 				game.state.start('menu');
