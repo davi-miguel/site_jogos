@@ -3,6 +3,7 @@ Game_over.src = "gammeover.mp4"
 const engine = new Audio()
 engine.src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/155629/engine.wav"
 
+
 $(function() {
 
     var anim_id;
@@ -43,7 +44,7 @@ $(function() {
     var score_counter = 1;
 
     var speed = 2;
-    var line_speed = 5;
+    var line_speed = 10;
 
     var move_right = false;
     var move_left = false;
@@ -159,7 +160,7 @@ $(function() {
     function car_down(car) {
         var car_current_top = parseInt(car.css('top'));
         if (car_current_top > container_height) {
-            car_current_top = -200;
+            car_current_top = -100;
             var car_left = parseInt(Math.random() * (container_width - car_width));
             car.css('left', car_left);
         }
@@ -169,7 +170,7 @@ $(function() {
     function line_down(line) {
         var line_current_top = parseInt(line.css('top'));
         if (line_current_top > container_height) {
-            line_current_top = -300;
+            line_current_top = -100;
         }
         line.css('top', line_current_top + line_speed);
     }

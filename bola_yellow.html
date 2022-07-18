@@ -43,7 +43,7 @@
         var canvas, ctx, ALTURA, LARGURA, VELOCIDADE = 8, maxPulos = 3,
         estadoAtual, record, img,
 
-		pontosParaNovaFase = [5, 10, 15, 20],
+		pontosParaNovaFase = [15, 35, 55, 75],
 		faseAtual = 0,
 
 		labelNovaFase = {
@@ -109,7 +109,7 @@
 			score: 0,
 			rotacao: 0,
 
-			vidas: 6,
+			vidas: 3,
 			colidindo: false,
 
 			atualiza: function() {
@@ -140,7 +140,7 @@
 					localStorage.setItem("record", this.score);
 				}
 
-				this.vidas = 6;
+				this.vidas = 3;
 				this.score = 0;
 
 				VELOCIDADE = 10;
@@ -263,7 +263,7 @@
 			bloco.vidas++;
 
 			if (faseAtual == 4)
-				bloco.gravidade *= 0.6;
+				bloco.gravidade *= 0.1;
 
 			labelNovaFase.texto = "Level " + faseAtual;
 			labelNovaFase.fadeIn(0.4);
@@ -361,7 +361,6 @@
 		//inicializa o jogo
 		main();
 	</script>
-	<audio src="rock!.mp3" loop autoplay></audio>
 	<a href="./index.html" id="voltar" class="btn">Voltar para site</a>
 	</body>
 </html>

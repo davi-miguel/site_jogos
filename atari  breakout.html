@@ -21,7 +21,7 @@
     const BALL_SPD = 0.5; // starting ball speed as a fraction of screen height per second
     const BALL_SPD_MAX = 2; // max ball speed as a multiple of starting speed
     const BALL_SPIN = 0.2; // ball deflection off the paddle (0 = no spin, 1 = high spin)
-    const BRICK_COLS = 30; // number of brick columns
+    const BRICK_COLS = 16; // number of brick columns
     const BRICK_GAP = 0.2; // brick gap as a fraction of wall width
     const BRICK_ROWS = 12; // starting number of brick rows
     const GAME_LIVES = 3; // starting number of game lives
@@ -33,7 +33,7 @@
     const PADDLE_SPD = 0.5; // fraction of screen width per second
     const PADDLE_W = 0.1; // paddle width as a fraction of screen width
     const PUP_BONUS = 50; // bonus points for collecting an extra powerup
-    const PUP_CHANCE = 0.1; // probability of a powerup per brick hit (between 0 and 1)
+
     const PUP_SPD = 0.15; // powerup speed as a fraction of screen height per second
     const WALL = 0.02; // wall/ball size as a fraction of the shortest screen dimension
 
@@ -51,7 +51,7 @@
     const TEXT_LIVES = "Ball";
     const TEXT_SCORE = "Score";
     const TEXT_SCORE_HIGH = "BEST";
-    const TEXT_WIN = "!!!!!!!!!!!!!!!! YOU WIN !!!!!!!!!!!!!!!!";
+    const TEXT_WIN = "!!! YOU WIN !!!";
 
     // definitions
     const Direction = {
@@ -60,12 +60,7 @@
         STOP: 2
     }
 
-    const PupType = {
-        EXTENSION: {color: "dodgerblue", symbol: "="},
-        LIFE: {color: "hotpink", symbol: "+"},
-        STICKY: {color: "forestgreen", symbol: "~"},
-        SUPER: {color: "magenta", symbol: "s"}, 
-    }
+   
 
     // set up the game canvas and context
     var canv = document.createElement("canvas");
@@ -509,16 +504,6 @@
                         ball.y = bricks[i][j].bot + ball.h * 0.5;
                     } else { // downwards
                         ball.y = bricks[i][j].top - ball.h * 0.5;
-                    }
-
-                    // create a powerup
-                    if (Math.random() <= PUP_CHANCE) {
-                        let px = bricks[i][j].left + bricks[i][j].w / 2;
-                        let py = bricks[i][j].top + bricks[i][j].h / 2;
-                        let pSize = bricks[i][j].w / 2;
-                        let pKeys = Object.keys(PupType);
-                        let pKey = pKeys[Math.floor(Math.random() * pKeys.length)];
-                        pups.push(new PowerUp(px, py, pSize, PupType[pKey]));
                     }
 
                     // bounce the ball (if not a super ball) and destroy the brick
