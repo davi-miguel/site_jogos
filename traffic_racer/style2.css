@@ -207,9 +207,9 @@ body {
 #restart {
     border: none;
     padding: 25px;
-    color: rgb(1, 0, 77);
+    color: rgb(238, 255, 0);
     background-color: #000000;
-    font-size: 30px;
+    font-size: 60px;
     margin-top: 30%;
 }
 .small_text{
