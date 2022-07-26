@@ -71,7 +71,7 @@ $(function() {
 
     var score_counter = 1;
 
-    var speed = 2;
+    var speed = 4;
     var line_speed = 10;
 
     var move_right = false;

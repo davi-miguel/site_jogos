@@ -10,8 +10,8 @@ body {
     position: relative;
     height: 530px;
     width: 50%;
-    left: 35%;
-    margin-top: 20px;;
+    left: 23%;
+    margin-top: 20px;
     background-color: #292929;
     overflow: hidden;
 }
@@ -192,6 +192,26 @@ body {
     width: 200px;
     height: 200px;
 }
+#esquerda{
+    position: absolute;
+    left: 10px;
+    top: 400px;
+}
+#direita{
+    position: absolute;
+    left: 10px;
+    top: 600px;
+}
+#para_cima{
+    position: absolute;
+    left: 740px;
+    top: 400px;
+}
+#para_baixo{
+    position: absolute;
+    left: 740px;
+    top: 600px;
+}
 #restart_div {
     position: absolute;
     height: 100%;
@@ -217,8 +237,8 @@ body {
 }
 #score_div{
     position: absolute;
-    margin-top: 20%;
-    margin-left: 0%;
+    margin-top: 100%;
+    margin-left: 27%;
     font-size: 35px;
     background-color: white;
     color: #454545;
