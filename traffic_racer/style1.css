@@ -189,8 +189,8 @@ body {
     width: 50px;
 }
 .fora{
-    width: 200px;
-    height: 200px;
+    width: 0;
+    height: 0;
 }
 #restart_div {
     position: absolute;
