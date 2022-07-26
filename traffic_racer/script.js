@@ -8,6 +8,19 @@ $(function() {
 
     var anim_id;
 
+    document.getElementById('esquerda').addEventListener('click', () => {
+		if (game_over === false && parseInt(car.css('left')) > 0) {
+            car.css('left', parseInt(car.css('left')) - 5);
+            move_left = requestAnimationFrame(left);
+        }
+	})
+    document.getElementById('direita').addEventListener('click', () => {
+        if (game_over === false && parseInt(car.css('left')) < container_width - car_width) {
+            car.css('left', parseInt(car.css('left')) + 5);
+            move_right = requestAnimationFrame(right);
+        }   
+	})
+
     //saving dom objects to variables
     var container = $('#container');
     var car = $('#car');

@@ -1072,7 +1072,7 @@ window.onload = function(){
             }
 
             for(var x = 0; x < scopes.length; x++){
-                sqs[scopes[x]].style.background = "#000";//.classList.add("scope");
+                sqs[scopes[x]].style.background = "#1f3";//.classList.add("scope");
             //    alert(scopes)
             }
         }
@@ -1204,7 +1204,7 @@ window.onload = function(){
                 values[Number(bestMove.split("-")[1])] = "q";
             }
 
-            sqs[bestMove.split("-")[1]].style.background = '#aaf';
+            sqs[bestMove.split("-")[1]].style.background = '#00f';
             sqs[bestMove.split("-")[0]].style.background = '#aaf';
 
             for(var x = 0; x < 64; x++){

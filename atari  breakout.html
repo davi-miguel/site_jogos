@@ -21,13 +21,13 @@
     const BALL_SPD = 0.5; // starting ball speed as a fraction of screen height per second
     const BALL_SPD_MAX = 2; // max ball speed as a multiple of starting speed
     const BALL_SPIN = 0.2; // ball deflection off the paddle (0 = no spin, 1 = high spin)
-    const BRICK_COLS = 16; // number of brick columns
+    const BRICK_COLS = 14; // number of brick columns
     const BRICK_GAP = 0.2; // brick gap as a fraction of wall width
     const BRICK_ROWS = 12; // starting number of brick rows
     const GAME_LIVES = 3; // starting number of game lives
     const KEY_SCORE = "breakout_highscore"; // save key for local storage of high score
     const MARGIN = 6; // number of empty rows above the bricks
-    const MAX_LEVEL = 20; // maximum game level (+2 rows of bricks per level)
+    const MAX_LEVEL = 10; // maximum game level (+2 rows of bricks per level)
     const MIN_BOUNCE_ANGLE = 30; // minimum bounce angle from the horizontal in degrees
     const PADDLE_SIZE = 1.5; // paddle size as a multiple of wall thickness
     const PADDLE_SPD = 0.5; // fraction of screen width per second
@@ -39,8 +39,8 @@
 
     // colours
     const COLOR_BACKGROUND = "black";
-    const COLOR_BALL = "red";
-    const COLOR_PADDLE = "blue";
+    const COLOR_BALL = " cyan";
+    const COLOR_PADDLE = "darkblue";
     const COLOR_TEXT = "yellow";
     const COLOR_WALL = "lightblue";
 
@@ -278,6 +278,7 @@
             r = 255;
             g = 255 * fraction / 0.67;
             p = 245;
+
         }
 
         // yellow to green (reduce red)

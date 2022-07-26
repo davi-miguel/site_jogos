@@ -121,7 +121,7 @@ var ShootPlayer = enchant.Class.create(enchant.Sprite, {
 		this.image = game.assets[graImg];
 		this.x = x;
 		this.y = y;
-		this.frame = 1;
+		this.frame = 2;
 		this.direction = direction;
 		this.moveSpeed = 10;
 		
