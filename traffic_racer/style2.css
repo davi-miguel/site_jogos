@@ -199,7 +199,7 @@ body {
 }
 #direita{
     position: absolute;
-    left: 10px;
+    left: 200px;
     top: 600px;
 }
 #para_cima{
@@ -209,7 +209,7 @@ body {
 }
 #para_baixo{
     position: absolute;
-    left: 740px;
+    left: 590px;
     top: 600px;
 }
 #restart_div {
