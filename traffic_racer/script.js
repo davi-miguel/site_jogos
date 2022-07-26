@@ -20,6 +20,21 @@ $(function() {
             move_right = requestAnimationFrame(right);
         }   
 	})
+    document.getElementById('para_cima').addEventListener('click', () => {
+		if (game_over === false && parseInt(car.css('top')) > 0) {
+            car.css('top', parseInt(car.css('top')) - 3);
+            move_up = requestAnimationFrame(up);
+            engine.play();
+        }
+	})
+    document.getElementById('para_baixo').addEventListener('click', () => {
+        if (game_over === false && parseInt(car.css('top')) < container_height - car_height) {
+            car.css('top', parseInt(car.css('top')) + 3);
+            move_down = requestAnimationFrame(down);
+            engine.play()
+        }  
+	})
+    
 
     //saving dom objects to variables
     var container = $('#container');
