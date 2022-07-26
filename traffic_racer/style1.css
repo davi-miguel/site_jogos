@@ -8,8 +8,8 @@ body {
 
 #container{
     position: relative;
-    height: 90vh;
-    width: 25%;
+    height: 530px;
+    width: 50%;
     left: 35%;
     margin-top: 20px;;
     background-color: #292929;
@@ -218,7 +218,7 @@ body {
 #score_div{
     position: absolute;
     margin-top: 20%;
-    margin-left: 5%;
+    margin-left: 0%;
     font-size: 35px;
     background-color: white;
     color: #454545;
