@@ -20,11 +20,11 @@
       <label class="labellevel">Level:</label>
       <label class="level" id="level">1</label>
       <label class="next">Next piece</label>
-      <label class="left" id="left"><<<</label>
-      <label class="right" id="right">>>></label>
-
-      <label class="rotate" id="rotate">TR</label>
-      <label class="rotatealt" id="rotatealt">TL</label>
+      <img class="left" src="esquerda.png" id="left">
+      <img class="right" id="right" src="direita.png">
+      <img src="down.png" class="down" id="down">
+      <img src="tr.png" class="rotate" id="rotate">
+      <img src="tl.png" class="rotatealt" id="rotatealt">
     </div>
 
     <script>
@@ -46,6 +46,7 @@
 
       var left = document.getElementById("left");
       var right = document.getElementById("right");
+      var down = document.getElementById("down");
       var rotate = document.getElementById("rotate");
       var rotatealt = document.getElementById("rotatealt");
       var dropinterval = 0;
@@ -307,6 +308,9 @@
 
       left.addEventListener("click", onPressleft, false);
       right.addEventListener("click", onPressright, false);
+      down.addEventListener("touchstart", onPressdown, false);
+      down.addEventListener("touchend", onUnpress, false);
+      down.addEventListener("touchcancel", onUnpress, false);
       rotate.addEventListener("click", onClockwise, false);
       rotatealt.addEventListener("click", onAnticlockwise, false);
 
@@ -315,6 +319,9 @@
       }
       function onPressright() {
         movepiece(1);
+      }
+      function onPressdown() {
+        threshold /= 10;
       }
       function onUnpress() {
         threshold = 1000;
