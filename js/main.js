@@ -54,7 +54,7 @@ window.addEventListener("scroll", function () {
         location.href="./Space Invader Game using JavaScript/space invader.html"
      }
    function logan9(){
-      location.href="tetris - Cópia.html"
+      location.href="tetris/index.html"
    }
    function logan3(){
       location.href="ping_pong.html";
