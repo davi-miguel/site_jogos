@@ -3,7 +3,7 @@
 * {
   padding: 0;
   margin: 0;
-  background: #b697a7;
+  background: #00ad34;
 }
 
 div {
@@ -19,7 +19,7 @@ div {
   left: 8px;
   position: absolute;
   display: block;
-  border: 3px double #ffcfeb;
+  border: 3px double #00c3ff;
 }
 
 .subcanvas {
@@ -27,7 +27,7 @@ div {
   left: 260px;
   position: absolute;
   display: block;
-  border: 3px double #ffcfeb;
+  border: 3px double #042aff;
 }
 
 .labelscore {
@@ -38,7 +38,7 @@ div {
   font-size: 20px;
   text-align: left;
   border: none;
-  color: #3e4546;
+  color: #000000;
 }
 
 .score {
@@ -50,16 +50,16 @@ div {
   font-size: 35px;
   text-align: center;
   line-height: 45px;
-  border: 1px solid #866371;
+  border: 1px solid #003644;
   border-radius: 20px;
-  color: #ffffff;
+  color: #ff0000;
   background-image: radial-gradient(
     circle,
-    #aea9ab,
-    #a19197,
-    #937a84,
-    #866371,
-    #784d5e
+    #3cff00,
+    #00fff2,
+    #ff1f01,
+    #420000,
+    #093500
   );
 }
 
@@ -71,7 +71,7 @@ div {
   font-size: 20px;
   text-align: left;
   border: none;
-  color: #3e4546;
+  color: #23005c;
 }
 
 .level {
@@ -85,16 +85,16 @@ div {
   text-align: center;
   vertical-align: middle;
   font-size: 28px;
-  border: 1px solid #785966;
+  border: 1px solid #990040;
   border-radius: 20px;
-  color: #ffffff;
+  color: #0a0041;
   background-image: radial-gradient(
     circle,
-    #a69ea2,
-    #96868e,
-    #876f7a,
-    #785966,
-    #694352
+    #a30b0b,
+    #ffffff,
+    #fbff00,
+    #0004ff,
+    #ff7300
   );
 }
 
@@ -105,7 +105,7 @@ div {
   position: absolute;
   font-size: 17px;
   border: none;
-  color: #3e4546;
+  color: #90c4cc;
 }
 
 .left {
@@ -122,11 +122,11 @@ div {
   border-radius: 20px;
   background-image: radial-gradient(
     circle,
-    #bea5d9,
-    #b894c5,
-    #b183b0,
-    #a8729a,
-    #9f6285
+    #00f5cc,
+    #3cff00,
+    #fffb00,
+    #ff0000,
+    #3700ff
   );
 }
 
@@ -144,11 +144,11 @@ div {
   border-radius: 20px;
   background-image: radial-gradient(
     circle,
-    #bea5d9,
-    #b894c5,
-    #b183b0,
-    #a8729a,
-    #9f6285
+    #25004d,
+    #ff0000,
+    #123f00,
+    #046961,
+    #240086
   );
 }
 
@@ -166,11 +166,11 @@ div {
   border-radius: 10px;
   background-image: radial-gradient(
     circle,
-    #d599c8,
-    #cb84b6,
-    #c16ea4,
-    #b75891,
-    #ac407d
+    #000000,
+    #000000,
+    #000000,
+    #000000,
+    #000000
   );
 }
 
@@ -188,11 +188,11 @@ div {
   border-radius: 10px;
   background-image: radial-gradient(
     circle,
-    #d599c8,
-    #cb84b6,
-    #c16ea4,
-    #b75891,
-    #ac407d
+    #000000,
+    #000000,
+    #000000,
+    #000000,
+    #000000
   );
 }
 
@@ -210,15 +210,15 @@ div {
   border-radius: 10px;
   background-image: radial-gradient(
     circle,
-    #bb84a5,
-    #b27398,
-    #a9628b,
-    #9f507d,
-    #963e70
+    #000000,
+    #000000,
+    #000000,
+    #000000,
+    #000000
   );
 }
 
 label:active {
-    background-color: #ffffff;
-    color: #ff00d4;
+    background-color: #0004ff;
+    color: #ff0000;
 }
