@@ -21,6 +21,21 @@ div {
   display: block;
   border: 3px double #00c3ff;
 }
+@media only screen and (min-device-width: 100px) {
+	#as{
+    font-size: 0px;
+  }
+}
+@media only screen and (max-device-width: 1002px) {
+	#as{
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    position: absolute;
+    left: 20px;
+    top: 750px;
+  }
+}
+
 
 .subcanvas {
   top: 170px;
