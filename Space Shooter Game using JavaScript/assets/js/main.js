@@ -180,6 +180,9 @@ var EnemyShoot = enchant.Class.create(ShootPlayer, { // Succeeds bullet class
 				som_explo1.play();
 				
 				game.end(game.score, "SCORE: " + game.score);
+				setTimeout(function(){
+					location.reload();
+				},2000);
 			}
 		});
 	}

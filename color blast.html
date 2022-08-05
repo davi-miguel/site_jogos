@@ -165,8 +165,8 @@ var Game = {
 
 	buttonUp: function(e){
 		if(e.keyCode === 32){
-			Game.shooting = false;
-			Game.oneShot = false;
+			Game.shooting = true;
+			Game.oneShot = true;
         e.preventDefault();
 		}
 		if(e.keyCode === 37 || e.keyCode === 65){
