@@ -141,7 +141,7 @@ function drawScore() {
 }
 
 function clearScreen() {
-  ctx.fillStyle = "black";
+  ctx.fillStyle = "darkgreen";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 

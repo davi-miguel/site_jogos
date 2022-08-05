@@ -182,7 +182,7 @@ var EnemyShoot = enchant.Class.create(ShootPlayer, { // Succeeds bullet class
 				game.end(game.score, "SCORE: " + game.score);
 				setTimeout(function(){
 					location.reload();
-				},2000);
+				},1000);
 			}
 		});
 	}
