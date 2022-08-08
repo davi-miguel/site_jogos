@@ -144,6 +144,7 @@ div {
   padding: 0;
   position: absolute;
   text-align: center;
+  user-select:none;
   line-height: 40px;
   vertical-align: middle;
   border: none;
@@ -165,6 +166,7 @@ div {
   left: 315px;
   padding: 0;
   position: absolute;
+  user-select:none;
   text-align: center;
   line-height: 40px;
   vertical-align: middle;
@@ -191,6 +193,7 @@ div {
   line-height: 40px;
   vertical-align: middle;
   border: none;
+  user-select:none;
   border-radius: 10px;
   background-image: radial-gradient(
     circle,
@@ -204,6 +207,7 @@ div {
 
 .down {
   width: 100px;
+  user-select:none;
   height: 40px;
   top: 365px;
   left: 260px;
