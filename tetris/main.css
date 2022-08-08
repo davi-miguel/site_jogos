@@ -113,7 +113,7 @@ div {
   width: 45px;
   height: 40px;
   top: 275px;
-  left: 260px;
+  left: 256px;
   padding: 0;
   position: absolute;
   text-align: center;
@@ -167,11 +167,11 @@ div {
   border-radius: 10px;
   background-image: radial-gradient(
     circle,
-    #000000,
-    #000000,
-    #000000,
-    #000000,
-    #000000
+    #ff00bf,
+    #00ffff,
+    #51ff00,
+    #0011ff,
+    #ff0000
   );
 }
 
@@ -189,11 +189,11 @@ div {
   border-radius: 10px;
   background-image: radial-gradient(
     circle,
-    #000000,
-    #000000,
-    #000000,
-    #000000,
-    #000000
+    #ff0000,
+    #001aff,
+    #00ff00,
+    #00ffdd,
+    #ff00d4
   );
 }
 
@@ -212,10 +212,10 @@ div {
   background-image: radial-gradient(
     circle,
     #000000,
-    #000000,
-    #000000,
-    #000000,
-    #000000
+    #ffffff,
+    #a200ff,
+    #ff0000,
+    #5eff00
   );
 }
 
