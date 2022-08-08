@@ -1,6 +1,27 @@
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
+function UP(){
+    if (inputsYVelocity == 1) return;
+    inputsYVelocity = -1;
+    inputsXVelocity = 0;
+}
+function DOWN(){
+  if (inputsYVelocity == -1) return;
+    inputsYVelocity = 1;
+    inputsXVelocity = 0;
+}
+function LEFT(){
+  if (inputsXVelocity == 1) return;
+    inputsYVelocity = 0;
+    inputsXVelocity = -1;
+}
+function RIGHT(){
+  if (inputsXVelocity == -1) return;
+    inputsYVelocity = 0;
+    inputsXVelocity = 1;
+}
+
 class SnakePart {
   constructor(x, y) {
     this.x = x;

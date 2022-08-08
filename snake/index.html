@@ -16,11 +16,41 @@
         canvas{
             box-shadow: green 20px 10px 50px;
         }
+        #botoes{
+            width: 369px;
+        }
+        #cima{
+            left: 920px;
+            top: 460px;
+            position: absolute;
+        }
+        #direita{
+            left: 480px;
+            top: 530px;
+            position: absolute;
+        }
+        #esquerda{
+            left: 350px;
+            top: 460px;
+            position: absolute;
+        }
+        #baixo{
+            left: 800px;
+            top: 530px;
+            position: absolute;
+        }
     </style>    
 </head>
 
 <body>
     <h1>Snake</h1>
+        <div id="botoes">
+    <button onclick="LEFT()" id="direita">DIREITA</button>
+    <button onclick="UP()" id="cima">PARA CIMA</button>
+    <button onclick="DOWN()" id="baixo">PARA BAIXO</button>
+    <button onclick="RIGHT()" id="esquerda">ESQUERDA</button>
+    </div>
+
     <canvas id="game" width="400" height="400"/>
     <script src="index.js"></script>
 </body>
