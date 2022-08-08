@@ -15,37 +15,7 @@
 }
 
 .gallery-image {
-    width: 90%;
-}
-
-.gallery-image-nave9{
-    width: 90%;
-}
-
-.gallery-image-velha{
-    width: 90%;
-}
-
-.gallery-image-ping{
-    width: 90%;
-}
-
-.gallery-image-nave{
-    width: 90%;
-}
-.gallery-image-nave2{
-    width: 90%;
-}
-.gallery-image-nave3{
-    width: 90%;
-}
-
-.gallery-image-flappy{
-    width: 90%;
-}
-
-.gallery-image-bola{
-    width: 90%;
+    width: 100%;
 }
 #navbar {
     height: 180px;
