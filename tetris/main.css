@@ -116,6 +116,10 @@ div {
   left: 256px;
   padding: 0;
   position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   text-align: center;
   line-height: 40px;
   vertical-align: middle;
