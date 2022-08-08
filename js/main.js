@@ -57,7 +57,7 @@ window.addEventListener("scroll", function () {
       location.href="tetris/index.html"
    }
    function logan3(){
-      location.href="pong/pong.html";
+      location.href="ping/index.html";
    }
    function logan1(){
       location.href="snake/index.html";
