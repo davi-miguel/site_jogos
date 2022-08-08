@@ -29,7 +29,7 @@
 #navbar-items {
     flex-direction: column;
     text-align: center;
-    width: 90%;
+    width: 100%;
 }
 
 #navbar-items li:nth-child(2) {
