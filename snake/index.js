@@ -1,25 +1,53 @@
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
+const death = new Audio
+
+death.src="audio/dead.mp3"
+
+const up = new Audio
+
+up.src="audio/up.mp3"
+
+const down = new Audio
+
+down.src="audio/down.mp3"
+
+const right = new Audio
+
+right.src="audio/right.mp3"
+
+const left = new Audio
+
+left.src="audio/left.mp3"
+
+const eat = new Audio
+
+eat.src="audio/eat.mp3"
+
 function UP(){
     if (inputsYVelocity == 1) return;
     inputsYVelocity = -1;
     inputsXVelocity = 0;
+    up.play();
 }
 function DOWN(){
   if (inputsYVelocity == -1) return;
     inputsYVelocity = 1;
     inputsXVelocity = 0;
+    down.play()
 }
 function LEFT(){
   if (inputsXVelocity == 1) return;
     inputsYVelocity = 0;
     inputsXVelocity = -1;
+    left.play()
 }
 function RIGHT(){
   if (inputsXVelocity == -1) return;
     inputsYVelocity = 0;
     inputsXVelocity = 1;
+    right.play()
 }
 
 class SnakePart {
@@ -109,18 +137,24 @@ function isGameOver() {
   //walls
   if (headX < 0) {
     gameOver = true;
+    death.play()
   } else if (headX === tileCount) {
     gameOver = true;
+    death.play()
   } else if (headY < 0) {
     gameOver = true;
+    death.play()
   } else if (headY === tileCount) {
     gameOver = true;
+    death.play()
+
   }
 
   for (let i = 0; i < snakeParts.length; i++) {
     let part = snakeParts[i];
     if (part.x === headX && part.y === headY) {
       gameOver = true;
+      death.play()
       break;
     }
   }
@@ -198,7 +232,7 @@ function checkAppleCollision() {
     appleY = Math.floor(Math.random() * tileCount);
     tailLength++;
     score++;
-    gulpSound.play();
+    eat.play();
   }
 }
 
@@ -211,6 +245,7 @@ function keyDown(event) {
     if (inputsYVelocity == 1) return;
     inputsYVelocity = -1;
     inputsXVelocity = 0;
+    up.play();
   }
 
   //down
@@ -219,6 +254,7 @@ function keyDown(event) {
     if (inputsYVelocity == -1) return;
     inputsYVelocity = 1;
     inputsXVelocity = 0;
+    down.play();
   }
 
   //left
@@ -227,6 +263,7 @@ function keyDown(event) {
     if (inputsXVelocity == 1) return;
     inputsYVelocity = 0;
     inputsXVelocity = -1;
+    left.play();
   }
 
   //right
@@ -235,6 +272,7 @@ function keyDown(event) {
     if (inputsXVelocity == -1) return;
     inputsYVelocity = 0;
     inputsXVelocity = 1;
+    right.play();
   }
 }
 
