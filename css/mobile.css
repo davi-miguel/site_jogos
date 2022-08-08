@@ -15,37 +15,37 @@
 }
 
 .gallery-image {
-    width: 100%;
+    width: 90%;
 }
 
 .gallery-image-nave9{
-    width: 100%;
+    width: 90%;
 }
 
 .gallery-image-velha{
-    width: 100%;
+    width: 90%;
 }
 
 .gallery-image-ping{
-    width: 100%;
+    width: 90%;
 }
 
 .gallery-image-nave{
-    width: 100%;
+    width: 90%;
 }
 .gallery-image-nave2{
-    width: 100%;
+    width: 90%;
 }
 .gallery-image-nave3{
-    width: 100%;
+    width: 90%;
 }
 
 .gallery-image-flappy{
-    width: 100%;
+    width: 90%;
 }
 
 .gallery-image-bola{
-    width: 100%;
+    width: 90%;
 }
 #navbar {
     height: 180px;
@@ -59,7 +59,7 @@
 #navbar-items {
     flex-direction: column;
     text-align: center;
-    width: 100%;
+    width: 90%;
 }
 
 #navbar-items li:nth-child(2) {
