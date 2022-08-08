@@ -9,7 +9,8 @@
     padding-right: 1px;
 }
 
-#showcase{
+/* Showcase */
+#showcase-container {
     padding: 40px;
 }
 
@@ -46,26 +47,22 @@
 .gallery-image-bola{
     width: 100%;
 }
-
-#navbar{
-    height: 110px;
-    position: fixed;
+#navbar {
+    height: 180px;
 }
 
-#navbar-container{
+#navbar-container {
     flex-direction: column;
     padding: 20px 0;
 }
-#navbar-items{
+
+#navbar-items {
     flex-direction: column;
     text-align: center;
     width: 100%;
 }
 
-#navbar li:nth-child(2){
+#navbar-items li:nth-child(2) {
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
-}
-#navbar-items li{
-    padding: 5px;
 }
