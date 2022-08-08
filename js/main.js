@@ -57,10 +57,10 @@ window.addEventListener("scroll", function () {
       location.href="tetris/index.html"
    }
    function logan3(){
-      location.href="ping_pong.html";
+      location.href="pong/pong.html";
    }
    function logan1(){
-      location.href="snake.html";
+      location.href="snake/index.html";
    }
      function logan8(){
         location.href="https://playcanv.as/p/2OlkUaxF/";
