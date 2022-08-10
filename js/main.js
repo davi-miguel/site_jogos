@@ -22,19 +22,6 @@ window.addEventListener("scroll", function () {
         document.querySelector("#navbar").style.opacity = 1;
     }
 });
-
-
-
-    
-     function logan4(){
-        location.href="./nave.html";
-     }
-     function logan7(){
-      location.href="./mina espacial.html";
-   }
-   function logan5(){
-      location.href="./tele-bomba.html";
-   }
    function logan12(){
         location.href="atari  breakout.html"
      }
@@ -42,7 +29,7 @@ window.addEventListener("scroll", function () {
       location.href="./menja.html"
    }    
      function logan10(){
-        location.href="color blast.html"
+        location.href="eclipse/eclipse-main/index.html"
      }
      function logan6(){
       location.href="bola_yellow.html";
