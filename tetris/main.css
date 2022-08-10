@@ -144,7 +144,6 @@ div {
   padding: 0;
   position: absolute;
   text-align: center;
-  user-select:none;
   line-height: 40px;
   vertical-align: middle;
   border: none;
