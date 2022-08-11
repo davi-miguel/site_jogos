@@ -8,32 +8,32 @@ $(function() {
 
     var anim_id;
 
-    document.getElementById('esquerda').addEventListener('click', () => {
+        function left(){
 		if (game_over === false && parseInt(car.css('left')) > 0) {
             car.css('left', parseInt(car.css('left')) - 5);
             move_left = requestAnimationFrame(left);
         }
-	})
-    document.getElementById('direita').addEventListener('click', () => {
+    }
+        function right(){
         if (game_over === false && parseInt(car.css('left')) < container_width - car_width) {
             car.css('left', parseInt(car.css('left')) + 5);
             move_right = requestAnimationFrame(right);
         }   
-	})
-    document.getElementById('para_cima').addEventListener('click', () => {
+    }
+    function up(){
 		if (game_over === false && parseInt(car.css('top')) > 0) {
             car.css('top', parseInt(car.css('top')) - 3);
             move_up = requestAnimationFrame(up);
             engine.play();
         }
-	})
-    document.getElementById('para_baixo').addEventListener('click', () => {
+	}
+    function down(){
         if (game_over === false && parseInt(car.css('top')) < container_height - car_height) {
             car.css('top', parseInt(car.css('top')) + 3);
             move_down = requestAnimationFrame(down);
             engine.play()
         }  
-	})
+	}
     
 
     //saving dom objects to variables

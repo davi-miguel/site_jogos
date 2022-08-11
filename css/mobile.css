@@ -1,18 +1,16 @@
 #navbar {
     height: 80px;
-    width: 90%;
 }
 
 #navbar-container {
     flex-direction: column;
     padding: 20px 0;
-    width: 90%;
 }
 
 #navbar-items {
     flex-direction: column;
     text-align: center;
-    width: 90%;
+    width: 100%;
 }
 
 #navbar-items li:nth-child(2) {
@@ -24,7 +22,7 @@
 /* Showcase */
 #showcase-container {
     padding: 50px;
-    width: 90%;
+    width: 100%;
 }
 
 /* Clients */
@@ -73,5 +71,5 @@
 }
 
 .gallery-image {
-    width: 90%;
+    width: 100%;
 }
