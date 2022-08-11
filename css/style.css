@@ -85,11 +85,11 @@ a {
     text-transform: uppercase;
 }
 #navbar-items li a{
-    padding: 10px;
+    padding: 140px;
 }
 /* Showcase */
 #showcase{
-    height: 90vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     color: #eee;
