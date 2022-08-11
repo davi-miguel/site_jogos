@@ -1,10 +1,12 @@
 #navbar {
     height: 80px;
+    width: 100%;
 }
 
 #navbar-container {
     flex-direction: column;
     padding: 20px 0;
+    width: 100%;
 }
 
 #navbar-items {
