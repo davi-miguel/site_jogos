@@ -16,6 +16,7 @@
 #navbar-items li:nth-child(2) {
     border-top: 0px solid #333;
     border-bottom: 0px solid #333;
+    padding: 1px;
 }
 
 /* Showcase */

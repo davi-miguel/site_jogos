@@ -84,10 +84,9 @@ a {
     list-style: none;
     text-transform: uppercase;
 }
-#navbar-items li {
+#navbar-items li a{
     padding: 140px;
 }
-
 /* Showcase */
 #showcase{
     height: 100vh;
