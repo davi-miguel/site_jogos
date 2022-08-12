@@ -22,7 +22,7 @@ body {
     transform: translatey(0px);
 }
 50%{
-    transform: translatey(-90px);
+    transform: translatey(-30px);
 }
 100%{
     transform: translatey(0px);
@@ -64,10 +64,9 @@ a {
 /* Navbar */
 #navbar {
     width: 100%;
-    background: #111;
+    background: #222;
     color: yellow;
     height: 80px;
-    align-items: center;
     position: fixed;
 }
 
@@ -90,7 +89,7 @@ a {
 }
 /* Showcase */
 #showcase{
-    height: 70vh;
+    height: 90vh;
     width: 100%;
     display: flex;
     justify-content: center;
