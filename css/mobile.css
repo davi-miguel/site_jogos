@@ -1,5 +1,6 @@
 #navbar{
-    height: 180px;
+    height: 80px;
+    position:fixed;
 }
 
 #navbar-container{
@@ -11,9 +12,29 @@
     flex-direction: column;
     text-align: center;
     width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 #navbar-items li:nth-child(2){
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
+}
+
+#touro{
+    width: 300px;
+    height: 300px;
+}
+/* GALERRY */
+
+#gallery-container{
+    grid-template-columns: 1fr;
+}
+
+.gallery-image{
+    width: 100%;
+}
+
+#showcase-container{
+    padding: 40px;
 }
