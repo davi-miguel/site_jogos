@@ -35,6 +35,7 @@ div {
   top: 5px;
   left: 280px;
   padding: 0px;
+  user-select:none;
   position: absolute;
   font-size: 20px;
   text-align: left;
@@ -48,6 +49,7 @@ div {
   top: 30px;
   left: 260px;
   position: absolute;
+  user-select:none;
   font-size: 35px;
   text-align: center;
   line-height: 45px;
@@ -70,6 +72,7 @@ div {
   padding: 0px;
   position: absolute;
   font-size: 20px;
+  user-select:none;
   text-align: left;
   border: none;
   color: #23005c;
@@ -88,6 +91,7 @@ div {
   font-size: 28px;
   border: 1px solid #990040;
   border-radius: 20px;
+  user-select:none;
   color: #0a0041;
   background-image: radial-gradient(
     circle,
@@ -104,6 +108,7 @@ div {
   left: 270px;
   padding: 0px;
   position: absolute;
+  user-select:none;
   font-size: 17px;
   border: none;
   color: #90c4cc;
@@ -146,6 +151,7 @@ div {
   text-align: center;
   line-height: 40px;
   vertical-align: middle;
+  user-select:none;
   border: none;
   border-radius: 20px;
   background-image: radial-gradient(

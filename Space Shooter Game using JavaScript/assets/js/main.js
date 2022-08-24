@@ -257,7 +257,7 @@ window.onload = function() {
 		game.rootScene.addEventListener('enterframe', function() {
 			if (rand(100) < 10) {
 				// make enemies appear randomly
-				var y = rand(304);
+				var y = rand(800);
 				if (y < 160) {
 					theta = 1;
 				} else {

@@ -94,3 +94,6 @@ window.addEventListener("scroll", function () {
      function logan28(){
         location.href="Xadrez/index.html"
      }
+     function logan29(){
+        location.href="tower defenser/index.html"
+     }
