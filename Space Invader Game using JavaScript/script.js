@@ -94,7 +94,7 @@ const particlesMaxSpeed     = 6;
 const particlesMinSize      = 1;
 var particlesMaxSize        = 8;
 const explosions            = [];
-var explosionColor = "white";
+var explosionColor = "yellow";
 let fps        = 60;
 const interval = 1000 / fps;
 

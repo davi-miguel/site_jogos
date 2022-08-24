@@ -121,7 +121,7 @@ var ShootPlayer = enchant.Class.create(enchant.Sprite, {
 		this.image = game.assets[graImg];
 		this.x = x;
 		this.y = y;
-		this.frame = 1;
+		this.frame = 2;
 		this.direction = direction;
 		this.moveSpeed = 10;
 		
@@ -180,6 +180,9 @@ var EnemyShoot = enchant.Class.create(ShootPlayer, { // Succeeds bullet class
 				som_explo1.play();
 				
 				game.end(game.score, "SCORE: " + game.score);
+				setTimeout(function(){
+					location.reload();
+				},1000);
 			}
 		});
 	}
@@ -254,7 +257,7 @@ window.onload = function() {
 		game.rootScene.addEventListener('enterframe', function() {
 			if (rand(100) < 10) {
 				// make enemies appear randomly
-				var y = rand(304);
+				var y = rand(800);
 				if (y < 160) {
 					theta = 1;
 				} else {

@@ -235,6 +235,7 @@
     </div>
 
     <div id="controls">
+      <spam>CONTROLS:</spam>
       <span><span>C</span>insert coin</span>
       <span><span>M</span>mute</span>
       <span><span>&lt;</span><span>&gt;</span>move</span>
@@ -487,7 +488,7 @@
 
       const highscores = [];
 
-      const width = 800;
+      const width = 900;
       const halfWidth = width / 2;
       const height = 500;
       const roadW = 4000;
@@ -496,13 +497,13 @@
       const H = 1500;
       const N = 70;
 
-      const maxSpeed = 1000000;
-      const accel = 10;
+      const maxSpeed = 300;
+      const accel = 50;
       const breaking = -80;
       const decel = -40;
       const maxOffSpeed = 40;
       const offDecel = -70;
-      const enemy_speed = 8;
+      const enemy_speed = 25;
       const hitSpeed = 20;
 
       const LANE = {
@@ -511,7 +512,7 @@
         C: 1.2,
       };
 
-      const mapLength = 15000;
+      const mapLength = 200000
 
       // loop
       let then = timestamp();

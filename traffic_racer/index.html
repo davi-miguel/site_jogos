@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Traffic racer</title>
-    <link href="style.css" rel="stylesheet" /> </head>
+    <link href="style2.css" media="screen and (max-width: 1000px") rel="stylesheet">
+    <link href="style1.css" media="screen and (min-width: 1000px") rel="stylesheet">
+ </head>
 
 <body>
     <div id="help">
@@ -132,7 +133,10 @@
             </button>
         </div>
     </div>
-
+    <button onclick="left()" id="esquerda" class="fora"></button> 
+    <button onclick="right()" id="direita" class="fora"></buttonpng>
+    <button onclick="up()" id="para_cima" class="fora"></buttonpng>
+    <button onclick="down()" id="para_baixo" class="fora"></button>  
     <script src="jquery.min.js"></script>
     <script src="script.js"></script>
 	<audio src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/155629/theme.mp3" loop autoplay></audio>

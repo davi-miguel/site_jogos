@@ -3,9 +3,38 @@ Game_over.src = "gammeover.mp4"
 const engine = new Audio()
 engine.src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/155629/engine.wav"
 
+
 $(function() {
 
     var anim_id;
+
+        function left(){
+		if (game_over === false && parseInt(car.css('left')) > 0) {
+            car.css('left', parseInt(car.css('left')) - 5);
+            move_left = requestAnimationFrame(left);
+        }
+    }
+        function right(){
+        if (game_over === false && parseInt(car.css('left')) < container_width - car_width) {
+            car.css('left', parseInt(car.css('left')) + 5);
+            move_right = requestAnimationFrame(right);
+        }   
+    }
+    function up(){
+		if (game_over === false && parseInt(car.css('top')) > 0) {
+            car.css('top', parseInt(car.css('top')) - 3);
+            move_up = requestAnimationFrame(up);
+            engine.play();
+        }
+	}
+    function down(){
+        if (game_over === false && parseInt(car.css('top')) < container_height - car_height) {
+            car.css('top', parseInt(car.css('top')) + 3);
+            move_down = requestAnimationFrame(down);
+            engine.play()
+        }  
+	}
+    
 
     //saving dom objects to variables
     var container = $('#container');
@@ -42,8 +71,8 @@ $(function() {
 
     var score_counter = 1;
 
-    var speed = 2;
-    var line_speed = 5;
+    var speed = 4;
+    var line_speed = 10;
 
     var move_right = false;
     var move_left = false;
@@ -132,7 +161,7 @@ $(function() {
         if (score_counter % 20 == 0) {
             score.text(parseInt(score.text()) + 1);
         }
-        if (score_counter % 500 == 0) {
+        if (score_counter % 1000 == 0) {
             speed++;
             line_speed++;
         }
@@ -159,7 +188,7 @@ $(function() {
     function car_down(car) {
         var car_current_top = parseInt(car.css('top'));
         if (car_current_top > container_height) {
-            car_current_top = -200;
+            car_current_top = -170;
             var car_left = parseInt(Math.random() * (container_width - car_width));
             car.css('left', car_left);
         }
@@ -169,7 +198,7 @@ $(function() {
     function line_down(line) {
         var line_current_top = parseInt(line.css('top'));
         if (line_current_top > container_height) {
-            line_current_top = -300;
+            line_current_top = -100;
         }
         line.css('top', line_current_top + line_speed);
     }
