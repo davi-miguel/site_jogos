@@ -38,7 +38,6 @@
 
       document.getElementById("div").style.transform =
         "scale(" + coefficient + ")";
-
       const maincanvas = document.getElementById("maincanvas");
       const con = maincanvas.getContext("2d");
 
@@ -53,6 +52,10 @@
       var dropinterval = 0;
       var nextpiece = "O";
       var threshold = 1000;
+
+      setTimeout(() => {
+        threshold=400;
+      }, 9900);
 
       const colors = [
         null,
