@@ -10,7 +10,7 @@
 #navbar-items {
     flex-direction: column;
     text-align: center;
-    width: auto;
+    width: 100%;
 }
 
 #navbar-items li:nth-child(2) {
@@ -47,7 +47,7 @@
 }
 
 #items {
-    width: auto;
+    width: 90%;
 }
 
 .item {
@@ -69,5 +69,5 @@
 }
 
 .gallery-image {
-    width: auto;
+    width: 100%;
 }

@@ -97,3 +97,6 @@ window.addEventListener("scroll", function () {
      function logan29(){
         location.href="tower defenser/index.html"
      }
+     function logan30(){
+        location.href="sudoku/index.html"
+     }
