@@ -287,3 +287,7 @@ button{
     cursor: pointer;
     background: #000;
 }
+
+#pacman{
+    height: 300px;
+}

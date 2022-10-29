@@ -28,9 +28,9 @@ Sprite.prototype.halfHeight = function(){
 var Alien = function(sourceX,sourceY,width,height,x,y){
 	//dispara o construtor do Sprite
 	Sprite.call(this,sourceX,sourceY,width,height,x,y);
-	this.NORMAL = 3;
-	this.EXPLODED = 4;
-	this.CRAZY = 5;
+	this.NORMAL = 1;
+	this.EXPLODED = 2;
+	this.CRAZY = 3;
 	this.state = this.NORMAL;
 	this.mvStyle = this.NORMAL;
 }
@@ -47,7 +47,7 @@ var ObjectMessage = function(y,text,color){
 	this.y = y;
 	this.text = text;
 	this.visible = true;
-	this.font = "normal bold 18px emulogic";
+	this.font = "normal bold 14px emulogic";
 	this.color = color;
 	this.baseline = "top";
 }

@@ -18,7 +18,7 @@
 	var shots = 0;
 	var hits = 0;
 	var acuracy = 0;
-	var scoreToWin = 100;
+	var scoreToWin = 80;
 	var FIRE = 0;
 	var EXPLOSION = 1;
 	
@@ -64,42 +64,13 @@
 	
 	//ações
 	var mvLeft = mvRight = shoot = spaceIsDown = false;
-
-    const btn_esquerda = document.getElementById("moveEsquerda")
-	btn_esquerda.addEventListener("touchstart", () => {
-		mvLeft = true;
-	})
-	btn_esquerda.addEventListener('touchend', () => {
-		mvLeft = false;
-	})
-
-	const btn_direita = document.getElementById('moveDireita')
-	btn_direita.addEventListener("touchstart", () => {
-		mvRight = true;
-	})
-	btn_direita.addEventListener('touchend', () => {
-		mvRight = false;
-	})
-
-	const btn_atira = document.getElementById('Atira')
-	btn_atira.addEventListener("touchstart", () => {
-		if(!spaceIsDown){
-			shoot = true;
-			spaceIsDown = true;
-		}
-	})
-	btn_atira.addEventListener('touchend', () => {
-		spaceIsDown = false;
-	})
-
-
 	
 	//estados do jogo
-	var LOADING = 0, PLAYING = 1,  PAUSED = 2, OVER = 3;
+	var LOADING = 0, PLAYING = 1, PAUSED = 2, OVER = 3;
 	var gameState = LOADING;
 	
 	//listeners
-	window.addEventListener('keydown', (e) => {
+	window.addEventListener('keydown',function(e){
 		var key = e.keyCode;
 		switch(key){
 			case LEFT:
@@ -111,25 +82,11 @@
 			case SPACE:
 				if(!spaceIsDown){
 					shoot = true;
+					spaceIsDown = true;
 				}
 				break;
-			
 		}
 	},false);
-
-	document.getElementById('init_jogo').addEventListener('click', () => {
-		if(gameState !== OVER){
-			if(gameState !== PLAYING){
-				gameState = PLAYING;
-				startMessage.visible = false;
-				pausedMessage.visible = false;
-			} else {
-				gameState = PAUSED;
-				pausedMessage.visible = true;
-			}
-		}
-	})
-	
 	
 	window.addEventListener('keyup',function(e){
 		var key = e.keyCode;
@@ -143,21 +100,19 @@
 			case ENTER:
 				if(gameState !== OVER){
 				
-					if(gameState !== PLAYING){
-						gameState = PLAYING;
-						startMessage.visible = false;
-						pausedMessage.visible = false;
-					} else {
-						gameState = PAUSED;
-						pausedMessage.visible = true;
-					}
+				if(gameState !== PLAYING){
+					gameState = PLAYING;
+					startMessage.visible = false;
+					pausedMessage.visible = false;
+				} else {
+					gameState = PAUSED;
+					pausedMessage.visible = true;
 				}
+			}
 				break;
-
 			case SPACE:
 				spaceIsDown = false;
-				break;
-		}	
+		}
 	},false);
 	
 	
@@ -171,8 +126,6 @@
 			gameState = PAUSED;
 		}
 	}
-
-	
 	
 	function loop(){
 		requestAnimationFrame(loop, cnv);
@@ -192,13 +145,11 @@
 	}
 	
 	function update(){
-		
 		//move para a esquerda
 		if(mvLeft && !mvRight){
 			defender.vx = -5;
-			
 		}
-
+		
 		//move para a direita
 		if(mvRight && !mvLeft){
 			defender.vx = 5;
@@ -214,6 +165,7 @@
 			fireMissile();
 			shoot = false;
 		}
+		
 		//atualiza a posição
 		defender.x = Math.max(0,Math.min(cnv.width - defender.width, defender.x + defender.vx));
 		
@@ -297,7 +249,7 @@
 	//criação dos mísseis
 	function fireMissile(){
 		var missile = new Sprite(136,12,8,13,defender.centerX() - 4,defender.y - 13);
-		missile.vy = - 8;
+		missile.vy = -8;
 		sprites.push(missile);
 		missiles.push(missile);
 		shots++;
@@ -316,7 +268,7 @@
 		//otimização do alien
 		if(Math.floor(Math.random() * 11) > 7){
 			alien.state = alien.CRAZY;
-			alien.vx = 3;
+			alien.vx = 2;
 		}
 		
 		if(Math.floor(Math.random() * 11) > 5){
@@ -389,8 +341,7 @@
 	function playSound(soundType){
 		var sound = document.createElement("audio");
 		if(soundType === EXPLOSION){
-			sound.src = "sound/explosion.ogg"
-
+			sound.src = "sound/explosion.ogg";
 		}else{
 			sound.src = "sound/fire.ogg";
 		}
