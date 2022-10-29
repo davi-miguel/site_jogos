@@ -100,6 +100,15 @@ window.addEventListener("scroll", function () {
      function logan30(){
         location.href="sudoku/index.html"
      }
+     function logan32(){
+        location.href="Dash/Dash/index.html"
+     }
+     function logan33(){
+        location.href="snake.html"
+     }
+     function logan34(){
+        location.href="Batalha Espacial/index.html"
+     }
      function logan31(){
         location.href="pacman/index.html"
      }
