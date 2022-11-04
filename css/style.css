@@ -295,10 +295,3 @@ button{
 #genius{
     height: 400px;
 }
-
-@media (max-width: 800px){
-	#BATALHA{
-    width: 0;
-    height: 0;
-    }
-}
