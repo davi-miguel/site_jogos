@@ -112,3 +112,6 @@ window.addEventListener("scroll", function () {
      function logan31(){
         location.href="pacman/index.html"
      }
+     function logan35(){
+      location.href="Genius/index.html"
+   }
