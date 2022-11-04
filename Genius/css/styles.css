@@ -104,7 +104,6 @@ html{
 	margin: 0;
 	padding-left: 1.2rem;
 	padding-top: 4.75;
-	display: none;
 }
 
 .reg{
@@ -127,42 +126,34 @@ html{
 .game__pd--tl{
 	background-color: var(--clr-normal-green);
 	border-top-left-radius: 100%;
-	display: none;
 }
 .game__pd--tr{
 	background-color: var(--clr-normal-red);
 	border-top-right-radius: 100%;
-	display: none;
 }
 .game__pd--bl{
 	background-color: var(--clr-normal-yellow);
 	border-bottom-left-radius: 100%;
-	display: none;
 }
 .game__pd--br{
 	background-color: var(--clr-normal-blue);
 	border-bottom-right-radius: 100%;
-	display: none;
 }
 
 .game__pd--tl.game__pad--active{
 background-color: var(--clr-light-green);
-display: none;
 }
 
 .game__pd--tr.game__pad--active{
 	background-color: var(--clr-light-red);
-	display: none;
 }
 
 .game__pd--bl.game__pad--active{
 	background-color: var(--clr-light-yellow);
-	display: none;
 }
 
 .game__pd--br.game__pad--active{
 	background-color: var(--clr-light-blue);
-	display: none;
 }
 
 .game__pad--btn{
