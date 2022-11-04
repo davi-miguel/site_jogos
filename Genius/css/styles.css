@@ -96,6 +96,7 @@ html{
 	flex-wrap: wrap;
 	margin-top: 5rem;
 	position: relative;
+	user-select:none;
 }
 
 .game__title{
@@ -104,12 +105,14 @@ html{
 	margin: 0;
 	padding-left: 1.2rem;
 	padding-top: 4.75;
+	user-select:none;
 }
 
 .reg{
 	font-family: verdana, sans-serif;
 	font-size: 1.8rem;
 	margin-left: -1rem;
+	user-select:none;
 	vertical-align: top;
 }
 
@@ -121,39 +124,48 @@ html{
 	width: calc(var(--game-size) / 2);
 	height: calc(var(--game-size) / 2);
 	border: var(--game-border);
+	user-select:none;
 }
 
 .game__pd--tl{
 	background-color: var(--clr-normal-green);
 	border-top-left-radius: 100%;
+	user-select:none;
 }
 .game__pd--tr{
 	background-color: var(--clr-normal-red);
 	border-top-right-radius: 100%;
+	user-select:none;
 }
 .game__pd--bl{
 	background-color: var(--clr-normal-yellow);
 	border-bottom-left-radius: 100%;
+	user-select:none;
 }
 .game__pd--br{
 	background-color: var(--clr-normal-blue);
 	border-bottom-right-radius: 100%;
+	user-select:none;
 }
 
 .game__pd--tl.game__pad--active{
 background-color: var(--clr-light-green);
+user-select:none;
 }
 
 .game__pd--tr.game__pad--active{
 	background-color: var(--clr-light-red);
+	user-select:none;
 }
 
 .game__pd--bl.game__pad--active{
 	background-color: var(--clr-light-yellow);
+	user-select:none;
 }
 
 .game__pd--br.game__pad--active{
 	background-color: var(--clr-light-blue);
+	user-select:none;
 }
 
 .game__pad--btn{
@@ -175,6 +187,7 @@ background-color: var(--clr-light-green);
 
 	border: var(--game-border);
 	border-radius: 25rem;
+	user-select:none;
 }
 
 /**********************************/
@@ -186,16 +199,19 @@ background-color: var(--clr-light-green);
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-end;
+	user-select:none;
 }
 
 .group{
 	margin-right: 2rem;
+	user-select:none;
 }
 
 .group-large{
 	display: flex;
 	width: 10rem;
 	margin-left: 6rem;
+	user-select:none;
 }
 
 .gui__label{
@@ -204,11 +220,13 @@ background-color: var(--clr-light-green);
 	font-size: 0.7rem;
 	text-align: center;
 	text-transform: uppercase;
+	user-select:none;
 }
 
 .gui__label--switch{
 	margin: 0;
 	padding-top: 0.75rem;
+	user-select:none;
 }
 
 .gui__btn{
@@ -219,6 +237,7 @@ background-color: var(--clr-light-green);
 	box-shadow: 0 .2rem .3rem #222;
 	border: .4rem solid #444;
 	cursor: pointer;
+	user-select:none;
 }
 
 .gui__btn:active{
@@ -227,11 +246,13 @@ background-color: var(--clr-light-green);
 }
 
 .gui__btn--start{
-	background-color: red
+	background-color: red;
+	user-select:none;
 }
 
 .gui__btn--strict{
 	background-color: yellow;
+	user-select:none;
 }
 
 .gui__btn-switch{
@@ -242,6 +263,7 @@ background-color: var(--clr-light-green);
 	height: 2.3rem;
 	border-radius: .3rem;
 	cursor: pointer;
+	user-select:none;
 }
 
 .gui__btn-switch::before{
@@ -254,10 +276,12 @@ background-color: var(--clr-light-green);
 	height: 1.9rem;
 	border-radius: .3rem;
 	border: .2rem solid #333;
+	user-select:none;
 }
 
 .gui__btn-switch--on::before{
 	left: 0;
+	user-select:none;
 }
 
 .gui__counter{
@@ -272,10 +296,12 @@ background-color: var(--clr-light-green);
 	border-radius: 1rem;
 	padding-right: .2rem;
 	padding-left: .3rem;
+	user-select:none;
 }
 
 .gui__counter--on{
 	color: var(--clr-counter-on);
+	user-select:none;
 }
 
 .gui__led{
@@ -286,10 +312,12 @@ background-color: var(--clr-light-green);
 	height: .8rem;
 	border: .2rem solid #222;
 	border-radius: 2rem;
+	user-select:none;
 }
 
 .gui__led--active{
 	background-color: red;
+	user-select:none;
 }
 
 /**********************************/
@@ -300,6 +328,7 @@ footer{
 	text-align: center;
 	margin-top: 5rem;
 	font-size: 1rem;
+	user-select:none;
 }
 
 @media (max-width: 600px){
