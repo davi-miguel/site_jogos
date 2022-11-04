@@ -291,6 +291,13 @@ button{
 #pacman{
     height: 300px;
 }
+
 #genius{
     height: 400px;
+}
+
+@media (max-width: 800px){
+	html{
+		font-size: 45%;
+	}
 }
