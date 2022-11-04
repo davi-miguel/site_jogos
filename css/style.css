@@ -297,7 +297,8 @@ button{
 }
 
 @media (max-width: 800px){
-	html{
-		font-size: 45%;
-	}
+	#BATALHA{
+    width: 0;
+    height: 0;
+    }
 }
