@@ -62,31 +62,7 @@ a {
 }
 
 /* Navbar */
-#navbar {
-    width: 100%;
-    background: #222;
-    color: yellow;
-    height: 80px;
-    position: fixed;
-}
 
-#navbar-container {
-    width: 80%;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#navbar-items {
-    display: flex;
-    list-style: none;
-    text-transform: uppercase;
-}
-#navbar-items li a{
-    padding: 140px;
-}
 /* Showcase */
 #showcase{
     height: 90vh;
@@ -294,4 +270,10 @@ button{
 
 #genius{
     height: 400px;
+    padding-left: 10;
+}
+
+#tower_block{
+    height: 310px;
+    width: 399px;
 }
