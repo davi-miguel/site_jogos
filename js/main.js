@@ -115,3 +115,6 @@ window.addEventListener("scroll", function () {
      function logan35(){
       location.href="Genius/index.html"
    }
+     function logan36(){
+      location.href="tower block/index.html"
+   }
