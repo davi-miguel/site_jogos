@@ -42,7 +42,7 @@
 }
 
 #items {
-    width: 90%;
+    width: 80%;
 }
 
 .item {
@@ -65,4 +65,8 @@
 
 .gallery-image {
     width: 100%;
+}
+
+button{
+    width: auto;
 }
