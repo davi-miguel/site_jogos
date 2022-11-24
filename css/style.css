@@ -215,8 +215,8 @@ a {
 }
 
 .gallery-image{
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     align-items: center;
     border-radius: 10px;
 }
