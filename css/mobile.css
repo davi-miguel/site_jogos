@@ -14,8 +14,9 @@
 }
 
 /* Showcase */
-#showcase-container {
+#showcase{
     padding: 40px;
+    width: 98%;
 }
 
 /* Clients */
