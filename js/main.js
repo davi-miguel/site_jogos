@@ -86,7 +86,7 @@ window.addEventListener("scroll", function () {
         location.href="dino.html"
      }
      function logan26(){
-        location.href="memoria/memoria/index.html"
+        location.href="memoria2/index.html"
      }
      function logan27(){
         location.href="bilhar/bilhar/index.html"
