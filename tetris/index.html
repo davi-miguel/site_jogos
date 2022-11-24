@@ -50,17 +50,33 @@
       var rotate = document.getElementById("rotate");
       var rotatealt = document.getElementById("rotatealt");
       var dropinterval = 0;
-      var nextpiece = "O";
+      var nextpiece = "I";
       var threshold = 1000;
+      
+      setTimeout(() => {
+        threshold=900;
+      }, 20000);
 
       setTimeout(() => {
-        threshold=400;
-      }, 9900);
+        threshold=800;
+      }, 40000);
+
+      setTimeout(() => {
+        threshold=700;
+      }, 60000);
+
+      setTimeout(() => {
+        threshold=600;
+      }, 80000);
+      
+      setTimeout(() => {
+        threshold=500;
+      }, 10000);
 
       const colors = [
         null,
         " #ff0000",
-        " #ffa600",
+        " #383838",
         " #eeff00",
         " #5eff00",
         " #00ffea",
