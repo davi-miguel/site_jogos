@@ -13,11 +13,6 @@
     width: 100%;
 }
 
-#navbar-items li:nth-child(2) {
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
-}
-
 /* Showcase */
 #showcase-container {
     padding: 40px;
@@ -47,7 +42,7 @@
 }
 
 #items {
-    width: 90%;
+    width: auto;
 }
 
 .item {
@@ -69,5 +64,5 @@
 }
 
 .gallery-image {
-    width: 100%;
+    width: 90%;
 }
