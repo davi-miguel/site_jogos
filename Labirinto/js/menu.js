@@ -2,7 +2,7 @@ var menuState = {
 	create: function(){
 		this.music = game.add.audio('music');
 		this.music.loop = true;
-		this.music.volume = 1.5;
+		this.music.volume = .5;
 		this.music.play();
 		
 		game.global.score = 0;
