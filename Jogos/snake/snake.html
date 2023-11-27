@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        canvas{
+            box-shadow: green 20px 10px 50px;
+        }
+        .botoes button{
+    width: 85px;
+	left: 650px;
+	top: 500px;
+	color: #000000;
+	background-color: #e52521;
+	display: inline;
+}
+
+@media only screen and (max-device-width: 100px) {
+	#moveEsquerda{
+		position: absolute;
+		display: none;
+	}
+	.botoes button{
+		position: absolute;
+		display: none;
+	}
+}
+
+@media only screen and (min-device-width: 1201px) {
+	#moveEsquerda{
+		position: absolute;
+		display: none;
+	}
+	.botoes button{
+		position: absolute;
+		display: none;
+	}
+}
+    </style>    
+</head>
+
+<body>
+    <h1>Snake</h1>
+<div>
+    <canvas id="game" width="400" height="400"/>
+</div>
+    <script src="index.js"></script>
+    <div class="botoes">
+        <button onclick="LEFT()" id="direita">ESQUERDA</button>
+        <button onclick="UP()" id="cima">PARA CIMA</button>
+        <button onclick="DOWN()" id="baixo">PARA BAIXO</button>
+        <button onclick="RIGHT()" id="esquerda">DIREITA</button>
+        <audio src="start.wav" play></audio>
+        </div>
+</body>
+</html>
