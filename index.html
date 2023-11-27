@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css site/style.css">
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" media="screen and (max-width: 900px") href="css site/mobile.css">
+    <title>Davi Super Games</title>
+    <style>
+        .botao{
+            border-radius: 15px;
+            background-color: #3ef;
+            border: none;
+            color: #11CC00;
+            text-align: center;
+            font-size: 25px;
+            padding: 15px;
+            width: 220px;
+            cursor: pointer;
+            margin: 5px;
+            transition: all 0.7s;
+        } 
+        .botao:hover span{
+            border: 15px;
+            color: rgb(0, 0, 0);
+            padding-right: 25px; 
+        } 
+        .botao:hover span:after{
+            border: 15px;
+            color: rgb(16, 0, 156);
+            opacity: 1;
+            right: 2;
+        }
+        .botao span{
+            display: inline-block;
+            position: relative;
+            transition: all 0.7s;
+        }
+        .botao span:after{
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -10px;
+            transition: all 0.7s;
+        }
+
+        .menu-conteiner{
+            width: 150px;
+            padding: 0px 0px;
+        }
+
+        .menu-conteiner li a{
+            padding: 5px;
+            text-decoration: none;
+            color:#fff;
+            display: block;
+            font-size: 10px;
+        }
+
+        #pesquisa{
+            width: 100%;
+            font-size: 10px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            padding-top: 10px;
+        }
+        .borda{
+            border: 1px solid rgb(99, 99, 99);
+        }
+
+        #menu{
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+            height: 0;
+            width: 150px;
+            visibility: hidden;
+        }
+
+        #pesquisa ul a:before{
+            display: block;
+        }
+
+        #menu li a:hover{
+            background-color: rgb(68, 68, 68);
+        }
+
+        img{
+            border-radius: 10px;
+        }
+                </style>
+</head>
+<body>
+    
+    <nav id="navbar">
+        <div id="navbar-container">
+            <ul id="navbar-items">
+                <li><a href="#showcase">Início</a></li>
+                <li><a href="#Jogos">Jogos</a></li>
+            </ul>
+        </div>
+        
+    </nav>   
+
+    <header id="showcase">
+        
+        <div id="showcase-container">
+            <div id="showcase-items">
+            <img id="touro" src="./image/touroLogo.png" width="350px" height="350px" style="text-align: center;">
+            <h2>O site com</h2>
+            <p>os melhores jogos antigos e novos que você já jogou</p>
+            <p></p>
+        </div>
+        </div>
+    </header>    
+
+    <section id="Jogos">
+
+    <div class="JogosMês desktop">
+        <p class="JogosMêsText">Jogos do mês</p>
+        <div class="BattleCityPos">
+        <button id="tetris" class="BattleCity" onclick="logan36()"><h1 class="BattleCitySize1">BATTLE CITY RECRIATED</h1><img src="image/battleCity.png" width="350px" height="350">
+                <p class="BattleCityText1"> Neste jogo o jogador ficará em um tanque de guerra<p class="BattleCityText2"> protegendo a base contra os inimigos.
+                    À medida que o</p><p class="BattleCityTex3"> jogador conseguir pontos pelo caminho, ele vai ficando cada vez</p><p class="BattleCityTex4"> mais forte e poderoso!</p>
+            </button>
+        </div>
+
+        <div class="TOWERBLOCKpos">
+            <button id="" class="TOWERBLOCK" onclick="logan37()"><h1 id="TowerBlock">TOWER BLOCK</h1><img src="image/TowerBlock.png" width="330px" height="330px">
+                <p class="f">
+                    Se você é a pessoa que é boa em estratégia e adora um desafio então esse é o jogo perfeito!
+                    A missão aqui é posicionar os blocos alinhados um em cima do outro. Caso o contrário BUMMM!
+                </p></button>
+        </div>
+
+        <div class="flappybirdpos">
+            <button class="flappybird" onclick="logan8()"><h3 class="flappybirdTitle">FLAPPY BIRD</h3><img src="image/flappy_bird.png" width="320px" height="300px"><span class="f">
+                <br><br><p class="flappybirdtext1">O objetivo no jogo é ganhar o maior número possível de</p><p class="flappybirdtext2"> pontos,controlando um pássaro (tocando na tela) sem</p><p class="flappybirdtext3">deixá-lo colidir nos canos. Se o pássaro tocar em algum</p><p class="flappybirdtext4"> obstáculo - ou se deixar o pássaro cair -, o jogo termina.</p><p class="flappybirdtext5"> Sempre que o personagem passa por um conjunto de</p><p class="flappybirdtext6"> canos, o jogador ganha um ponto.</p></button>
+        </div>
+
+    </div>
+
+    </div>
+            <div id="gallery-container">
+
+                <div>
+                    <button id="menja" onclick="logan16()"><h1>MENJA</h1><img src="image/menja.png" width="296px" height="220px"><span class="f">   
+                        <p> O que você acha de ser um guerreiro espatachim super ágil e certeiro?
+                            O objetivo do jogo é cortar os quadrados com a seta seta ou dedo sem deixar cair nenhum bloco. E aí, vai encarar?</p></button>   
+                </div> 
+
+                <div>
+                    <button id="RunAdventure" onclick="logan38()"><h1>PIM-BO-LIM</h1><img src="./image/runadventure.png" width="296px" height="220px"><span class="f">   
+                        <p>Neste divertido jogo a missão é levar a bolinha até o fim do caminho.
+                            É muito importante que a bolinha pule por cima de tos os murinhos, senão será game over em 3, 2, 1. OK
+                            </p></button>   
+                </div> 
+    
+    <div> 
+    <button id="tetris" class="gallery-image" onclick="logan12()"><h1>ATARI BREAKOUT</h1><img src="image/atari breakout.png" width="280px" height="160px"><span class="f">
+        <p>Esse é um jogo das antigas mas que nunca deixou de ser legal e desafiador.
+            O principal objetivo é quebrar todos os tijolos sem deixar a bolinha cair da barra,
+            atingindo fases cada vez mais divertidas, mas calma, este jogo possui um segredo oculto, uma estratégia infalível que só poucos conseguem descobrir. E aí, você aceita o desafio?</p></button>
+    </div>
+    <div>
+    <button id="tetris" class="gallery-image" onclick="logan13()"><h1>SPACE SHOOTER</h1><img src="image/spc-st.png" width="295px" height="200px"><span class="f">   
+        <p>Para você que é fã de Space Invaders ou que adora jogos do espaço, aqui é o lugar certo!</p></button>
+    </div>
+    <div>
+        <button id="tetris" class="tetris" onclick="logan9()"><h1>TETRIS</h1><img src="image/tetris.png" width="250px" height="250px"><span class="f">
+            <p>Tetris, sem dúvida é um dos melhores jogos e mais conhecidos por várias gerações!
+Jogado por pessoas pelo mundo todo, o jogo consiste em posicionar os blocos preenchendo totalmente as lacunas e impedindo que encostem no topo da tela. Venha se divertir você também!</p>
+</button>    
+        </div>
+        <div>
+        <button id="cobrinha" class="snake" onclick="logan1()"><h1>SNAKE</h1><img src="image/cobrinha1.png" width="238px" height="210px"><span class="f">
+            <p>Este, que jogávamos usando aquele celular modelo tijolão, é sem dúvida um jogo que além de simples é também desafiador e exige muita paciência.
+Pra quem ainda não conhece, a cobra deve comer as maçãs e a cada 5 pontos ela vai aumentar a velocidade. O jogo acaba quando a cobra não conseguir mais andar para lugar nenhum ou enroscar em sí mesma.</p>
+        </button>
+    </div>
+        <div>
+            <button id="trafficRacer" class="trafficRacer" onclick="logan21()"><h1>TRAFFIC RACER</h1><img src="image/traffic.png" width="220px" height="220px">
+            <p class="f">
+                Traffic Racer é um jogo de corrida emocionante e viciante que coloca os jogadores atrás do volante de carros de alta velocidade em estradas movimentadas.
+                É um jogo super envolvente e desafiador que conta com trilhas-sonoras bem empolgantes.
+                </p></button>
+            </div>
+                
+                 
+            <div>
+            <button class="ping" onclick="logan20()"><h1>START REATOR</h1><img src="image\reator.png" width="355px" height="340px"><p class="f">   
+                <p></p></button>
+            </div>
+
+            <div>
+            <button id="tetris" class="" onclick="logan15()"><h1>JOGO DA FORCA</h1><img src="image/forca.png" width="296px" height="230px"><span class="f">   
+                <p>O jogo da forca é um jogo em que o jogador tem que acertar qual é a palavra proposta, tendo como dica o número de letras e o tema ligado à palavra. A cada letra errada, é desenhado uma parte do corpo do enforcado. O jogo termina ou com o acerto da palavra ou com o término do preenchimento das partes corpóreas do enforcado.</p>
+
+                <p>Para começar o jogo se desenha uma base e um risco correspondente ao lugar de cada letra.</p></button> 
+            </div>
+
+            <button class="Memoria" onclick="logan26()"><h1>JOGO DA MEMORIA</h1><img src="image/memoriacraft.png" width="355px" height="290px"><span class="f">   
+                <p>O jogo da memória é um clássico jogo formado por peças que apresentam uma figura em um dos lados.</p>
+                <p>Cada figura se repete em duas peças diferentes. Para começar o jogo, as peças são postas com as figuras voltadas para baixo,</p>
+                <p>para que não possam ser vistas. Cada participante deve, na sua vez,virar duas peças e deixar que todos as vejam.</p>
+                <p>Caso as figuras sejam iguais, o participante deve recolher consigo esse par e jogar novamente. Se forem peças diferentes,</p>
+                <p>estas devem ser viradas novamente, e sendo passada a vez ao participante seguinte. Ganha o jogo quem tiver mais pares no final.</p></button>    
+            
+            <button id="tetris" class="gallery-image" onclick="logan27()"><h1>SINUCA</h1><img src="image/sinuca.png" width="290px" height="270px"><span class="f">   
+                <p></p></button>
+            
+            <button id="tetris" class="gallery-image" onclick="logan30()"><h1>SUDOKU</h1><img src="image/sudoku.png" width="290px" height="272px"><span class="f">   
+            <p></p></button>
+
+            <button id="tetris" class="batalhaEspacial desktop" onclick="logan34()"><h1>BATALHA ESPACIAL</h1><img src="image/batalha_espacial.png" width="290px" height="270px">  
+            <p>Eletrônico, divertido e emocionante, este jogo, permite que os jogadores assumam o 
+                controle de naves espaciais e 
+                lutem contra invasores alienígenas em um ambiente futurista.
+                Com gráficos incríveis e uma jogabilidade envolvente, a batalha espacial
+                é uma ótima maneira de aliviar o estresse e relaxar, enquanto se diverte em um mundo 
+                virtual emocionante. Se você é fã de ficção científica e jogos eletrônicos, a batalha 
+                espacial é definitivamente uma escolha incrível para experimentar.</p></button> 
+
+            <button id="pacman" class="snake2 desktop" onclick="logan33()"><h1>SNAKE 2</h1><img src="image/snake.png" width="290" height="230px"><span class="f">   
+                <p>O jogador controla uma longa e fina criatura que se arrasta pela tela, coletando comida (ou algum outro item),</p>
+                <p>não podendo colidir com seu próprio corpo ou as "paredes" que cercam a área de jogo.</p>
+                <p>Cada vez que a serpente come um pedaço de comida, sua cauda cresce, aumentando a dificuldade do jogo.</p>
+            </button> 
+
+            <button id="pacman" class="gallery-image desktop" onclick="logan32()"><h1>DASH</h1><img src="image/dush.png" width="290px" height="230px"><span class="f">   
+            <p></p></button> 
+            
+            <button id="genius"class="gallery-image desktop" onclick="logan25()"><h1>Labirinto</h1><img src="image/labirinto.png" width="297px" height="170px"><p class="f">   
+            <p>É um jogo de quebra-cabeça que tem como objetivo encontrar a saída de um caminho complexo e cheio de desafios.
+                É um jogo que testa a habilidade de raciocínio lógico e de orientação espacial, além de ser uma ótima maneira
+                 de se divertir e passar o tempo. Jogar labirinto é uma atividade que pode ser feita sozinho ou em grupo, e
+                  pode ser uma ótima maneira de exercitar o cérebro e melhorar a concentração e a memória. Se você ainda não
+                   experimentou jogar labirinto, vale a pena dar uma chance e descobrir todo o desafio e diversão que esse 
+                   jogo pode proporcionar.</p></button>
+            </div>
+                                                             
+    </section>
+
+
+
+
+    <footer id="footer">
+        <p>Feito por Davi Miguel</p>
+        <p>Suporte:</p>
+        <p>davisuportegames@gmail.com</p>
+    </footer>
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/f9e19193d6.js" crossorigin="anonymous"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- Our JS file -->
+    <script src="js site/main.js"></script>
+</body>
+
+</html>

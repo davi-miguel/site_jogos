@@ -1,0 +1,18 @@
+{
+    "compile-hero.disable-compile-files-on-did-save-code": true,
+    "files.associations": {
+        "DNAs.C": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled",
+    "workbench.colorCustomizations": {
+<<<<<<< HEAD
+        "activityBar.background": "#0C3425",
+        "titleBar.activeBackground": "#114934",
+        "titleBar.activeForeground": "#F4FDFA"
+=======
+        "activityBar.background": "#491559",
+        "titleBar.activeBackground": "#661D7D",
+        "titleBar.activeForeground": "#FDFAFE"
+>>>>>>> 182a340f8a8e78fd482540b94995ba79b77a2da9
+    }
+}
