@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Traffic racer</title>
+    <link href="style2.css" media="screen and (max-width: 1000px") rel="stylesheet">
+    <link href="style1.css" media="screen and (min-width: 1000px") rel="stylesheet">
+ </head>
+
+<body>
+    <div id="help">
+        <p>Controls: Right, Left, Up & Down arrow keys.</p>
+    </div>
+    <div id="score_div">
+        Score: <span id="score">0</span>
+        High Score: <span id="high_score">0</span>
+    </div>
+    <div id="container">
+        <div id="line_1" class="line"></div>
+        <div id="line_2" class="line"></div>
+        <div id="line_3" class="line"></div>
+        <div id="car" class="car_11">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+        <div id="car_1" class="car_11">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+        <div id="car_2" class="car_11">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+        <div id="car_3" class="car_11">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+        <div id="car_4" class="car_11">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+        <div id="car_5" class="car_11">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+        <div id="car_6" class="car_11">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+
+
+
+        <div id="car_7" class="car_11">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+        <div id="car_8" class="car_11">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+        <div id="car_9" class="car_11">
+            <div class="f_glass"></div>
+            <div class="b_glass"></div>
+            <div class="f_light_l"></div>
+            <div class="f_light_r"></div>
+            <div class="f_tyre_l"></div>
+            <div class="f_tyre_r"></div>
+            <div class="b_tyre_l"></div>
+            <div class="b_tyre_r"></div>
+        </div>
+
+        <div id="car_10" class="car"></div>
+        <div id="car_11" class="car"></div>
+        
+        <div id="restart_div">
+            <button id="restart">
+                Restart<br>
+                <small class="small_text">(click here!) - (clique aqui!)</small>
+            </button>
+        </div>
+    </div>
+    <button onclick="left()" id="esquerda" class="fora"></button> 
+    <button onclick="right()" id="direita" class="fora"></buttonpng>
+    <button onclick="up()" id="para_cima" class="fora"></buttonpng>
+    <button onclick="down()" id="para_baixo" class="fora"></button>  
+    <script src="jquery.min.js"></script>
+    <script src="script.js"></script>
+	<audio src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/155629/theme.mp3" loop autoplay></audio>
+</body>
+</html>
