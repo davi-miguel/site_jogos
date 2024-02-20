@@ -17,7 +17,7 @@ $("#navbar a, .btn").on("click", function (event) {
       location.href="./jogos/snake/snake.html";
    }
    function logan12(){
-        location.href="./jogos/breakout/atari breakout.html"
+        location.href="./jogos/breakout/atari_breakout.html"
    }
    function logan16(){
       location.href="./jogos/menja/menja.html"
@@ -26,7 +26,7 @@ $("#navbar a, .btn").on("click", function (event) {
         location.href="./jogos/eclipse/eclipse.html"
    }
    function logan13(){
-        location.href="./jogos/space shooter/space_shooter.html"
+        location.href="./jogos/space_shooter/space_shooter.html"
    }
    function logan9(){
       location.href="./jogos/tetris/index.html"
@@ -41,7 +41,7 @@ $("#navbar a, .btn").on("click", function (event) {
       location.href="./jogos/Dash/Dash.html"
    }
    function logan20(){
-      location.href="./jogos/reator/start reator.html"
+      location.href="./jogos/reator/start_reator.html"
    }
    function logan15(){
       location.href="./jogos/forca/forca.html"
@@ -68,7 +68,7 @@ $("#navbar a, .btn").on("click", function (event) {
         location.href="./jogos/snake1/snake.html"
      }
      function logan34(){
-        location.href="./jogos/Batalha Espacial/batalha espacial.html"
+        location.href="./jogos/Batalha_Espacial/batalha_espacial.html"
      }
      function logan35(){
       location.href="./jogos/Genius/index.html"
@@ -79,13 +79,13 @@ $("#navbar a, .btn").on("click", function (event) {
      }
 
      function logan37(){
-      location.href="./jogos/tower block/index.html"
+      location.href="./jogos/tower_block/index.html"
      }
 
      function logan38(){
-      location.href="./jogos/Run Adventure/index.html"
+      location.href="./jogos/Run_Adventure/index.html"
      }
 
      function logan39(){
-      location.href="./jogos/SuperMarioBros/super mario bros game.html"
+      location.href="./jogos/SuperMarioBros/super_mario_bros_game.html"
      }
