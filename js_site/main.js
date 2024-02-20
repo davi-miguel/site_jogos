@@ -75,7 +75,7 @@ $("#navbar a, .btn").on("click", function (event) {
      }
 
      function logan36(){
-      location.href="./Jogos/battleCityindex.html"
+      location.href="./Jogos/battleCity/index.html"
      }
 
      function logan37(){
