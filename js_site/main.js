@@ -14,78 +14,78 @@ $("#navbar a, .btn").on("click", function (event) {
 });
 
    function logan1(){
-      location.href="./jogos/snake/snake.html";
+      location.href="./Jogos/snake/snake.html";
    }
    function logan12(){
-        location.href="./jogos/breakout/atari_breakout.html"
+        location.href="./Jogos/breakout/atari_breakout.html"
    }
    function logan16(){
-      location.href="./jogos/menja/menja.html"
+      location.href="./Jogos/menja/menja.html"
    }    
    function logan10(){
-        location.href="./jogos/eclipse/eclipse.html"
+        location.href="./Jogos/eclipse/eclipse.html"
    }
    function logan13(){
-        location.href="./jogos/space_shooter/space_shooter.html"
+        location.href="./Jogos/space_shooter/space_shooter.html"
    }
    function logan9(){
-      location.href="./jogos/tetris/index.html"
+      location.href="./Jogos/tetris/index.html"
    }
      function logan8(){
         location.href="https://playcanv.as/p/2OlkUaxF/";
      }
      function logan21(){
-      location.href="./jogos/traffic_racer/traffic.html"
+      location.href="./Jogos/traffic_racer/traffic.html"
    }
    function logan23(){
-      location.href="./jogos/Dash/Dash.html"
+      location.href="./Jogos/Dash/Dash.html"
    }
    function logan20(){
-      location.href="./jogos/reator/start_reator.html"
+      location.href="./Jogos/reator/start_reator.html"
    }
    function logan15(){
-      location.href="./jogos/forca/forca.html"
+      location.href="./Jogos/forca/forca.html"
    }
      function logan25(){
-      location.href="./jogos/Labirinto/index.html"
+      location.href="./Jogos/Labirinto/index.html"
    }
      function logan26(){
-        location.href="./jogos/memoria/index.html"
+        location.href="./Jogos/memoria/index.html"
      }
      function logan27(){
-        location.href="./jogos/bilhar/bilhar.html"
+        location.href="./Jogos/bilhar/bilhar.html"
      }
      function logan28(){
-        location.href="./jogos/Xadrez/xadrez.html"
+        location.href="./Jogos/Xadrez/xadrez.html"
      }
      function logan30(){
-        location.href="./jogos/sudoku/sudoku.html"
+        location.href="./Jogos/sudoku/sudoku.html"
      }
      function logan32(){
-        location.href="./jogos/Dash/Dash.html"
+        location.href="./Jogos/Dash/Dash.html"
      }
      function logan33(){
-        location.href="./jogos/snake1/snake.html"
+        location.href="./Jogos/snake1/snake.html"
      }
      function logan34(){
-        location.href="./jogos/Batalha_Espacial/batalha_espacial.html"
+        location.href="./Jogos/Batalha_Espacial/batalha_espacial.html"
      }
      function logan35(){
-      location.href="./jogos/Genius/index.html"
+      location.href="./Jogos/Genius/index.html"
      }
 
      function logan36(){
-      location.href="./jogos/battleCityindex.html"
+      location.href="./Jogos/battleCityindex.html"
      }
 
      function logan37(){
-      location.href="./jogos/tower_block/index.html"
+      location.href="./Jogos/tower_block/index.html"
      }
 
      function logan38(){
-      location.href="./jogos/Run_Adventure/index.html"
+      location.href="./Jogos/Run_Adventure/index.html"
      }
 
      function logan39(){
-      location.href="./jogos/SuperMarioBros/super_mario_bros_game.html"
+      location.href="./Jogos/SuperMarioBros/super_mario_bros_game.html"
      }
