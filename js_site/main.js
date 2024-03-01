@@ -89,3 +89,7 @@ $("#navbar a, .btn").on("click", function (event) {
      function logan39(){
       location.href="./Jogos/SuperMarioBros/super_mario_bros_game.html"
      }
+
+     function logan40(){
+      location.href="./Jogos/campo_minado/index.html"
+     }
