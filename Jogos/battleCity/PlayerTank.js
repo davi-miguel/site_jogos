@@ -58,13 +58,13 @@ PlayerTank.prototype.slideCounter = 0;
 
 //Normal bullet speed. Will be changed if player gets a powerup, or if the
 //tank is the enemy time that shoots faster bullets.
-PlayerTank.prototype.bulletVelocity = 30;
+PlayerTank.prototype.bulletVelocity = 15;
 
 //HD: Normal bullet strength. Will be changed if player gets a powerup.
-PlayerTank.prototype.bulletStrength = 2;
+PlayerTank.prototype.bulletStrength = 1;
 
 //HD: Can only fire one shot at a time. Changed with powerup.
-PlayerTank.prototype.canFireTwice = 10;
+PlayerTank.prototype.canFireTwice = 1;
 
 //counter for bullets alive that belong to tank
 //increments when bullet fired, decrements when bullet is destroyed
@@ -75,11 +75,11 @@ PlayerTank.prototype.forceFieldType = 0;
 
 PlayerTank.prototype.frozen = false;
 
-PlayerTank.prototype.moveDistance = 8;
+PlayerTank.prototype.moveDistance = 4;
 
 PlayerTank.prototype.orientation = consts.DIRECTION_UP;
 
-PlayerTank.prototype.numberOfLives = 10;
+PlayerTank.prototype.numberOfLives = 5;
 
 //Used as check to decide whether the tank's bullets will destroy
 //an enemy tank (player->enemy or enemy->player, maybe also enemy->enemy) or
@@ -385,7 +385,7 @@ PlayerTank.prototype.addStar = function() {
             //Fired bullets can destroy steel walls and are twice as effective
             //against brick walls.
             this.starLevel = consts.TANK_POWER_3STARS;
-            this.bulletStrength = 2;
+            this.bulletStrength = 1;
         break;
         case(consts.TANK_POWER_3STARS):
             //Nothing happens.
